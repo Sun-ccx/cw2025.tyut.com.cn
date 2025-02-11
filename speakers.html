@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>会议日程 - CyberWorlds 2025</title>
+    <title>Keynote Speakers - CyberWorlds 2025</title>
     <style>
         /* 基础样式 */
         * {
@@ -78,123 +78,48 @@
             color: #007bff;
         }
 
-        /* 会议日程样式 */
-        .program-content {
+        /* 主旨演讲者样式 */
+        .keynote-speakers-section {
             margin-top: 100px;
             padding: 2rem 0;
         }
 
-        .program-header {
+        .keynote-speakers-header {
             text-align: center;
             margin-bottom: 3rem;
         }
 
-        .program-header h1 {
+        .keynote-speakers-header h1 {
             font-size: 2.5em;
             color: #333;
             margin-bottom: 1rem;
         }
 
-        .program-header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .program-tabs {
+        .speaker {
             display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #eee;
-        }
-
-        .tab-button {
-            padding: 1rem 2rem;
-            border: none;
-            background: none;
-            font-size: 1.1em;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .tab-button:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #007bff;
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .tab-button.active {
-            color: #007bff;
-        }
-
-        .tab-button.active:after {
-            transform: scaleX(1);
-        }
-
-        .program-day {
-            display: none;
-        }
-
-        .program-day.active {
-            display: block;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: #eee;
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 2rem;
         }
 
-        .time-slot {
-            flex: 0 0 150px;
-            text-align: right;
-            padding-right: 2rem;
-            color: #666;
+        .speaker img {
+            max-width: 200px;
+            margin-right: 2rem;
         }
 
-        .event-content {
-            flex: 0 0 150px;
-            padding-left: 2rem;
+        .speaker-info {
+            flex: 1;
         }
 
-        .event-title {
+        .speaker-title {
+            font-size: 1.5em;
             font-weight: bold;
-            color: #333;
             margin-bottom: 0.5rem;
         }
 
-        .event-description {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .event-speaker {
-            color: #007bff;
-            font-style: italic;
-            margin-top: 0.5rem;
+        .speaker-bio {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.5;
         }
 
         @media (max-width: 768px) {
@@ -202,23 +127,13 @@
                 display: none;
             }
 
-            .timeline:before {
-                left: 30px;
-            }
-
-            .timeline-item {
+            .speaker {
                 flex-direction: column;
+                text-align: center;
             }
 
-            .time-slot {
-                text-align: left;
-                padding-right: 0;
-                padding-left: 60px;
-                margin-bottom: 0.5rem;
-            }
-
-            .event-content {
-                padding-left: 60px;
+            .speaker img {
+                margin: 0 auto 1rem;
             }
         }
     </style>
@@ -243,3 +158,24 @@
             </div>
         </nav>
     </header>
+    <main>
+        <section class="keynote-speakers-section">
+            <div class="keynote-speakers-header">
+                <h1>Keynote Speakers</h1>
+            </div>
+            <div class="speaker">
+                <img src="speaker1.jpg" alt="Prof. Ji-Ming Chen, Ph.D.">
+                <div class="speaker-info">
+                    <h2 class="speaker-title">Prof. Ji-Ming Chen, Ph.D.</h2>
+                    <p class="speaker-bio">
+                        President of Hangzhou Dianzi University and a professor at Zhejiang University<br>
+                        Director of the Institute of Industrial Process Control and the Deputy Director of the State Key Laboratory of Industrial Control Technology<br><br>
+                        Title: AIoT Technology for Power Sector: Design and Application<br>
+                        The power sector provides fundamental utility services such as water, electricity, gas, cooling, and heating to the industrial park, consuming nearly half of the park's energy. Therefore, achieving low-carbon operation in the power sector holds significant significance for energy efficiency in the industrial park. In this presentation, we will delve into the current operational status of the power sector and share our experiences and case studies in achieving efficient energy management and low-carbon operation by exploiting AIoT.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
