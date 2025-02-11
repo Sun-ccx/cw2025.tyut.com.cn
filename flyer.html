@@ -1,84 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberWorlds 2025</title>
+    <title>会议日程 - CyberWorlds 2025</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* 基础样式 */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        header {
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏样式 */
+        .main-header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            padding: 1rem 0;
+        }
+
+        .navbar .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
             display: flex;
             align-items: center;
+            text-decoration: none;
+            color: #333;
         }
 
         .logo img {
-            height: 50px;
+            height: 40px;
             margin-right: 10px;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: bold;
         }
 
-        nav a {
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
             text-decoration: none;
             color: #333;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #6a0dad;
-        }
-
-        main {
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .awards {
-            margin-bottom: 40px;
-        }
-
-        .awards h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .awards h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        article {
-            margin-bottom: 20px;
-        }
-
-        article h3 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        article p {
-            margin: 0;
+        .nav-links a:hover {
+            color: #007bff;
         }
     </style>
 </head>
