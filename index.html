@@ -196,6 +196,111 @@
             margin-top: 2rem;
         }
 
+        .highlight-card {
+            background: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .highlight-icon {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .highlight-list li {
+            margin-bottom: 0.5em;
+        }
+
+        .highlight-link {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .highlight-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 最新更新部分的样式 */
+        .latest-updates {
+            padding: 2rem 0;
+            background: #fff;
+        }
+
+        .latest-updates h2 {
+            font-size: 1.5em;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .updates-list {
+            background: #f8f9fa;
+            padding: 1rem;
+        }
+
+        .update-item {
+            display: flex;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-date {
+            flex: 0 0 100px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .update-content {
+            flex: 1;
+            color: #333;
+        }
+
+        .update-content > div {
+            margin-bottom: 0.2em;
+        }
+
+        .update-content a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .update-content a:hover {
+            text-decoration: underline;
+        }
+
+        .see-more, .view-accommodations {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 0.3em;
+        }
+
+        .see-more:hover, .view-accommodations:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .update-item {
+                flex-direction: column;
+            }
+
+            .update-date {
+                margin-bottom: 0.5rem;
+            }
+        }
+
         /* 响应式设计 */
         @media (max-width: 768px) {
             .nav-links {
@@ -215,6 +320,97 @@
                 font-size: 1em;
             }
         }
+
+        /* 主办单位样式 */
+        .sponsors {
+            padding: 4rem 0;
+            background: #fff;
+        }
+
+        .sponsors h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .sponsor-item {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .sponsor-item img {
+            max-width: 200px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .sponsor-item img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* 快速链接样式 */
+        .quick-links {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .quick-links h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .quick-link-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .quick-link-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .quick-link-card a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .quick-link-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .sponsor-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .sponsor-item img {
+                max-width: 150px;
+            }
+
+            .quick-links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -222,7 +418,7 @@
         <nav class="navbar">
             <div class="container">
                 <a href="index.html" class="logo">
-                    <img src="logo1.png" alt="CW Logo">
+                    <img src="images/logo.png" alt="CW Logo">
                     <span class="logo-text">CyberWorlds 2025</span>
                 </a>
                 <ul class="nav-links">
@@ -248,14 +444,14 @@
                 </div>
             </div>
             <div class="slide">
-                <img src="shanxi2.jpg" alt="Previous Conference">
+                <img src="images/slider/slide2.jpg" alt="Previous Conference">
                 <div class="slide-content">
                     <h2>汇聚全球顶尖学者</h2>
                     <p>分享最新研究成果</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="shanxi3.jpg" alt="Technology Exhibition">
+                <img src="images/slider/slide3.jpg" alt="Technology Exhibition">
                 <div class="slide-content">
                     <h2>突破性技术展示</h2>
                     <p>体验未来科技</p>
@@ -272,6 +468,82 @@
     </div>
 
     <main>
+        <section class="latest-updates">
+            <div class="container">
+                <h2>LATEST UPDATES</h2>
+                <div class="updates-list">
+                    <div class="update-item">
+                        <div class="update-date">2024-11-07</div>
+                        <div class="update-content">
+                            <div>Award List available <a href="#">here</a></div>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-date">2024-10-17</div>
+                        <div class="update-content">
+                            <div>Conference Program Updates:</div>
+                            <div>- Session chair updates</div>
+                            <div>- Timetable updates</div>
+                            <a href="#" class="see-more">See More</a>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-date">2024-10-11</div>
+                        <div class="update-content">
+                            <div>Conference Program Updates:</div>
+                            <div>- Oral Paper Presentation updates</div>
+                            <a href="#" class="see-more">See More</a>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-date">2024-10-03</div>
+                        <div class="update-content">
+                            <div>Conference Program Updates:</div>
+                            <div>- Keynote Speaker schedule</div>
+                            <a href="#" class="see-more">See More</a>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-date">2024-10-01</div>
+                        <div class="update-content">
+                            <div>Social Events Updates:</div>
+                            <div>- About our Social Events venue <a href="#" class="see-more">See More</a></div>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-date">2024-09-25</div>
+                        <div class="update-content">
+                            <div>Conference Program Updates:</div>
+                            <div>- Excursion destination notice</div>
+                            <div>- Session time of VIC3 and CHMI1 updates</div>
+                            <a href="#" class="see-more">See More</a>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-date">2024-09-24</div>
+                        <div class="update-content">
+                            <div>Keynote Speaker Updates</div>
+                            <a href="#" class="see-more">See More</a>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-date">2024-09-22</div>
+                        <div class="update-content">
+                            <div>New Accommodation Recommendation Available</div>
+                            <a href="#" class="view-accommodations">View Accommodations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="highlights">
             <div class="container">
                 <h2>会议亮点</h2>
@@ -279,59 +551,34 @@
                     <div class="highlight-card">
                         <div class="highlight-icon">📅</div>
                         <h3>重要日期</h3>
-                        <ul>
-                            <li>论文提交截止：2025年6月15日</li>
-                            <li>录用通知：2025年7月30日</li>
-                            <li>终稿提交：2025年8月15日</li>
+                        <ul class="highlight-list">
+                            <li>论文提交截止：2025年5月15日</li>
+                            <li>录用通知：2025年7月1日</li>
+                            <li>会议日期：2025年10月15-17日</li>
                         </ul>
-                        <a href="important-dates.html" class="highlight-link">查看更多 →</a>
                     </div>
+
                     <div class="highlight-card">
                         <div class="highlight-icon">🎯</div>
                         <h3>征稿主题</h3>
-                        <ul>
+                        <ul class="highlight-list">
                             <li>虚拟现实与增强现实</li>
+                            <li>计算机图形学与可视化</li>
                             <li>人工智能与机器学习</li>
-                            <li>元宇宙技术与应用</li>
+                            <li>人机交互与用户体验</li>
                         </ul>
-                        <a href="call-for-papers.html" class="highlight-link">查看更多 →</a>
                     </div>
+
                     <div class="highlight-card">
                         <div class="highlight-icon">🌟</div>
                         <h3>特邀报告</h3>
-                        <ul>
-                            <li>John Smith教授 - 斯坦福大学</li>
-                            <li>张教授 - 清华大学</li>
-                            <li>Maria Garcia教授 - 马德里理工大学</li>
+                        <ul class="highlight-list">
+                            <li>5位国际知名学者</li>
+                            <li>前沿技术分享</li>
+                            <li>行业发展趋势</li>
                         </ul>
-                        <a href="program.html" class="highlight-link">查看更多 →</a>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="news">
-            <div class="container">
-                <h2>最新消息</h2>
-                <div class="news-grid">
-                    <div class="news-card">
-                        <div class="news-date">2025-02-01</div>
-                        <h3>论文提交系统开放</h3>
-                        <p>CyberWorlds 2025论文提交系统现已开放，欢迎各位学者提交论文。</p>
-                        <a href="#" class="news-link">了解详情</a>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">2025-01-15</div>
-                        <h3>特邀报告嘉宾公布</h3>
-                        <p>我们很荣幸地宣布今年的特邀报告嘉宾阵容。</p>
-                        <a href="#" class="news-link">了解详情</a>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">2025-01-01</div>
-                        <h3>会议征稿启事发布</h3>
-                        <p>CyberWorlds 2025现已开始征集论文，欢迎相关领域学者投稿。</p>
-                        <a href="#" class="news-link">了解详情</a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -340,21 +587,20 @@
             <div class="container">
                 <h2>主办单位</h2>
                 <div class="sponsor-grid">
-                    <div class="sponsor-card">
-                        <img src="logo2.png" alt="山梨大学">
-                        <h3>山梨大学</h3>
+                    <div class="sponsor-item">
+                        <img src="images/sponsors/sponsor1.png" alt="主办单位1">
                     </div>
-                    <div class="sponsor-card">
-                        <img src="images/ieee-logo.png" alt="IEEE">
-                        <h3>IEEE</h3>
+                    <div class="sponsor-item">
+                        <img src="images/sponsors/sponsor2.png" alt="主办单位2">
                     </div>
-                    <div class="sponsor-card">
-                        <img src="logo.png" alt="ACM">
-                        <h3>ACM</h3>
+                    <div class="sponsor-item">
+                        <img src="images/sponsors/sponsor3.png" alt="主办单位3">
                     </div>
                 </div>
             </div>
         </section>
+
+    
 
         <section class="quick-links">
             <div class="container">
