@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberWorlds 2025 - 国际虚拟世界会议</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏样式 */
+        .main-header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            padding: 1rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* 轮播图样式 */
+        .hero-slider {
+            margin-top: 73px;
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .slide-content p {
+            font-size: 1.2em;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .slider-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .slider-button.prev {
+            left: 20px;
+        }
+
+        .slider-button.next {
+            right: 20px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        /* 主要内容区域样式 */
+        main {
+            padding: 2rem 0;
+        }
+
+        .highlights {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-slider {
+                height: 400px;
+                margin-top: 60px;
+            }
+
+            .slide-content h2 {
+                font-size: 2em;
+            }
+
+            .slide-content p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="CW Logo">
+                    <span class="logo-text">CyberWorlds 2025</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="call-for-papers.html">征稿启事</a></li>
+                    <li><a href="important-dates.html">重要日期</a></li>
+                    <li><a href="submission.html">论文提交</a></li>
+                    <li><a href="committee.html">委员会</a></li>
+                    <li><a href="program.html">会议日程</a></li>
+                    <li><a href="venue.html">会议地点</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="images/slider/slide1.jpg" alt="Conference Venue">
+                <div class="slide-content">
+                    <h2>欢迎参加 CyberWorlds 2025</h2>
+                    <p>探索虚拟世界的前沿科技</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slider/slide2.jpg" alt="Previous Conference">
+                <div class="slide-content">
+                    <h2>汇聚全球顶尖学者</h2>
+                    <p>分享最新研究成果</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slider/slide3.jpg" alt="Technology Exhibition">
+                <div class="slide-content">
+                    <h2>突破性技术展示</h2>
+                    <p>体验未来科技</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-button prev">&lt;</button>
+        <button class="slider-button next">&gt;</button>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <main>
+        <section class="highlights">
+            <div class="container">
+                <h2>会议亮点</h2>
+                <div class="highlight-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">📅</div>
+                        <h3>重要日期</h3>
+                        <ul>
+                            <li>论文提交截止：2025年6月15日</li>
+                            <li>录用通知：2025年7月30日</li>
+                            <li>终稿提交：2025年8月15日</li>
+                        </ul>
+                        <a href="important-dates.html" class="highlight-link">查看更多 →</a>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🎯</div>
+                        <h3>征稿主题</h3>
+                        <ul>
+                            <li>虚拟现实与增强现实</li>
+                            <li>人工智能与机器学习</li>
+                            <li>元宇宙技术与应用</li>
+                        </ul>
+                        <a href="call-for-papers.html" class="highlight-link">查看更多 →</a>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🌟</div>
+                        <h3>特邀报告</h3>
+                        <ul>
+                            <li>John Smith教授 - 斯坦福大学</li>
+                            <li>张教授 - 清华大学</li>
+                            <li>Maria Garcia教授 - 马德里理工大学</li>
+                        </ul>
+                        <a href="program.html" class="highlight-link">查看更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="container">
+                <h2>最新消息</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-date">2025-02-01</div>
+                        <h3>论文提交系统开放</h3>
+                        <p>CyberWorlds 2025论文提交系统现已开放，欢迎各位学者提交论文。</p>
+                        <a href="#" class="news-link">了解详情</a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">2025-01-15</div>
+                        <h3>特邀报告嘉宾公布</h3>
+                        <p>我们很荣幸地宣布今年的特邀报告嘉宾阵容。</p>
+                        <a href="#" class="news-link">了解详情</a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">2025-01-01</div>
+                        <h3>会议征稿启事发布</h3>
+                        <p>CyberWorlds 2025现已开始征集论文，欢迎相关领域学者投稿。</p>
+                        <a href="#" class="news-link">了解详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sponsors">
+            <div class="container">
+                <h2>主办单位</h2>
+                <div class="sponsor-grid">
+                    <div class="sponsor-card">
+                        <img src="images/yamanashi-logo.png" alt="山梨大学">
+                        <h3>山梨大学</h3>
+                    </div>
+                    <div class="sponsor-card">
+                        <img src="images/ieee-logo.png" alt="IEEE">
+                        <h3>IEEE</h3>
+                    </div>
+                    <div class="sponsor-card">
+                        <img src="images/acm-logo.png" alt="ACM">
+                        <h3>ACM</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <div class="container">
+                <div class="quick-links-grid">
+                    <div class="quick-link-card">
+                        <h3>关于会议</h3>
+                        <ul>
+                            <li><a href="about.html">会议简介</a></li>
+                            <li><a href="committee.html">组织委员会</a></li>
+                            <li><a href="previous.html">往届会议</a></li>
+                        </ul>
+                    </div>
+                    <div class="quick-link-card">
+                        <h3>参会指南</h3>
+                        <ul>
+                            <li><a href="registration.html">注册说明</a></li>
+                            <li><a href="venue.html">会议地点</a></li>
+                            <li><a href="accommodation.html">住宿信息</a></li>
+                        </ul>
+                    </div>
+                    <div class="quick-link-card">
+                        <h3>联系我们</h3>
+                        <ul>
+                            <li>邮箱：contact@cyberworlds2025.org</li>
+                            <li>电话：+81-XX-XXXX-XXXX</li>
+                            <li><a href="contact.html">更多联系方式</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 CyberWorlds Conference. All rights reserved.</p>
+            <p>联系方式: cyberworlds2025@example.com</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.slider-button.prev');
+            const nextButton = document.querySelector('.slider-button.next');
+            let currentSlide = 0;
+            const slideCount = slides.length;
+
+            // 自动轮播间隔（毫秒）
+            const autoSlideInterval = 5000;
+            let autoSlideTimer;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                showSlide(currentSlide);
+            }
+
+            prevButton.addEventListener('click', () => {
+                prevSlide();
+                resetAutoSlide();
+            });
+
+            nextButton.addEventListener('click', () => {
+                nextSlide();
+                resetAutoSlide();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                    resetAutoSlide();
+                });
+            });
+
+            function startAutoSlide() {
+                autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlideTimer);
+                startAutoSlide();
+            }
+
+            const slider = document.querySelector('.hero-slider');
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideTimer);
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+
+            startAutoSlide();
+        });
+    </script>
+</body>
+</html>
