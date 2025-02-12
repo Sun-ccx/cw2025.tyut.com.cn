@@ -78,123 +78,49 @@
             color: #007bff;
         }
 
-        /* 会议日程样式 */
-        .program-content {
+        /* 内容样式 */
+        .content {
             margin-top: 100px;
             padding: 2rem 0;
         }
 
-        .program-header {
-            text-align: center;
+        .section {
             margin-bottom: 3rem;
         }
 
-        .program-header h1 {
-            font-size: 2.5em;
-            color: #333;
+        .section-header {
+            text-align: center;
             margin-bottom: 1rem;
         }
 
-        .program-header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .program-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #eee;
-        }
-
-        .tab-button {
-            padding: 1rem 2rem;
-            border: none;
-            background: none;
-            font-size: 1.1em;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .tab-button:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #007bff;
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .tab-button.active {
-            color: #007bff;
-        }
-
-        .tab-button.active:after {
-            transform: scaleX(1);
-        }
-
-        .program-day {
-            display: none;
-        }
-
-        .program-day.active {
-            display: block;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: #eee;
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-
-        .time-slot {
-            flex: 0 0 150px;
-            text-align: right;
-            padding-right: 2rem;
-            color: #666;
-        }
-
-        .event-content {
-            flex: 0 0 150px;
-            padding-left: 2rem;
-        }
-
-        .event-title {
-            font-weight: bold;
+        .section-header h2 {
+            font-size: 1.5em;
             color: #333;
-            margin-bottom: 0.5rem;
         }
 
-        .event-description {
-            color: #666;
-            font-size: 0.9em;
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
         }
 
-        .event-speaker {
-            color: #007bff;
-            font-style: italic;
+        .info-item {
+            flex: 1;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .info-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .info-item p {
             margin-top: 0.5rem;
+            color: #666;
         }
 
         @media (max-width: 768px) {
@@ -202,23 +128,12 @@
                 display: none;
             }
 
-            .timeline:before {
-                left: 30px;
-            }
-
-            .timeline-item {
+            .info-box {
                 flex-direction: column;
             }
 
-            .time-slot {
-                text-align: left;
-                padding-right: 0;
-                padding-left: 60px;
-                margin-bottom: 0.5rem;
-            }
-
-            .event-content {
-                padding-left: 60px;
+            .info-item {
+                margin-bottom: 1rem;
             }
         }
     </style>
@@ -243,3 +158,99 @@
             </div>
         </nav>
     </header>
+    <main>
+        <div class="content">
+            <div class="section">
+                <div class="section-header">
+                    <h2>山梨大学</h2>
+                </div>
+                <div class="info-box">
+                    <div class="info-item">
+                        <img src="university.jpg" alt="山梨大学">
+                    </div>
+                    <div class="info-item">
+                        <p>地址：〒400-8510 山梨県甲府市武田4-4-37</p>
+                        <p>山梨大学是一所位于日本山梨县甲府市的国立大学，拥有优美的校园环境和现代化的会议设施。本次会议将在山梨大学甲府校区的综合会议中心举行。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>交通指南</h2>
+                </div>
+                <div class="info-box">
+                    <div class="info-item">
+                        <h3>从东京方向</h3>
+                        <ul>
+                            <li>从JR东京站乘坐中央线特快列车</li>
+                            <li>在甲府站下车（约2小时）</li>
+                            <li>从甲府站乘坐公交车或出租车前往山梨大学（约15分钟）</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3>从羽田机场</h3>
+                        <ul>
+                            <li>搭乘机场大巴直达甲府站（约2.5小时）</li>
+                            <li>或转乘JR列车至甲府站</li>
+                            <li>从甲府站乘坐公交车或出租车前往山梨大学</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3>从成田机场</h3>
+                        <ul>
+                            <li>搭乘JR成田特快至东京站</li>
+                            <li>从东京站换乘中央线至甲府站</li>
+                            <li>总行程约4小时</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>周边景点</h2>
+                </div>
+                <div class="info-box">
+                    <div class="info-item">
+                        <img src="fuji.jpg" alt="富士山">
+                        <p>富士山<br>日本标志性景点，距离甲府约2小时车程，可安排一日游。</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="kofu-castle.jpg" alt="甲府城">
+                        <p>甲府城遗址<br>历史遗迹，距离会场步行15分钟，可以俯瞰甲府市全景。</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="winery.jpg" alt="葡萄酒庄">
+                        <p>山梨葡萄酒庄<br>日本著名的葡萄酒产区，可以参观酿酒过程和品尝美酒。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>实用信息</h2>
+                </div>
+                <div class="info-box">
+                    <div class="info-item">
+                        <h3>天气</h3>
+                        <p>10月平均气温：15-20℃<br>建议携带薄外套</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>货币</h3>
+                        <p>日元<br>主要场所可使用信用卡</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>紧急联系</h3>
+                        <p>警察：110<br>救护：119</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>会议服务台</h3>
+                        <p>电话：+81-XX-XXXX-XXXX<br>邮箱：info@cw2025.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
