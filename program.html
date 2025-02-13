@@ -151,19 +151,9 @@
             padding: 2rem 0;
         }
 
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: #eee;
-        }
-
         .timeline-item {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Align items to the left */
             align-items: flex-start;
             margin-bottom: 2rem;
         }
@@ -176,8 +166,10 @@
         }
 
         .event-content {
-            flex: 0 0 150px;
-            padding-left: 2rem;
+            flex: 1;  /* Allow the content to take up the remaining space */
+            padding-left: 2rem;  /* Add padding to the left */
+            padding-right: 2rem;  /* Add padding to the right for spacing */
+            max-width: calc(100% - 150px);  /* Ensure it takes the full remaining space minus the time slot width */
         }
 
         .event-title {
@@ -197,13 +189,40 @@
             margin-top: 0.5rem;
         }
 
+        /* 日期与时间样式 */
+        .program-day-header {
+            background: #f7f7f7;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;  /* Center the Day header text */
+        }
+
+        .program-day-header h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .event-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .event-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.3rem;
+            color: #333;
+        }
+
+        .event-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
-            }
-
-            .timeline:before {
-                left: 30px;
             }
 
             .timeline-item {
@@ -243,171 +262,34 @@
             </div>
         </nav>
     </header>
-
-    <main class="program-content">
-        <div class="container">
+    <main>
+        <section class="program-content">
             <div class="program-header">
-                <h1>Conference Program</h1>
-                <p>2025年10月15-17日</p>
+                <h1>CyberWorlds 2025 Conference Program</h1>
+                <p>Data of Update：October 17，2024</p>
             </div>
-
-            <div class="program-tabs">
-                <button class="tab-button active" data-day="1">Day 2: October 29</button>
-                <button class="tab-button" data-day="2">Day 2: October 30</button>
-                <button class="tab-button" data-day="3">Day 3: October 31</button>
+            <div class="program-day-header">
+                <h2>Day 2: October 30</h2>
             </div>
-
-            <div class="program-day active" id="day1">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="time-slot">9:20 – 10:30	</div>
-                        <div class="event-content">
-                            <div class="event-title">VIC 4 (Chair: Prof. Issei Fujishiro)</div>
-                            <div class="event-description">Prompt Assisted Generative Modelling for Digital Recreation of the Lost Caesar Paintings by Titian        Ivan Rybnikov, Ivan Lysikov, Hassan Ugail, Maadh Ali Zameer, Yan Antropov, Manuel Portela and Noah Ugail</div>
-                        </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time-slot">9:20 – 11:00</div>
+                    <div class="event-content">
+                        <h3>VIC 1 (Chair: Prof. Alexei Sourin)</h3>
+                        <p>Visualization for Serve Form of Volleyball to Support the Improvement of Serve Technique</p>
+                        <p>Speaker: Nao Torii and Takayuki Itoh</p>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">11:00 – 12:20 </div>
-                        <div class="event-content">
-                            <div class="event-title">CHMI 2 (Chair: Dr. Olga Sourina)</div>
-                            <div class="event-description">Understanding Visual Fatigue in Air Traffic Control via Dynamic Air Traffic Density     Shiwei Xin, Yufei Li, Sun Woh Lye and Chun-Hsien Chen</div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">13:20 – 14:20</div>
-                        <div class="event-content">
-                            <div class="event-title">CHMI 3 (Chair: Mikhail Fominykh)</div>
-                            <div class="event-description">V-TX: A VR-Based Deployment and Evaluation System for Wearable Telexistence Robotic Systems</div>
-                            <div class="event-speaker">Abdullah Iskandar, Hala Khazer Shebli Aburajouh, Eman Hussain Al-Shaer, Fatima Thabit Al-Yafei, Bushra Ahmad Al-Arqaban, Moneera Al-Yousef, Pinchu Yang, Osama Halabi, Mohammed Al-Sada and Tatsuo Nakajima</div>
-                        </div>
-                    </div>
-
-                    
-
-            <div class="program-day" id="day2">
-                <!-- 第二天日程内容 -->
-           <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="time-slot">9:20 – 11:00</div>
-                        <div class="event-content">
-                            <div class="event-title">VIC 1 (Chair: Prof. Alexei Sourin)</div>
-                            <div class="event-description">Visualization for Serve Form of Volleyball to Support the Improvement of Serve Technique    	Nao Torii and Takayuki Itoh</div>
-                            <div class="event-description">One-to-many Line Matching across keyframes using the minimum weight edge cover problem     Ayumu Sato, Ryo Moriai and Suguru Saito</div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">11:20 – 12:20</div>
-                        <div class="event-content">
-                            <div class="event-title">VIC 2 (Chair: Prof. Hiroki Takahashi)</div>
-                            <div class="event-description">Simulation of Mid-air Image Interaction in Virtual Reality           Ryugo Hayashi and Naoya Koizumi</div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">13:20 – 14:30 </div>
-                        <div class="event-content">
-                            <div class="event-title">VIC 3 (Chair: Dr. Noah Ugaii)</div>
-                            <div class="event-description">Synthesis of Enthusiastic Collective Audience NPCs in VR Live Concerts      Takehiro Ishinuki and Issei Fujishiro</div>
-                           
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">12:00 - 13:30</div>
-                        <div class="event-content">
-                            <div class="event-title">休息</div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">13:30 - 15:30</div>
-                        <div class="event-content">
-                            <div class="event-title">论文报告（第一场）</div>
-                            <div class="event-description">待添加</div>
-                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time-slot">11:00 – 12:30</div>
+                    <div class="event-content">
+                        <h3>CWAI 1 (Chair: Prof. Won-Du Chang)</h3>
+                        <p>Analysis of Acute Stress Reaction with EEG using MI-mRMR EEG channel selection and Ensemble Learning with Majority Voting</p>
+                        <p>Speaker: Muhammad Rasydan Mazlan, Abdul Syafiq Abdull Sukor, and others</p>
                     </div>
                 </div>
             </div>
-
-            <div class="program-day" id="day3">
-                <!-- 第三天日程内容 -->
-
-
-    <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="time-slot">9:20 – 11:00</div>
-                        <div class="event-content">
-                            <div class="event-title">VIC 1 (Chair: Prof. Alexei Sourin)</div>
-                            <div class="event-description">Visualization for Serve Form of Volleyball to Support the Improvement of Serve Technique    	Nao Torii and Takayuki Itoh</div>
-                            <div class="event-description">One-to-many Line Matching across keyframes using the minimum weight edge cover problem     Ayumu Sato, Ryo Moriai and Suguru Saito</div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">11:20 – 12:20</div>
-                        <div class="event-content">
-                            <div class="event-title">VIC 2 (Chair: Prof. Hiroki Takahashi)</div>
-                            <div class="event-description">Simulation of Mid-air Image Interaction in Virtual Reality           Ryugo Hayashi and Naoya Koizumi</div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">13:20 – 14:30 </div>
-                        <div class="event-content">
-                            <div class="event-title">VIC 3 (Chair: Dr. Noah Ugaii)</div>
-                            <div class="event-description">Synthesis of Enthusiastic Collective Audience NPCs in VR Live Concerts      Takehiro Ishinuki and Issei Fujishiro</div>
-                           
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">12:00 - 13:30</div>
-                        <div class="event-content">
-                            <div class="event-title">休息</div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-slot">13:30 - 15:30</div>
-                        <div class="event-content">
-                            <div class="event-title">论文报告（第一场）</div>
-                            <div class="event-description">待添加</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-                
-            </div>
-        </div>
+        </section>
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.tab-button');
-            const days = document.querySelectorAll('.program-day');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // 移除所有活动状态
-                    tabs.forEach(t => t.classList.remove('active'));
-                    days.forEach(d => d.classList.remove('active'));
-
-                    // 添加活动状态到当前选中的标签
-                    tab.classList.add('active');
-                    const dayNumber = tab.getAttribute('data-day');
-                    document.getElementById(`day${dayNumber}`).classList.add('active');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
