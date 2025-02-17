@@ -130,6 +130,27 @@
             color: #666;
         }
 
+        /* 轮播图样式 */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+            border-radius: 5px;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -173,16 +194,19 @@
                 </div>
                 <div class="info-box">
                     <div class="info-item">
-                        <img src="tyut.jpg" alt="Yamanashi University">
+                        <div class="carousel">
+                            <img src="tyut1.jpg" alt="Taiyuan University of Technology" class="active">
+                            <img src="tyut2.jpg" alt="Taiyuan University of Technology">
+                            <img src="tyut3.jpg" alt="Taiyuan University of Technology">
+                        </div>
                     </div>
                     <div class="info-item">
-                        <p>Address:No.209,University Street,Yuci District,Jinzhong City</p>
+                        <p>Address: No.209, University Street, Yuci District, Jinzhong City</p>
                         <p>Taiyuan University of Technology is a century-old institution with a long history, profound heritage, and distinctive characteristics. It is located in Taiyuan, a national historical and cultural city with a history of over 2,500 years. Adhering to the motto “Seeking Truth and Innovation,” Taiyuan University of Technology is committed to cultivating well-rounded socialist builders and successors who excel in moral, intellectual, physical, aesthetic, and labor education. The university has made significant contributions to national economic construction and social development.</p>
                     </div>
                 </div>
             </div>
-
-            <div class="section">
+             <div class="section">
                 <div class="section-header">
                     <h2>Transportation Guide</h2>
                 </div>
@@ -259,5 +283,18 @@
             </div>
         </div>
     </main>
+<script>
+        // 轮播图逻辑
+        const carouselImages = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            carouselImages[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % carouselImages.length;
+            carouselImages[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 2400); // 2.4秒切换一次
+    </script>
 </body>
 </html>
