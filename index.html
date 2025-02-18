@@ -78,106 +78,109 @@
             color: #007bff;
         }
 
-        /* 轮播图样式 */
-        .hero-slider {
-            margin-top: 73px;
-            position: relative;
-            width: 100%;
-            height: 600px;
-            overflow: hidden;
-        }
+       <style>
+    /* 轮播图样式 */
+    .hero-slider {
+        margin-top: 73px;
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+    }
 
-        .slider-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
 
-        .slide.active {
-            opacity: 1;
-        }
+    .slide.active {
+        opacity: 1;
+    }
 
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; /* 确保图片居中显示 */
+    }
 
-        .slide-content {
-            position: absolute;
-            bottom: 20%;
-            left: 10%;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+    .slide-content {
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 
-        .slide-content h2 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-        }
+    .slide-content h2 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
 
-        .slide-content p {
-            font-size: 1.2em;
-        }
+    .slide-content p {
+        font-size: 1.2em;
+    }
 
-        .slider-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 1em;
-            cursor: pointer;
-            font-size: 1.2em;
-            transition: background 0.3s;
-            z-index: 10;
-        }
+    .slider-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 1em;
+        cursor: pointer;
+        font-size: 1.2em;
+        transition: background 0.3s;
+        z-index: 10;
+    }
 
-        .slider-button:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
+    .slider-button:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
 
-        .slider-button.prev {
-            left: 20px;
-        }
+    .slider-button.prev {
+        left: 20px;
+    }
 
-        .slider-button.next {
-            right: 20px;
-        }
+    .slider-button.next {
+        right: 20px;
+    }
 
-        .slider-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
-        }
+    .slider-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
 
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: background 0.3s;
+    }
 
-        .dot.active {
-            background: white;
-        }
+    .dot.active {
+        background: white;
+    }
+</style>
 
         /* 主要内容区域样式 */
         main {
@@ -322,40 +325,48 @@
         }
 
         /* 主办单位样式 */
-        .sponsors {
-            padding: 4rem 0;
-            background: #fff;
-        }
+        <style>
+    /* 主办单位样式 */
+    .sponsors {
+        padding: 4rem 0;
+        background: #fff;
+    }
 
-        .sponsors h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #333;
-        }
+    .sponsors h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #333;
+    }
 
+    .sponsor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .sponsor-item {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .sponsor-item img {
+        max-width: 200px;
+        height: auto;
+        /* 移除 filter: grayscale(100%) */
+    }
+
+    @media (max-width: 768px) {
         .sponsor-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            align-items: center;
-            justify-items: center;
-        }
-
-        .sponsor-item {
-            padding: 1rem;
-            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         }
 
         .sponsor-item img {
-            max-width: 200px;
-            height: auto;
-            filter: grayscale(100%);
-            transition: filter 0.3s;
+            max-width: 150px;
         }
-
-        .sponsor-item img:hover {
-            filter: grayscale(0%);
-        }
+    }
+</style>
 
         /* 快速链接样式 */
         .quick-links {
@@ -576,22 +587,22 @@
         </table>
     </section>
 
-    <section class="sponsors">
-        <div class="container">
-            <h2>Organizing Committee</h2>
-            <div class="sponsor-grid">
-                <div class="sponsor-item">
-                    <img src="logo11.png" alt="Organizing Committee1">
-                </div>
-                <div class="sponsor-item">
-                    <img src="logo22.png" alt="Organizing Committee2">
-                </div>
-                <div class="sponsor-item">
-                    <img src="logo.png" alt="Organizing Committee3">
-                </div>
+   <section class="sponsors">
+    <div class="container">
+        <h2>Organizing Committee</h2>
+        <div class="sponsor-grid">
+            <div class="sponsor-item">
+                <img src="logo11.png" alt="Organizing Committee1">
+            </div>
+            <div class="sponsor-item">
+                <img src="logo22.png" alt="Organizing Committee2">
+            </div>
+            <div class="sponsor-item">
+                <img src="logo.png" alt="Organizing Committee3">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer class="main-footer">
         <div class="container">
@@ -600,74 +611,74 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-            const prevButton = document.querySelector('.slider-button.prev');
-            const nextButton = document.querySelector('.slider-button.next');
-            let currentSlide = 0;
-            const slideCount = slides.length;
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevButton = document.querySelector('.slider-button.prev');
+        const nextButton = document.querySelector('.slider-button.next');
+        let currentSlide = 0;
+        const slideCount = slides.length;
 
-            // 自动轮播间隔（毫秒）
-            const autoSlideInterval = 5000;
-            let autoSlideTimer;
+        // 自动轮播间隔（毫秒）
+        const autoSlideInterval = 5000;
+        let autoSlideTimer;
 
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                dots.forEach(dot => dot.classList.remove('active'));
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-            }
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
 
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slideCount;
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slideCount;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+            showSlide(currentSlide);
+        }
+
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
                 showSlide(currentSlide);
-            }
-
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-                showSlide(currentSlide);
-            }
-
-            prevButton.addEventListener('click', () => {
-                prevSlide();
                 resetAutoSlide();
             });
+        });
 
-            nextButton.addEventListener('click', () => {
-                nextSlide();
-                resetAutoSlide();
-            });
+        function startAutoSlide() {
+            autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
+        }
 
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentSlide = index;
-                    showSlide(currentSlide);
-                    resetAutoSlide();
-                });
-            });
+        function resetAutoSlide() {
+            clearInterval(autoSlideTimer);
+            startAutoSlide();
+        }
 
-            function startAutoSlide() {
-                autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
-            }
+        const slider = document.querySelector('.hero-slider');
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideTimer);
+        });
 
-            function resetAutoSlide() {
-                clearInterval(autoSlideTimer);
-                startAutoSlide();
-            }
-
-            const slider = document.querySelector('.hero-slider');
-            slider.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideTimer);
-            });
-
-            slider.addEventListener('mouseleave', () => {
-                startAutoSlide();
-            });
-
+        slider.addEventListener('mouseleave', () => {
             startAutoSlide();
         });
-    </script>
+
+        startAutoSlide();
+    });
+</script>
 </body>
 </html>
