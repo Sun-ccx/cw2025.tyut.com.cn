@@ -78,110 +78,108 @@
             color: #007bff;
         }
 
-       <style>
-    /* 轮播图样式 */
-    .hero-slider {
-        margin-top: 73px;
-        position: relative;
-        width: 100%;
-        height: 600px;
-        overflow: hidden;
-    }
+        /* 轮播图样式 */
+        .hero-slider {
+            margin-top: 73px;
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
 
-    .slider-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
 
-    .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
 
-    .slide.active {
-        opacity: 1;
-    }
+        .slide.active {
+            opacity: 1;
+        }
 
-    .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center; /* 确保图片居中显示 */
-    }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center; /* 确保图片居中显示 */
+        }
 
-    .slide-content {
-        position: absolute;
-        bottom: 20%;
-        left: 10%;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+        .slide-content {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-    .slide-content h2 {
-        font-size: 2.5em;
-        margin-bottom: 0.5em;
-    }
+        .slide-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
 
-    .slide-content p {
-        font-size: 1.2em;
-    }
+        .slide-content p {
+            font-size: 1.2em;
+        }
 
-    .slider-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 1em;
-        cursor: pointer;
-        font-size: 1.2em;
-        transition: background 0.3s;
-        z-index: 10;
-    }
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+            z-index: 10;
+        }
 
-    .slider-button:hover {
-        background: rgba(0, 0, 0, 0.8);
-    }
+        .slider-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
 
-    .slider-button.prev {
-        left: 20px;
-    }
+        .slider-button.prev {
+            left: 20px;
+        }
 
-    .slider-button.next {
-        right: 20px;
-    }
+        .slider-button.next {
+            right: 20px;
+        }
 
-    .slider-dots {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 10px;
-        z-index: 10;
-    }
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
 
-    .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
-        cursor: pointer;
-        transition: background 0.3s;
-    }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-    .dot.active {
-        background: white;
-    }
-</style>
-<style>
+        .dot.active {
+            background: white;
+        }
+
         /* 主要内容区域样式 */
         main {
             padding: 2rem 0;
@@ -323,51 +321,47 @@
                 font-size: 1em;
             }
         }
-</style>
+
         /* 主办单位样式 */
-        <style>
-    /* 主办单位样式 */
-    .sponsors {
-        padding: 4rem 0;
-        background: #fff;
-    }
+        .sponsors {
+            padding: 4rem 0;
+            background: #fff;
+        }
 
-    .sponsors h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: #333;
-    }
+        .sponsors h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
 
-    .sponsor-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        align-items: center;
-        justify-items: center;
-    }
-
-    .sponsor-item {
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .sponsor-item img {
-        max-width: 200px;
-        height: auto;
-        /* 移除 filter: grayscale(100%) */
-    }
-
-    @media (max-width: 768px) {
         .sponsor-grid {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .sponsor-item {
+            padding: 1rem;
+            text-align: center;
         }
 
         .sponsor-item img {
-            max-width: 150px;
+            max-width: 200px;
+            height: auto;
         }
-    }
-</style>
-<style>
+
+        @media (max-width: 768px) {
+            .sponsor-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .sponsor-item img {
+                max-width: 150px;
+            }
+        }
+
         /* 快速链接样式 */
         .quick-links {
             padding: 4rem 0;
@@ -465,7 +459,6 @@
         .acl-2025-dates th {
             background-color: #f0f4f8;
         }
-
     </style>
 </head>
 <body>
@@ -512,16 +505,16 @@
                     <p>Experience Future Technology</p>
                 </div>
             </div>
-             <div class="slide">
+            <div class="slide">
                 <img src="bo3.jpg" alt="Technology Exhibition">
             </div>
-             <div class="slide">
+            <div class="slide">
                 <img src="bo4.jpg" alt="Technology Exhibition">
             </div>
-             <div class="slide">
+            <div class="slide">
                 <img src="shanxi1.jpg" alt="Technology Exhibition">
             </div>
-             <div class="slide">
+            <div class="slide">
                 <img src="shanxi2.jpg" alt="Technology Exhibition">
             </div>
             <div class="slide">
@@ -532,6 +525,11 @@
         <button class="slider-button next">&gt;</button>
         <div class="slider-dots">
             <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
