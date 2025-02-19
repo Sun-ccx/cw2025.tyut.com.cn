@@ -255,8 +255,12 @@
                     <h2>Local Attractions</h2>
                 </div>
                 <div class="info-box">
-                    <div class="info-item">
-                        <img src="jinci.jpg" alt="jinci">
+        <div class="info-item">
+            <div class="carousel">
+                <img src="jinci1.jpg" alt="Jinci Temple" class="active">
+                <img src="jinci2.jpg" alt="Jinci Temple">
+                <img src="jinci3.jpg" alt="Jinci Temple">
+            </div>
                         <p>Jinci Temple<br>A royal sacrificial garden in Taiyuan,Shanxi,with a long history and exquisite architecture.</p>
                     </div>
                     <div class="info-item">
@@ -297,16 +301,20 @@
     </main>
 <script>
         // 轮播图逻辑
-        const carouselImages = document.querySelectorAll('.carousel img');
-        let currentIndex = 0;
+        const carousels = document.querySelectorAll('.carousel');
 
-        function showNextImage() {
-            carouselImages[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % carouselImages.length;
-            carouselImages[currentIndex].classList.add('active');
-        }
+carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll('img');
+    let currentIndex = 0;
 
-        setInterval(showNextImage, 2400); // 2.4秒切换一次
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 2400); // 2.4秒切换一次
+});
     </script>
 </body>
 </html>
