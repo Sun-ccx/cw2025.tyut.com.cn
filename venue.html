@@ -151,6 +151,65 @@
             display: block;
         }
 
+        /* 黑神话悟空板块样式 */
+        .wukong-section {
+            background: linear-gradient(to right, #1a1a1a, #333);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .wukong-section h2 {
+            font-size: 2em;
+            margin-bottom: 1rem;
+            color: #ffcc00;
+        }
+
+        .wukong-section p {
+            font-size: 1.1em;
+            margin-bottom: 1.5rem;
+            color: #ddd;
+        }
+
+        .wukong-section .keywords {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .wukong-section .keywords span {
+            padding: 0.5rem 1rem;
+            background-color: #444;
+            border-radius: 20px;
+            color: #ffcc00;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .wukong-section .keywords span:hover {
+            background-color: #555;
+        }
+
+        .wukong-section .explore-btn {
+            padding: 0.8rem 2rem;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 25px;
+            color: #1a1a1a;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .wukong-section .explore-btn:hover {
+            background-color: #e6b800;
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -162,6 +221,11 @@
 
             .info-item {
                 margin-bottom: 1rem;
+            }
+
+            .wukong-section .keywords {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -295,7 +359,11 @@
                 <p>Wutai Mountain<br>A Buddhist holy land in Xinzhou,Shanxi,one of China's Four Sacred Mountains,known for its temples and scenic beauty.</p>
                     </div>
                     <div class="info-item">
-                        <img src="qjdy.jpg" alt="Winery">
+            <div class="carousel">
+                <img src="qiaojia1.jpg" alt="Jinci Temple" class="active">
+                <img src="qiaojia2.jpg" alt="Jinci Temple">
+                <img src="qiaojia3.jpg" alt="Jinci Temple">
+            </div>
                         <p>Qiao Family Compound<br>A cluster of ancient buildings from the Ming and Qing dynasties in Qixian,Shanxi,showcasing the essence of Jin merchant culture.</p>
                     </div>
                 </div>
