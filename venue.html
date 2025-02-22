@@ -118,7 +118,13 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             text-align: center;
         }
-
+      /* 首行缩进和两端对齐样式 */
+      .indent-justify {
+         text-indent: 2em; /* 首行缩进 2em */
+         text-align: justify; /* 两端对齐 */
+         text-justify: inter-word; /* 单词间距调整，使对齐更美观 */
+      }
+        
         .info-item img {
             max-width: 100%;
             height: auto;
@@ -407,13 +413,13 @@
                             <img src="tyut12.jpg" alt="Taiyuan University of Technology">
                         </div>
                     </div>
-                    <div class="info-item">
-                        <p>Address: No.209, University Street, Yuci District, Jinzhong City</p>
-                        <p>Taiyuan University of Technology is a century-old institution with a long history,profound heritage,and distinctive characteristics.It is located in Taiyuan,a national historical and cultural city with a history of over 2,500 years.</p>
-                        <p>The university focuses primarily on engineering while integrating science and engineering with the coordinated development of multiple disciplines.It covers nine categories,including science,engineering,economics,education,literature,management,art,and interdisciplinary studies,and has 24 professional colleges.</p>
-                        <p>Taiyuan University of Technology places great emphasis on the construction of sports culture and is the only university in China that has won national championships in both men's basketball and football.</p>
-                        <p>Throughout its long history,Taiyuan University of Technology has always adhered to the motto of"Seeking Truth and Innovation"and is committed to cultivating well-rounded socialist builders and successors who develop morally,intellectually,physically,aesthetically,and laboriously.</p>
-                    </div>
+                   <div class="info-item">
+    <p class="indent-justify">Address: No.209, University Street, Yuci District, Jinzhong City</p>
+    <p class="indent-justify">Taiyuan University of Technology is a century-old institution with a long history, profound heritage, and distinctive characteristics. It is located in Taiyuan, a national historical and cultural city with a history of over 2,500 years.</p>
+    <p class="indent-justify">The university focuses primarily on engineering while integrating science and engineering with the coordinated development of multiple disciplines. It covers nine categories, including science, engineering, economics, education, literature, management, art, and interdisciplinary studies, and has 24 professional colleges.</p>
+    <p class="indent-justify">Taiyuan University of Technology places great emphasis on the construction of sports culture and is the only university in China that has won national championships in both men's basketball and football.</p>
+    <p class="indent-justify">Throughout its long history, Taiyuan University of Technology has always adhered to the motto of "Seeking Truth and Innovation" and is committed to cultivating well-rounded socialist builders and successors who develop morally, intellectually, physically, aesthetically, and laboriously.</p>
+</div>
                 </div>
             </div>
 
