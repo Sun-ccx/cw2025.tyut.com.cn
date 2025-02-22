@@ -259,8 +259,15 @@
 
 /* 移动端样式 */
 @media (max-width: 768px) {
+    .navbar .container {
+        display: flex;
+        justify-content: space-between; /* 将 logo 和汉堡菜单分别放在两侧 */
+        align-items: center;
+    }
+
     .hamburger {
         display: block; /* 显示汉堡菜单 */
+        order: 2; /* 将汉堡菜单放在右侧 */
     }
 
     .nav-links {
@@ -274,6 +281,10 @@
         z-index: 1000;
     }
 
+    .nav-links.active {
+        display: block; /* 显示导航链接 */
+    }
+
     .nav-links ul {
         flex-direction: column;
         padding: 1rem;
@@ -281,10 +292,6 @@
 
     .nav-links ul li {
         margin: 0.5rem 0;
-    }
-
-    .nav-links.active {
-        display: block; /* 显示导航链接 */
     }
 
     .hero-slider {
