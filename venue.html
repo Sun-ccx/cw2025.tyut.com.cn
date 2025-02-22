@@ -257,93 +257,98 @@
             top: 6px;
         }
 
-        /* 移动端样式 */
-        @media (max-width: 768px) {
-            .navbar .container {
-                display: flex;
-                justify-content: space-between; /* 将 logo 和汉堡菜单分别放在两侧 */
-                align-items: center;
-            }
+       /* 移动端样式 */
+@media (max-width: 768px) {
+    /* 确保容器宽度不超出屏幕 */
+    .container {
+        padding: 0 10px; /* 减少内边距 */
+    }
 
-            .hamburger {
-                display: block; /* 显示汉堡菜单 */
-                order: 2; /* 将汉堡菜单放在右侧 */
-            }
+    /* 调整内容区域的顶部间距 */
+    .content {
+        margin-top: 60px; /* 避免被导航栏遮挡 */
+    }
 
-            .nav-links {
-                display: none; /* 默认隐藏导航链接 */
-                position: absolute;
-                top: 60px; /* 导航栏高度 */
-                left: 0;
-                width: 100%;
-                background: #fff;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-                flex-direction: column;
-                padding: 1rem;
-            }
+    /* 调整 .section 的内边距 */
+    .section {
+        padding: 1rem; /* 减少内边距 */
+    }
 
-            .nav-links.active {
-                display: flex; /* 显示导航链接 */
-            }
+    /* 调整 .info-box 为垂直布局 */
+    .info-box {
+        flex-direction: column;
+    }
 
-            .nav-links li {
-                margin: 0.5rem 0;
-            }
+    /* 调整 .info-item 的宽度和间距 */
+    .info-item {
+        width: 100%; /* 确保宽度占满 */
+        margin-bottom: 1rem; /* 增加间距 */
+        padding: 0.5rem; /* 减少内边距 */
+    }
 
-            .hero-slider {
-                margin-top: 60px; /* 调整轮播图的顶部间距 */
-            }
+    /* 调整轮播图的宽度 */
+    .carousel {
+        max-width: 100%; /* 确保轮播图不溢出 */
+    }
 
-            /* 内容区域调整 */
-            .content {
-                margin-top: 60px; /* 调整顶部间距，避免被导航栏遮挡 */
-            }
+    /* 调整黑神话悟空板块的关键字布局 */
+    .wukong-section .keywords {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-            .info-box {
-                flex-direction: column; /* 移动端将 info-box 改为垂直布局 */
-            }
+    .wukong-section .keywords span {
+        width: 100%; /* 关键字占满宽度 */
+    }
 
-            .info-item {
-                margin-bottom: 1rem; /* 增加间距 */
-            }
+    /* 调整视频容器的宽度 */
+    .video-container {
+        width: 100%; /* 视频占满宽度 */
+    }
 
-            .carousel {
-                max-width: 100%; /* 轮播图宽度占满屏幕 */
-            }
+    video {
+        width: 100%; /* 视频占满宽度 */
+    }
 
-            /* 黑神话悟空板块调整 */
-            .wukong-section .keywords {
-                flex-direction: column; /* 关键字垂直排列 */
-                gap: 0.5rem;
-            }
+    /* 调整列表和段落的样式 */
+    .info-item ul {
+        padding-left: 1rem; /* 调整列表内边距 */
+    }
 
-            .wukong-section .keywords span {
-                width: 100%; /* 关键字占满宽度 */
-            }
+    .info-item p {
+        font-size: 0.9em; /* 缩小段落字体 */
+        line-height: 1.4; /* 增加行高 */
+    }
 
-            /* 交通指南和实用信息板块调整 */
-            .section-header h2 {
-                font-size: 1.2em; /* 缩小标题字体 */
-            }
+    /* 调整标题字体大小 */
+    .section-header h2 {
+        font-size: 1.2em; /* 缩小标题字体 */
+    }
 
-            .info-item h3 {
-                font-size: 1em; /* 缩小子标题字体 */
-            }
+    .info-item h3 {
+        font-size: 1em; /* 缩小子标题字体 */
+    }
 
-            .info-item ul {
-                padding-left: 1rem; /* 调整列表内边距 */
-            }
+    /* 调整导航栏的布局 */
+    .nav-links {
+        top: 60px; /* 导航栏高度 */
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        flex-direction: column;
+        padding: 1rem;
+    }
 
-            /* 视频容器调整 */
-            .video-container {
-                width: 100%; /* 视频占满宽度 */
-            }
+    .nav-links.active {
+        display: flex; /* 显示导航链接 */
+    }
 
-            video {
-                width: 100%; /* 视频占满宽度 */
-            }
-        }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+}
     </style>
 </head>
 <body>
