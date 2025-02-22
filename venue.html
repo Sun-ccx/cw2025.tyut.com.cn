@@ -210,175 +210,171 @@
             background-color: #e6b800;
         }
 
-       /* 汉堡菜单样式 */
-.hamburger {
-    display: none; /* 默认隐藏 */
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-    z-index: 1001;
-}
+        /* 汉堡菜单样式 */
+        .hamburger {
+            display: none; /* 默认隐藏 */
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+            z-index: 1001;
+        }
 
-.hamburger-box {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-}
+        .hamburger-box {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+        }
 
-.hamburger-inner {
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s;
-}
+        .hamburger-inner {
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s;
+        }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    transition: transform 0.3s;
-}
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s;
+        }
 
-.hamburger-inner::before {
-    top: -6px;
-}
+        .hamburger-inner::before {
+            top: -6px;
+        }
 
-.hamburger-inner::after {
-    top: 6px;
-}
+        .hamburger-inner::after {
+            top: 6px;
+        }
 
-/* 移动端样式 */
-@media (max-width: 768px) {
-    .navbar .container {
-        display: flex;
-        justify-content: space-between; /* 将 logo 和汉堡菜单分别放在两侧 */
-        align-items: center;
-    }
+        /* 移动端样式 */
+        @media (max-width: 768px) {
+            .navbar .container {
+                display: flex;
+                justify-content: space-between; /* 将 logo 和汉堡菜单分别放在两侧 */
+                align-items: center;
+            }
 
-    .hamburger {
-        display: block; /* 显示汉堡菜单 */
-        order: 2; /* 将汉堡菜单放在右侧 */
-    }
+            .hamburger {
+                display: block; /* 显示汉堡菜单 */
+                order: 2; /* 将汉堡菜单放在右侧 */
+            }
 
-    .nav-links {
-        display: none; /* 默认隐藏导航链接 */
-        position: absolute;
-        top: 60px; /* 导航栏高度 */
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
+            .nav-links {
+                display: none; /* 默认隐藏导航链接 */
+                position: absolute;
+                top: 60px; /* 导航栏高度 */
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                flex-direction: column;
+                padding: 1rem;
+            }
 
-    .nav-links.active {
-        display: block; /* 显示导航链接 */
-    }
+            .nav-links.active {
+                display: flex; /* 显示导航链接 */
+            }
 
-    .nav-links ul {
-        flex-direction: column;
-        padding: 1rem;
-    }
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
 
-    .nav-links ul li {
-        margin: 0.5rem 0;
-    }
+            .hero-slider {
+                margin-top: 60px; /* 调整轮播图的顶部间距 */
+            }
+        }
 
-    .hero-slider {
-        margin-top: 60px; /* 调整轮播图的顶部间距 */
-    }
-}
         /* 移动端响应式样式 */
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
+            /* 内容区域调整 */
+            .content {
+                margin-top: 60px; /* 调整顶部间距，避免被导航栏遮挡 */
+            }
 
-    /* 内容区域调整 */
-    .content {
-        margin-top: 60px; /* 调整顶部间距，避免被导航栏遮挡 */
-    }
+            .info-box {
+                flex-direction: column; /* 移动端将 info-box 改为垂直布局 */
+            }
 
-    .info-box {
-        flex-direction: column; /* 移动端将 info-box 改为垂直布局 */
-    }
+            .info-item {
+                margin-bottom: 1rem; /* 增加间距 */
+            }
 
-    .info-item {
-        margin-bottom: 1rem; /* 增加间距 */
-    }
+            .carousel {
+                max-width: 100%; /* 轮播图宽度占满屏幕 */
+            }
 
-    .carousel {
-        max-width: 100%; /* 轮播图宽度占满屏幕 */
-    }
+            /* 黑神话悟空板块调整 */
+            .wukong-section .keywords {
+                flex-direction: column; /* 关键字垂直排列 */
+                gap: 0.5rem;
+            }
 
-    /* 黑神话悟空板块调整 */
-    .wukong-section .keywords {
-        flex-direction: column; /* 关键字垂直排列 */
-        gap: 0.5rem;
-    }
+            .wukong-section .keywords span {
+                width: 100%; /* 关键字占满宽度 */
+            }
 
-    .wukong-section .keywords span {
-        width: 100%; /* 关键字占满宽度 */
-    }
+            /* 交通指南和实用信息板块调整 */
+            .section-header h2 {
+                font-size: 1.2em; /* 缩小标题字体 */
+            }
 
-    /* 交通指南和实用信息板块调整 */
-    .section-header h2 {
-        font-size: 1.2em; /* 缩小标题字体 */
-    }
+            .info-item h3 {
+                font-size: 1em; /* 缩小子标题字体 */
+            }
 
-    .info-item h3 {
-        font-size: 1em; /* 缩小子标题字体 */
-    }
+            .info-item ul {
+                padding-left: 1rem; /* 调整列表内边距 */
+            }
 
-    .info-item ul {
-        padding-left: 1rem; /* 调整列表内边距 */
-    }
+            /* 视频容器调整 */
+            .video-container {
+                width: 100%; /* 视频占满宽度 */
+            }
 
-    /* 视频容器调整 */
-    .video-container {
-        width: 100%; /* 视频占满宽度 */
-    }
-
-    video {
-        width: 100%; /* 视频占满宽度 */
-    }
-}
-        
+            video {
+                width: 100%; /* 视频占满宽度 */
+            }
+        }
     </style>
 </head>
 <body>
-   <header class="main-header">
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="logo11.png" alt="CW Logo">
-            </a>
-            <!-- 汉堡菜单按钮 -->
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-            <!-- 导航链接 -->
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="flyer.html">Flyer</a></li>
-                <li><a href="program.html">Conference Program</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="speakers.html">Keynote Speakers</a></li>
-                <li><a href="committee.html">Committee</a></li>
-                <li><a href="venue.html">For Attendees</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="logo11.png" alt="CW Logo">
+                </a>
+                <!-- 汉堡菜单按钮 -->
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <!-- 导航链接 -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flyer.html">Flyer</a></li>
+                    <li><a href="program.html">Conference Program</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="speakers.html">Keynote Speakers</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="venue.html">For Attendees</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="content">
             <div class="section">
@@ -412,29 +408,22 @@
                 </div>
             </div>
 
+            <div class="content">
+                <!-- 黑神话悟空板块 -->
+                <div class="wukong-section">
+                    <h2>Black Myth: Wukong and Shanxi</h2>
+                    <p>The creative inspiration for Black Myth: Wukong largely originates from the profound cultural heritage of Shanxi. The game scenes blend seamlessly with the ancient architecture and mythological tales of Shanxi, taking you on a journey to explore the beauty of Eastern fantasy.</p>
+                    
+                    <!-- 视频插入 -->
+                    <div class="video-container">
+                        <video controls width="100%">
+                            <source src="wokong2026.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
 
-             <div class="content">
-            <!-- 黑神话悟空板块 -->
-            <!-- 黑神话悟空板块 -->
-<div class="wukong-section">
-    <h2>Black Myth: Wukong and Shanxi</h2>
-    <p>The creative inspiration for Black Myth: Wukong largely originates from the profound cultural heritage of Shanxi. The game scenes blend seamlessly with the ancient architecture and mythological tales of Shanxi, taking you on a journey to explore the beauty of Eastern fantasy.</p>
-    
-    <!-- 视频插入 -->
-    <div class="video-container">
-        <video controls width="100%">
-            <source src="wokong2026.mp4" type="video/mp4">
-           
-        </video>
-    </div>
-    
-
-
-    <!-- 关键字 -->
-    
-  </div>
-</div>
-             <div class="section">
+            <div class="section">
                 <div class="section-header">
                     <h2>Transportation Guide</h2>
                 </div>
@@ -452,7 +441,7 @@
                         <ul>
                             <li>Take Bus No. 902 directly from Taiyuan Railway Station to Taiyuan University of Technology Mingxiang Campus.</li>
                             <li>Or take a taxi to the university</li>
-                            <li></li>About 1 hour 30 minutes.</li>
+                            <li>About 1 hour 30 minutes.</li>
                         </ul>
                     </div>
                     <div class="info-item">
@@ -471,29 +460,28 @@
                     <h2>Local Attractions</h2>
                 </div>
                 <div class="info-box">
-        <div class="info-item">
-            <div class="carousel">
-                <img src="jinci1.jpg" alt="Jinci Temple" class="active">
-                <img src="jinci2.jpg" alt="Jinci Temple">
-                <img src="jinci3.jpg" alt="Jinci Temple">
-            </div>
+                    <div class="info-item">
+                        <div class="carousel">
+                            <img src="jinci1.jpg" alt="Jinci Temple" class="active">
+                            <img src="jinci2.jpg" alt="Jinci Temple">
+                            <img src="jinci3.jpg" alt="Jinci Temple">
+                        </div>
                         <p>Jinci Temple<br>A royal sacrificial garden in Taiyuan,Shanxi,with a long history and exquisite architecture.</p>
                     </div>
-                     <div class="info-item">
-            <div class="carousel">
-                <img src="wutaishan1.jpg" alt="Wutai Mountain" class="active">
-                <img src="wutaishan2.jpg" alt="Wutai Mountain">
-                <img src="wutaishan3.jpg" alt="Wutai Mountain">
-            </div>
-                <p>Wutai Mountain<br>A Buddhist holy land in Xinzhou,Shanxi,one of China's Four Sacred Mountains,known for its temples and scenic beauty.</p>
+                    <div class="info-item">
+                        <div class="carousel">
+                            <img src="wutaishan1.jpg" alt="Wutai Mountain" class="active">
+                            <img src="wutaishan2.jpg" alt="Wutai Mountain">
+                            <img src="wutaishan3.jpg" alt="Wutai Mountain">
+                        </div>
+                        <p>Wutai Mountain<br>A Buddhist holy land in Xinzhou,Shanxi,one of China's Four Sacred Mountains,known for its temples and scenic beauty.</p>
                     </div>
                     <div class="info-item">
-            <div class="carousel">
-                <img src="qjdy.jpg" alt="Jinci Temple" class="active">
-                <img src="qiaojia2.jpg" alt="Jinci Temple">
-                <img src="qiaojia3.jpg" alt="Jinci Temple">
-              
-            </div>
+                        <div class="carousel">
+                            <img src="qjdy.jpg" alt="Jinci Temple" class="active">
+                            <img src="qiaojia2.jpg" alt="Jinci Temple">
+                            <img src="qiaojia3.jpg" alt="Jinci Temple">
+                        </div>
                         <p>Qiao Family Compound<br>A cluster of ancient buildings from the Ming and Qing dynasties in Qixian,Shanxi,showcasing the essence of Jin merchant culture.</p>
                     </div>
                 </div>
@@ -504,7 +492,7 @@
                     <h2>Practical Information</h2>
                 </div>
                 <div class="info-box">
-                   <div class="info-item">
+                    <div class="info-item">
                         <h3>Conference Service Desk</h3>
                         <p>Phone: 17535007386<br>Email:wangjianfeng@tyut.edu.cn</p>
                     </div>
@@ -524,35 +512,35 @@
             </div>
         </div>
     </main>
-<script>
+    <script>
         // 轮播图逻辑
         const carousels = document.querySelectorAll('.carousel');
 
-carousels.forEach(carousel => {
-    const images = carousel.querySelectorAll('img');
-    let currentIndex = 0;
+        carousels.forEach(carousel => {
+            const images = carousel.querySelectorAll('img');
+            let currentIndex = 0;
 
-    function showNextImage() {
-        images[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add('active');
-    }
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
 
-    setInterval(showNextImage, 2400); // 2.4秒切换一次
-});
+            setInterval(showNextImage, 2400); // 2.4秒切换一次
+        });
 
- document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+        // 汉堡菜单逻辑
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', function () {
-        // 切换导航栏的显示状态
-        navLinks.classList.toggle('active');
-        // 切换汉堡菜单的动画
-        hamburger.classList.toggle('is-active');
-    });
-});
-    
+            hamburger.addEventListener('click', function () {
+                // 切换导航栏的显示状态
+                navLinks.classList.toggle('active');
+                // 切换汉堡菜单的动画
+                hamburger.classList.toggle('is-active');
+            });
+        });
     </script>
 </body>
 </html>
