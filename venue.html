@@ -80,136 +80,6 @@
             color: #007bff;
         }
 
-        /* 内容样式 */
-        .content {
-            margin-top: 100px;
-            padding: 2rem 0;
-        }
-
-        .section {
-            margin-bottom: 3rem;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .section-header h2 {
-            font-size: 1.5em;
-            color: #333;
-        }
-
-        .info-box {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .info-item {
-            flex: 1;
-            padding: 1rem;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .info-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .info-item p {
-            margin-top: 0.5rem;
-            color: #666;
-        }
-
-        /* 轮播图样式 */
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: auto;
-            display: none;
-            border-radius: 5px;
-        }
-
-        .carousel img.active {
-            display: block;
-        }
-
-        /* 黑神话悟空板块样式 */
-        .wukong-section {
-            background: linear-gradient(to right, #1a1a1a, #333);
-            color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-
-        .wukong-section h2 {
-            font-size: 2em;
-            margin-bottom: 1rem;
-            color: #ffcc00;
-        }
-
-        .wukong-section p {
-            font-size: 1.1em;
-            margin-bottom: 1.5rem;
-            color: #ddd;
-        }
-
-        .wukong-section .keywords {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .wukong-section .keywords span {
-            padding: 0.5rem 1rem;
-            background-color: #444;
-            border-radius: 20px;
-            color: #ffcc00;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .wukong-section .keywords span:hover {
-            background-color: #555;
-        }
-
-        .wukong-section .explore-btn {
-            padding: 0.8rem 2rem;
-            background-color: #ffcc00;
-            border: none;
-            border-radius: 25px;
-            color: #1a1a1a;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .wukong-section .explore-btn:hover {
-            background-color: #e6b800;
-        }
-
         /* 汉堡菜单样式 */
         .hamburger {
             display: none; /* 默认隐藏 */
@@ -257,98 +127,88 @@
             top: 6px;
         }
 
-       /* 移动端样式 */
-@media (max-width: 768px) {
-    /* 确保容器宽度不超出屏幕 */
-    .container {
-        padding: 0 10px; /* 减少内边距 */
-    }
+        /* 移动端样式 */
+        @media (max-width: 768px) {
+            .navbar .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
 
-    /* 调整内容区域的顶部间距 */
-    .content {
-        margin-top: 60px; /* 避免被导航栏遮挡 */
-    }
+            .hamburger {
+                display: block; /* 显示汉堡菜单 */
+            }
 
-    /* 调整 .section 的内边距 */
-    .section {
-        padding: 1rem; /* 减少内边距 */
-    }
+            .nav-links {
+                display: none; /* 默认隐藏导航链接 */
+                position: absolute;
+                top: 60px; /* 导航栏高度 */
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                flex-direction: column;
+                padding: 1rem;
+            }
 
-    /* 调整 .info-box 为垂直布局 */
-    .info-box {
-        flex-direction: column;
-    }
+            .nav-links.active {
+                display: flex; /* 显示导航链接 */
+            }
 
-    /* 调整 .info-item 的宽度和间距 */
-    .info-item {
-        width: 100%; /* 确保宽度占满 */
-        margin-bottom: 1rem; /* 增加间距 */
-        padding: 0.5rem; /* 减少内边距 */
-    }
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="logo11.png" alt="CW Logo">
+                </a>
+                <!-- 汉堡菜单按钮 -->
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <!-- 导航链接 -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flyer.html">Flyer</a></li>
+                    <li><a href="program.html">Conference Program</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="speakers.html">Keynote Speakers</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="venue.html">For Attendees</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <!-- 内容部分保持不变 -->
+        </div>
+    </main>
+    <script>
+        // 汉堡菜单逻辑
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-    /* 调整轮播图的宽度 */
-    .carousel {
-        max-width: 100%; /* 确保轮播图不溢出 */
-    }
-
-    /* 调整黑神话悟空板块的关键字布局 */
-    .wukong-section .keywords {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .wukong-section .keywords span {
-        width: 100%; /* 关键字占满宽度 */
-    }
-
-    /* 调整视频容器的宽度 */
-    .video-container {
-        width: 100%; /* 视频占满宽度 */
-    }
-
-    video {
-        width: 100%; /* 视频占满宽度 */
-    }
-
-    /* 调整列表和段落的样式 */
-    .info-item ul {
-        padding-left: 1rem; /* 调整列表内边距 */
-    }
-
-    .info-item p {
-        font-size: 0.9em; /* 缩小段落字体 */
-        line-height: 1.4; /* 增加行高 */
-    }
-
-    /* 调整标题字体大小 */
-    .section-header h2 {
-        font-size: 1.2em; /* 缩小标题字体 */
-    }
-
-    .info-item h3 {
-        font-size: 1em; /* 缩小子标题字体 */
-    }
-
-    /* 调整导航栏的布局 */
-    .nav-links {
-        top: 60px; /* 导航栏高度 */
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .nav-links.active {
-        display: flex; /* 显示导航链接 */
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-}
+            hamburger.addEventListener('click', function () {
+                // 切换导航栏的显示状态
+                navLinks.classList.toggle('active');
+                // 切换汉堡菜单的动画
+                hamburger.classList.toggle('is-active');
+            });
+        });
+    </script>
+</body>
+</html>
     </style>
 </head>
 <body>
