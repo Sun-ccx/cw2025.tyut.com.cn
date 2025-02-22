@@ -179,7 +179,62 @@
         .dot.active {
             background: white;
         }
+/* 重要日期板块样式 */
+.important-dates {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.important-dates h2 {
+    text-align: center;
+    color: #007bff; /* 标题为蓝色 */
+    margin-bottom: 1.5rem;
+    font-size: 1.8em;
+}
+
+.important-dates table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.important-dates th,
+.important-dates td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+}
+
+.important-dates th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.important-dates td {
+    color: #555;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .important-dates table {
+        font-size: 0.9em;
+    }
+
+    .important-dates th,
+    .important-dates td {
+        padding: 0.6rem;
+    }
+}
+
+
+
+
+        
         /* 主要内容区域样式 */
         main {
             padding: 2rem 0;
@@ -616,6 +671,38 @@
         </div>
     </section>
 
+<!-- 重要日期板块 -->
+<section class="important-dates">
+    <div class="container">
+        <h2>Important Dates</h2>
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>Paper Submission Deadline</td>
+                <td>February 15, 2025</td>
+            </tr>
+            <tr>
+                <td>Notification of Acceptance</td>
+                <td>May 15, 2025</td>
+            </tr>
+            <tr>
+                <td>Camera-ready Papers Due</td>
+                <td>May 30, 2025</td>
+            </tr>
+            <tr>
+                <td>Conference Dates</td>
+                <td>July 27 - August 1, 2025</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+
+    
     <!-- 待插入 -->
     
    <section class="sponsors">
