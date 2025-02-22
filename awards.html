@@ -193,17 +193,7 @@
     }
 }
 
-    document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', function () {
-        // 切换导航栏的显示状态
-        navLinks.classList.toggle('active');
-        // 切换汉堡菜单的动画
-        hamburger.classList.toggle('is-active');
-    });
-});
         
     </style>
 </head>
@@ -259,5 +249,21 @@
             </div>
         </section>
     </main>
+
+
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+        // 切换导航栏的显示状态
+        navLinks.classList.toggle('active');
+        // 切换汉堡菜单的动画
+        hamburger.classList.toggle('is-active');
+    });
+});
+</script>
 </body>
 </html>
+
