@@ -85,10 +85,13 @@
             text-align: center; /* 添加居中样式 */
         }
 
-       .committee-header h1 {
-    font-size: 10em; /* 将字号从 3em 增加到 4em */
-    color: #333;
-    margin-bottom: 1rem;
+      .committee-header h1 {
+    font-size: 8em; /* 超级大的字体 */
+    font-weight: bold; /* 加粗 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+    margin-bottom: 20px; /* 增加底部间距 */
+    text-align: center; /* 居中显示 */
+}
 }
 
         .committee-role {
@@ -218,7 +221,9 @@
 </header>
     <main>
         <section class="committee-section">
-            <h1>Committee</h1>
+    <div class="committee-header">
+        <h1>Committee</h1> <!-- 这是需要变大的标题 -->
+    </div>
             <p class="committee-role">GENERAL CHAIR</p>
             <p class="committee-member">Mingqiang Wei, Yanwen Guo,Yvhua Qian</p>
 
