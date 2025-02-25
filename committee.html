@@ -82,16 +82,16 @@
         .committee-section {
             margin-top: 100px;
             padding: 2rem 0;
-            text-align: center; /* 添加居中样式 */
+            text-align: left; /* 修改为左对齐 */
         }
 
-      .committee-header h1 {
-    font-size: 8em; /* 超级大的字体 */
-    font-weight: bold; /* 加粗 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
-    margin-bottom: 20px; /* 增加底部间距 */
-    text-align: center; /* 居中显示 */
-}
+        .committee-header h1 {
+            font-size: 5em; /* 超级大的字体 */
+            font-weight: bold; /* 加粗 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+            margin-bottom: 20px; /* 增加底部间距 */
+            text-align: left; /* 修改为左对齐 */
+        }
 
         .committee-role {
             font-size: 1.2em;
@@ -107,132 +107,134 @@
 
         .committee-track {
             margin-top: 2rem;
+            font-style: italic; /* 斜体 */
+            color: #666; /* 字体颜色变浅 */
+            font-size: 1.5em; /* 字体变大 */
         }
 
-      /* 汉堡菜单样式 */
-.hamburger {
-    display: none; /* 默认隐藏 */
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-    z-index: 1001;
-}
+        /* 汉堡菜单样式 */
+        .hamburger {
+            display: none; /* 默认隐藏 */
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+            z-index: 1001;
+        }
 
-.hamburger-box {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-}
+        .hamburger-box {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+        }
 
-.hamburger-inner {
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s;
-}
+        .hamburger-inner {
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s;
+        }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    transition: transform 0.3s;
-}
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s;
+        }
 
-.hamburger-inner::before {
-    top: -6px;
-}
+        .hamburger-inner::before {
+            top: -6px;
+        }
 
-.hamburger-inner::after {
-    top: 6px;
-}
+        .hamburger-inner::after {
+            top: 6px;
+        }
 
-/* 移动端样式 */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* 显示汉堡菜单 */
-    }
+        /* 移动端样式 */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block; /* 显示汉堡菜单 */
+            }
 
-    .nav-links {
-        display: none; /* 默认隐藏导航链接 */
-        position: absolute;
-        top: 60px; /* 导航栏高度 */
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
+            .nav-links {
+                display: none; /* 默认隐藏导航链接 */
+                position: absolute;
+                top: 60px; /* 导航栏高度 */
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
 
-    .nav-links ul {
-        flex-direction: column;
-        padding: 1rem;
-    }
+            .nav-links ul {
+                flex-direction: column;
+                padding: 1rem;
+            }
 
-    .nav-links ul li {
-        margin: 0.5rem 0;
-    }
+            .nav-links ul li {
+                margin: 0.5rem 0;
+            }
 
-    .nav-links.active {
-        display: block; /* 显示导航链接 */
-    }
+            .nav-links.active {
+                display: block; /* 显示导航链接 */
+            }
 
-    .hero-slider {
-        margin-top: 60px; /* 调整轮播图的顶部间距 */
-    }
-}
+            .hero-slider {
+                margin-top: 60px; /* 调整轮播图的顶部间距 */
+            }
+        }
     </style>
 </head>
 <body>
     <header class="main-header">
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="logo11.png" alt="CW Logo">
-            </a>
-            <!-- 汉堡菜单按钮 -->
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-            <!-- 导航链接 -->
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="flyer.html">Flyer</a></li>
-                <li><a href="program.html">Conference Program</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="speakers.html">Keynote Speakers</a></li>
-                <li><a href="committee.html">Committee</a></li>
-                <li><a href="venue.html">For Attendees</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="logo11.png" alt="CW Logo">
+                </a>
+                <!-- 汉堡菜单按钮 -->
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <!-- 导航链接 -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flyer.html">Flyer</a></li>
+                    <li><a href="program.html">Conference Program</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="speakers.html">Keynote Speakers</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="venue.html">For Attendees</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <section class="committee-section">
-    <div class="committee-header">
-        <h1>Committee</h1> <!-- 这是需要变大的标题 -->
-    </div>
+            <div class="committee-header">
+                <h1>Committee</h1> <!-- 这是需要变大的标题 -->
+            </div>
             <p class="committee-role">GENERAL CHAIR</p>
-            <p class="committee-member">Mingqiang Wei, Yanwen Guo,Yvhua Qian</p>
+            <p class="committee-member">Mingqiang Wei, Yanwen Guo, Yvhua Qian</p>
 
             <p class="committee-role">PC CHAIR</p>
-            <p class="committee-member">Zehua Chen,Lei Zhu</p>
+            <p class="committee-member">Zehua Chen, Lei Zhu</p>
             <p class="committee-member">Alexei Sourin, Nanyang Technological University</p>
 
             <p class="committee-role">LOCAL ORGANIZATION CHAIR</p>
-            <p class="committee-member">Jianfeng Wang,Yongfei Wu,Feijiang Li</p>
-            
+            <p class="committee-member">Jianfeng Wang, Yongfei Wu, Feijiang Li</p>
 
             <p class="committee-role">PUBLICATION CHAIR</p>
             <p class="committee-member">Chaoli Sun</p>
@@ -244,76 +246,73 @@
             <p class="committee-member">Pending update</p>
 
             <p class="committee-role">COMMITTEE MEMBER</p>
-            <p class="committee-role">Track on Visual and Interactive Computing</p>
-<p class="committee-member">Selim Balcisoy, Sabanci University</p>
-<p class="committee-member">Saoussen Ben, Jabra University of Sousse</p>
-<p class="committee-member">Amal Dev Parakkat, Institut Polytechnique de Paris</p>
-<p class="committee-member">Rae Earnshaw, University of Bradford</p>
-<p class="committee-member">Issei Fujishiro, Keio University</p>
-<p class="committee-member">Tsukasa Fukusato, The University of Tokyo</p>
-<p class="committee-member">Akemi Galvez-Tomida, University of Cantabria</p>
-<p class="committee-member">Sami Gazzah, Université de Sousse. ISITCOM</p>
-<p class="committee-member">Yuki Igarashi, Ochanomizu University</p>
-<p class="committee-member">Tomoya Ito, Hachinohe Institute of Technology</p>
-<p class="committee-member">Takayuki Itoh, Ochanomizu University</p>
-<p class="committee-member">Xiaogang Jin, State Key Lab of CAD\&CG, Zhejiang University</p>
-<p class="committee-member">Kouichi Konno, Iwate University</p>
-<p class="committee-member">Michel Krämer, Fraunhofer Institute for Computer Graphics Research</p>
-<p class="committee-member">Hiroyuki Kubo, Chiba University</p>
-<p class="committee-member">Arjan Kuijper, TU Darmstadt</p>
-<p class="committee-member">Akinobu Maejima, OLM Digital, Inc.</p>
-<p class="committee-member">Xiaoyang Mao, University of Yamanashi</p>
-<p class="committee-member">Shinya Miyazaki, Chukyo University</p>
-<p class="committee-member">Ming-Yong Pang, Nanjing Normal University</p>
-<p class="committee-member">Simant Prakoonwit, Bournemouth University</p>
-<p class="committee-member">Kaisei Sakurai, DWANGO Co., Ltd.</p>
-<p class="committee-member">Mie Sato, Utsunomiya University</p>
-<p class="committee-member">Syuhei Sato, Hosei University</p>
-<p class="committee-member">Michio Shiraishi, Toho University</p>
-<p class="committee-member">Alexei Sourin, Nanyang Technological University</p>
-<p class="committee-member">Hiroki Takahashi, The University of Electro-Communications</p>
-<p class="committee-member">Yuriko Takeshima, Tokyo University of Technology</p>
-<p class="committee-member">Daniel Thalmann, Ecole Polytechnique Fédérale de Lausanne</p>
-<p class="committee-member">Masahiro Toyoura, University of Yamanashi</p>
-<p class="committee-member">Krzysztof Walczak, Poznań University of Economics and Business</p>
-<p class="committee-member">Mingqiang Wei, Taiyuan University of Technology</p>
-<p class="committee-member">Zhongke Wu, Beijing Normal University</p>
-<p class="committee-member">Haoran Xie, Japan Advanced Institute of Science and Technology</p>
-<p class="committee-member">Norimasa Yoshida, Nihon University</p>
-<p class="committee-member">Qingshu Yuan, Hangzhou Normal University</p>
-<p class="committee-member">Jiri Zara Czech, Technical University in Prague</p>
-<p class="committee-member">Chao Zhang, University of Toyama</p>
-<p class="committee-member">Jiang Yu, Zheng Purdue University</p>
+            <p class="committee-track">Track on Visual and Interactive Computing</p>
+            <p class="committee-member">Selim Balcisoy, Sabanci University</p>
+            <p class="committee-member">Saoussen Ben, Jabra University of Sousse</p>
+            <p class="committee-member">Amal Dev Parakkat, Institut Polytechnique de Paris</p>
+            <p class="committee-member">Rae Earnshaw, University of Bradford</p>
+            <p class="committee-member">Issei Fujishiro, Keio University</p>
+            <p class="committee-member">Tsukasa Fukusato, The University of Tokyo</p>
+            <p class="committee-member">Akemi Galvez-Tomida, University of Cantabria</p>
+            <p class="committee-member">Sami Gazzah, Université de Sousse. ISITCOM</p>
+            <p class="committee-member">Yuki Igarashi, Ochanomizu University</p>
+            <p class="committee-member">Tomoya Ito, Hachinohe Institute of Technology</p>
+            <p class="committee-member">Takayuki Itoh, Ochanomizu University</p>
+            <p class="committee-member">Xiaogang Jin, State Key Lab of CAD\&CG, Zhejiang University</p>
+            <p class="committee-member">Kouichi Konno, Iwate University</p>
+            <p class="committee-member">Michel Krämer, Fraunhofer Institute for Computer Graphics Research</p>
+            <p class="committee-member">Hiroyuki Kubo, Chiba University</p>
+            <p class="committee-member">Arjan Kuijper, TU Darmstadt</p>
+            <p class="committee-member">Akinobu Maejima, OLM Digital, Inc.</p>
+            <p class="committee-member">Xiaoyang Mao, University of Yamanashi</p>
+            <p class="committee-member">Shinya Miyazaki, Chukyo University</p>
+            <p class="committee-member">Ming-Yong Pang, Nanjing Normal University</p>
+            <p class="committee-member">Simant Prakoonwit, Bournemouth University</p>
+            <p class="committee-member">Kaisei Sakurai, DWANGO Co., Ltd.</p>
+            <p class="committee-member">Mie Sato, Utsunomiya University</p>
+            <p class="committee-member">Syuhei Sato, Hosei University</p>
+            <p class="committee-member">Michio Shiraishi, Toho University</p>
+            <p class="committee-member">Alexei Sourin, Nanyang Technological University</p>
+            <p class="committee-member">Hiroki Takahashi, The University of Electro-Communications</p>
+            <p class="committee-member">Yuriko Takeshima, Tokyo University of Technology</p>
+            <p class="committee-member">Daniel Thalmann, Ecole Polytechnique Fédérale de Lausanne</p>
+            <p class="committee-member">Masahiro Toyoura, University of Yamanashi</p>
+            <p class="committee-member">Krzysztof Walczak, Poznań University of Economics and Business</p>
+            <p class="committee-member">Mingqiang Wei, Taiyuan University of Technology</p>
+            <p class="committee-member">Zhongke Wu, Beijing Normal University</p>
+            <p class="committee-member">Haoran Xie, Japan Advanced Institute of Science and Technology</p>
+            <p class="committee-member">Norimasa Yoshida, Nihon University</p>
+            <p class="committee-member">Qingshu Yuan, Hangzhou Normal University</p>
+            <p class="committee-member">Jiri Zara Czech, Technical University in Prague</p>
+            <p class="committee-member">Chao Zhang, University of Toyama</p>
+            <p class="committee-member">Jiang Yu, Zheng Purdue University</p>
 
-<p class="committee-role">Track on Cognitive Human-Machine Interaction</p>
-<p class="committee-member">Jian Cui, Zhejiang Lab</p>
-<p class="committee-member">Andres Iglesias, Prieto University of Cantabria</p>
-<p class="committee-member">Anastasia Kovaleva, FRC IEBPT</p>
-<p class="committee-member">Fan Li, Hongkong Polyu</p>
-<p class="committee-member">Ruilin Li, Nanyang Technological University</p>
-<p class="committee-member">Wei Lun Lim, Nanyang Technological University</p>
-<p class="committee-member">Yisi Liu, Singapore Polytechnic</p>
-<p class="committee-member">Reinhold Scherer, University of Essex</p>
-<p class="committee-member">Olga Sourina, Nanyang Technological University</p>
-
-</p>
-            </div>
+            <p class="committee-track">Track on Cognitive Human-Machine Interaction</p>
+            <p class="committee-member">Jian Cui, Zhejiang Lab</p>
+            <p class="committee-member">Andres Iglesias, Prieto University of Cantabria</p>
+            <p class="committee-member">Anastasia Kovaleva, FRC IEBPT</p>
+            <p class="committee-member">Fan Li, Hongkong Polyu</p>
+            <p class="committee-member">Ruilin Li, Nanyang Technological University</p>
+            <p class="committee-member">Wei Lun Lim, Nanyang Technological University</p>
+            <p class="committee-member">Yisi Liu, Singapore Polytechnic</p>
+            <p class="committee-member">Reinhold Scherer, University of Essex</p>
+            <p class="committee-member">Olga Sourina, Nanyang Technological University</p>
         </section>
     </main>
 
-<script>
-      document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', function () {
-        // 切换导航栏的显示状态
-        navLinks.classList.toggle('active');
-        // 切换汉堡菜单的动画
-        hamburger.classList.toggle('is-active');
-    });
-});
-</script>
+            hamburger.addEventListener('click', function () {
+                // 切换导航栏的显示状态
+                navLinks.classList.toggle('active');
+                // 切换汉堡菜单的动画
+                hamburger.classList.toggle('is-active');
+            });
+        });
+    </script>
 </body>
 </html>
     
