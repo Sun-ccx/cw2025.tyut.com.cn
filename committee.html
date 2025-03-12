@@ -83,26 +83,42 @@
     display: flex;
     justify-content: space-between; /* 三张照片均匀分布 */
     align-items: center; /* 垂直居中 */
-    width: 70%; /* 容器宽度占页面宽度的70% */
+    width: 100%; /* 容器宽度占满父容器 */
     margin: 20px auto; /* 上下外边距为20px，左右自动居中 */
     padding: 0; /* 清除内边距 */
+    flex-wrap: wrap; /* 允许换行，用于移动端布局 */
 }
 
 .committee-member-photo {
     text-align: center; /* 文字居中 */
     width: 30%; /* 每张照片占容器宽度的30%，留出一些空间用于间隔 */
+    margin-bottom: 20px; /* 移动端换行时的间距 */
 }
 
 .committee-member-photo img {
     width: 100%; /* 图片宽度占满容器 */
     height: auto; /* 保持图片的原始比例 */
-    object-fit: contain; /* 确保图片完整显示，不裁剪 */
+    object-fit: cover; /* 确保图片完整显示，不裁剪 */
+    border-radius: 50%; /* 圆形头像 */
     margin-bottom: 10px; /* 图片和名字的间距 */
 }
 
 .committee-member-photo p {
     font-size: 1.2em; /* 增大名字的字体大小 */
     color: #333; /* 字体颜色 */
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    .committee-general-chair {
+        flex-direction: column; /* 在移动端改为单列布局 */
+        align-items: center; /* 居中对齐 */
+    }
+
+    .committee-member-photo {
+        width: 100%; /* 每张照片占满整个容器宽度 */
+        margin-bottom: 20px; /* 增加间距 */
+    }
 }
 
         
@@ -288,15 +304,15 @@
 <div class="committee-general-chair">
     <div class="committee-member-photo">
         <img src="weimingqiang.jpg" alt="Mingqiang Wei">
-        <p>Mingqiang Wei(Taiyuan University of Technology)</p>
+        <p>Mingqiang Wei (Taiyuan University of Technology)</p>
     </div>
     <div class="committee-member-photo">
         <img src="R-C.jpg" alt="Yanwen Guo">
-        <p>Yanwen Gu(Nanjing University)</p>
+        <p>Yanwen Gu (Nanjing University)</p>
     </div>
     <div class="committee-member-photo">
         <img src="Yvhua-Qian.jpg" alt="Yvhua Qian">
-        <p>Yvhua Qian(Shanxi University)</p>
+        <p>Yvhua Qian (Shanxi University)</p>
     </div>
 </div>
 
