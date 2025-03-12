@@ -79,6 +79,33 @@
         }
 
         /* 委员会样式 */
+.committee-general-chair {
+    display: flex;
+    justify-content: space-between; /* 三张照片均匀分布 */
+    align-items: center; /* 垂直居中 */
+    width: 70%; /* 容器宽度占页面宽度的70% */
+    margin: 20px auto; /* 上下外边距为20px，左右自动居中 */
+    padding: 0; /* 清除内边距 */
+}
+
+.committee-member-photo {
+    text-align: center; /* 文字居中 */
+    width: 30%; /* 每张照片占容器宽度的30%，留出一些空间用于间隔 */
+}
+
+.committee-member-photo img {
+    width: 100%; /* 图片宽度占满容器 */
+    height: auto; /* 保持图片的原始比例 */
+    object-fit: contain; /* 确保图片完整显示，不裁剪 */
+    margin-bottom: 10px; /* 图片和名字的间距 */
+}
+
+.committee-member-photo p {
+    font-size: 1.2em; /* 增大名字的字体大小 */
+    color: #333; /* 字体颜色 */
+}
+
+        
         .committee-section {
             margin-top: 100px;
             padding: 2rem 0;
@@ -256,8 +283,22 @@
             <div class="committee-header">
                 <h1>Committee</h1> <!-- 这是需要变大的标题 -->
             </div>
-            <p class="committee-role">GENERAL CHAIR</p>
-            <p class="committee-member">Mingqiang Wei, Yanwen Guo, Yvhua Qian</p>
+            
+<p class="committee-role">GENERAL CHAIR</p>
+<div class="committee-general-chair">
+    <div class="committee-member-photo">
+        <img src="weimingqiang.jpg" alt="Mingqiang Wei">
+        <p>Mingqiang Wei(Taiyuan University of Technology)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="R-C.jpg" alt="Yanwen Guo">
+        <p>Yanwen Gu(Nanjing University)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="Yvhua-Qian.jpg" alt="Yvhua Qian">
+        <p>Yvhua Qian(Shanxi University)</p>
+    </div>
+</div>
 
             <p class="committee-role">PC CHAIR</p>
             <p class="committee-member">Zehua Chen, Lei Zhu</p>
