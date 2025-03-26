@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call for papers - Cyberworlds2025</title>
+    <title>Committee - Cyberworlds 2025</title>
     <style>
         /* 基础样式 */
         * {
@@ -15,14 +15,13 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            padding: 20px;
-            background-color: #f8f9fa;
         }
 
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         /* 导航栏样式 */
@@ -79,9 +78,117 @@
             color: #007bff;
         }
 
+        /* 委员会样式 */
+.committee-general-chair {
+    display: flex;
+    justify-content: space-between; /* 三张照片均匀分布 */
+    align-items: center; /* 垂直居中 */
+    width: 70%; /* 容器宽度占满父容器 */
+    margin: 20px auto; /* 上下外边距为20px，左右自动居中 */
+    padding: 0; /* 清除内边距 */
+    flex-wrap: wrap; /* 允许换行，用于移动端布局 */
+}
+
+.committee-member-photo {
+    text-align: center; /* 文字居中 */
+    width: 30%; /* 每张照片占容器宽度的30%，留出一些空间用于间隔 */
+    margin-bottom: 20px; /* 移动端换行时的间距 */
+}
+
+.committee-member-photo img {
+    width: 100%; /* 图片宽度占满容器 */
+    height: auto; /* 保持图片的原始比例 */
+    object-fit: cover; /* 裁剪图片以适应容器 */
+    margin-bottom: 10px; /* 图片和名字的间距 */
+    aspect-ratio: 4 / 5; /* 设置图片宽高比为 4:5 */
+    border-radius: 10px; /* 可选：添加圆角效果 */
+}
+
+.committee-member-photo p {
+    font-size: 1.2em; /* 增大名字的字体大小 */
+    color: #333; /* 字体颜色 */
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    .committee-general-chair {
+        flex-direction: column; /* 在移动端改为单列布局 */
+        align-items: center; /* 居中对齐 */
+    }
+
+    .committee-member-photo {
+        width: 100%; /* 每张照片占满整个容器宽度 */
+        margin-bottom: 20px; /* 增加间距 */
+    }
+}
+
+        
+        .committee-section {
+            margin-top: 100px;
+            padding: 2rem 0;
+            text-align: left; /* 修改为左对齐 */
+        }
+
+        .committee-header {
+            padding-left: 60px; /* 增加左边距 */
+        }
+
+        .committee-header h1 {
+            font-size: 5em; /* 超级大的字体 */
+            font-weight: bold; /* 加粗 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+            margin-bottom: 20px; /* 增加底部间距 */
+            text-align: left; /* 修改为左对齐 */
+        }
+
+        .committee-role {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            padding-left: 60px; /* 增加左边距 */
+        }
+
+        .committee-member {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 1rem;
+            padding-left: 60px; /* 增加左边距 */
+        }
+
+        .committee-track {
+            margin-top: 2rem;
+            font-style: italic; /* 斜体 */
+            color: #666; /* 字体颜色变浅 */
+            font-size: 1.5em; /* 字体变大 */
+            padding-left: 60px; /* 增加左边距 */
+        }
+        
+        .track-title {
+    color: #007bff; /* 蓝色 */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtrack-title {
+    color: #007bff; /* 蓝色 */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 40px; /* 缩进一个 Tab（40px） */
+}
+
+.subtrack-content {
+    padding-left: 80px; /* 缩进两个 Tab（80px） */
+}
+
+.subtrack-content p {
+    margin-bottom: 5px; /* 调整段落间距 */
+}
+
         /* 汉堡菜单样式 */
         .hamburger {
-            display: none;
+            display: none; /* 默认隐藏 */
             cursor: pointer;
             background: none;
             border: none;
@@ -129,13 +236,13 @@
         /* 移动端样式 */
         @media (max-width: 768px) {
             .hamburger {
-                display: block;
+                display: block; /* 显示汉堡菜单 */
             }
 
             .nav-links {
-                display: none;
+                display: none; /* 默认隐藏导航链接 */
                 position: absolute;
-                top: 60px;
+                top: 60px; /* 导航栏高度 */
                 left: 0;
                 width: 100%;
                 background: #fff;
@@ -153,350 +260,12 @@
             }
 
             .nav-links.active {
-                display: block;
+                display: block; /* 显示导航链接 */
             }
 
             .hero-slider {
-                margin-top: 60px;
+                margin-top: 60px; /* 调整轮播图的顶部间距 */
             }
-
-            .content {
-                flex-direction: column;
-            }
-
-            .main-content, .side-content {
-                width: 100%;
-                margin-left: 0;
-            }
-        }
-
-        /* 内容样式 */
-        .content {
-            margin-top: 60px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .main-content {
-            flex: 1;
-            min-width: 60%;
-        }
-
-        .side-content {
-            flex: 0 0 30%;
-            margin-left: 30px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 1rem;
-            width: 100%;
-            color: #4a90e2; /* 修改为与侧边栏相同的蓝色 */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font-size: 1.5em;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 0.5rem;
-            width: 100%;
-            color: #333;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, #007bff, #0056b3);
-        }
-
-        h3 {
-            font-size: 1.2em;
-            margin-bottom: 1rem;
-            color: #4a90e2;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-
-        ul {
-            margin-bottom: 1rem;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .submission-categories {
-            margin-bottom: 2rem;
-        }
-
-        .submission-categories ul {
-            list-style: disc;
-        }
-
-        .paper-submission, .reviewing-process {
-            margin-bottom: 2rem;
-        }
-
-        .double-blind {
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .guidelines {
-            margin-left: 20px;
-        }
-
-        .guidelines li {
-            margin-bottom: 0.5rem;
-        }
-
-        .submission-instructions {
-            margin-top: 2rem;
-            border-top: 1px solid #ddd;
-            padding-top: 1rem;
-        }
-
-        .publication-policy {
-            margin-top: 2rem;
-            border-top: 1px solid #ddd;
-            padding-top: 1rem;
-        }
-
-        .conference-proceedings, .journal-publication {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .important-dates {
-            margin-top: 2rem;
-            border-top: 1px solid #ddd;
-            padding-top: 1rem;
-            width: 100%;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f8f8f8;
-        }
-
-        /* 3D效果样式 */
-        .module {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .module-title {
-            font-size: 1.3em;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #eee;
-            color: #007bff;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .module-content {
-            margin-top: 10px;
-        }
-
-        .side-module {
-            background: #fff;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .side-module-title {
-            font-size: 1.1em;
-            margin-bottom: 1rem;
-            color: #4a90e2;
-        }
-
-        .important-dates table {
-            border-collapse: separate;
-            border-spacing: 0 10px;
-        }
-
-        .important-dates th, .important-dates td {
-            padding: 12px;
-            background: #f8f9fa;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .important-dates tr:hover td {
-            transform: translateY(-3px);
-            transition: transform 0.3s ease;
-        }
-
-        .content-section {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .content-section > * {
-            margin-bottom: 30px;
-        }
-
-        .content-section h2 {
-            margin-bottom: 15px;
-        }
-
-        .content-section ul {
-            margin-left: 30px;
-        }
-
-        .content-section li {
-            padding: 5px 0;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .content-section li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .content-section li strong {
-            color: #333;
-        }
-
-        .content-section li ul {
-            margin-left: 20px;
-        }
-
-        .content-section li li {
-            padding-left: 10px;
-        }
-
-        .content-section li li::before {
-            content: '◦';
-            left: -10px;
-            color: #6c757d;
-        }
-
-        .content-section h3 {
-            margin-top: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .content-section h3:first-of-type {
-            margin-top: 0;
-        }
-
-        .content-section p {
-            margin-bottom: 15px;
-        }
-
-        .content-section a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .content-section a:hover {
-            text-decoration: underline;
-        }
-
-        .double-blind {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-
-        .guidelines {
-            margin-left: 25px;
-        }
-
-        .guidelines li {
-            margin-bottom: 8px;
-        }
-
-        /* 新增模块样式 */
-        .tracing-beam {
-            background: linear-gradient(45deg, #f5f7fa, #e9ecef);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .tracing-beam-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .tracing-beam-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .badge {
-            display: inline-block;
-            background: #2c3e50;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-        }
-
-        .description {
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .image-container {
-            margin: 1rem 0;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .image-container:hover img {
-            transform: scale(1.05);
         }
     </style>
 </head>
@@ -507,15 +276,19 @@
                 <a href="index.html" class="logo">
                     <img src="logo11.png" alt="CW Logo">
                 </a>
+                <!-- 汉堡菜单按钮 -->
                 <button class="hamburger" aria-label="Toggle navigation">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
+                <!-- 导航链接 -->
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                   <li><a href="index.html">Home</a></li>
                     <li><a href="flyer.html">Flyer</a></li>
+              
                     <li><a href="Papers.html">Call for papers</a></li>
+       
                     <li><a href="speakers.html">Keynote Speakers</a></li>
                     <li><a href="committee.html">Committee</a></li>
                     <li><a href="venue.html">For Attendees</a></li>
@@ -523,135 +296,157 @@
             </div>
         </nav>
     </header>
-    <main class="content">
-        <h1>Call for papers</h1>
-        <div class="main-content">
-            <div class="tracing-beam">
-                <div class="tracing-beam-content">
-                    <div class="tracing-beam-item">
-                        <div class="badge">Scope</div>
-                        <h2 class="title">Cyberworlds Conference Scope</h2>
-                        <p class="description">
-                            Cyberworlds are information spaces and communities that immensely augment the way we interact, participate in business and receive information throughout the world. Cyberworlds seriously impact our lives and the evolution of the world economy by taking such forms as social networking services, 3D shared virtual communities and massively multiplayer online role-playing games. CW 2025 is the 24rd conference organized annually since 2002.
-                        </p>
-                    </div>
-
-                    <div class="tracing-beam-item">
-                        <div class="badge">Topics</div>
-                        <h2 class="title">Research Topics</h2>
-                        <div class="description">
-                            <h3>VISUAL AND INTERACTIVE COMPUTING IN CYBERSPACE</h3>
-                            <ul>
-                                <li><strong>Visual Computing:</strong> Extended reality (XR); Computer graphics; Computer animation; Visualization; Image processing; Computer vision, Deep learning in visual computing, etc.</li>
-                                <li><strong>Data Science for Immersive Communication:</strong> Immersive visual analytics; Machine and deep learning in visual communication; Collaborative visual analysis, etc.</li>
-                                <li><strong>Applications:</strong> Digital humans; Education in cyberspace; Shared art and cultural heritage; Health care in cyberspace; Online games and living in shared virtual worlds; Shared digital fabrication, etc.</li>
-                                <li><strong>Multimodal Interaction and Human Factors:</strong> Man-machine interaction (haptics, olfaction, sonification); Human dynamics; Communication; Collaboration; Entertainment; Digital assistants; Enhanced living; Human augmentation, etc.</li>
-                                <li><strong>Computer Vision for Cyberworlds:</strong> Virtual and Augmented Reality Integration; Digital Twins and Virtual Ecosystems; Machine Learning and AI for Computer Vision; Image and Video Processing in Cyberworlds; Augmented Reality and Computer Vision; Virtual Reality and Computer Vision; Scene Understanding in Cyberworlds; Sensor Fusion in Cyberworlds Computer Vision; Visual Navigation and Path Planning in Cyberworlds; Ethical and Social Issues in Computer Vision for Cyberworlds, etc.</li>
-                                <li><strong>Computer Graphics and 3D vision:</strong>Deep Learning Approaches in Computer Vision for Cyberworlds; 3D Construction; Modeling and Animation; Image Processing and Computer Vision in Graphics; User Interface and Interaction Design, etc.</li>
-                            </ul>
-
-                            <h3>COGNITIVE HUMAN-MACHINE INTERACTION</h3>
-                            <ul>
-                                <li><strong>Brain-Computer Interfaces (BCI) in Extended Reality (XR):</strong> BCI applications; EEG-based neuroimaging; Mobile and adaptive BCIs; Neurofeedback systems and games; Neurorehabilitation and neuroplasticity; Machine-assisted cognitive enhancement, etc.</li>
-                                <li><strong>Human Factors in Cyberspace:</strong> Affective computing; Emotion artificial intelligence; Human factors in transportation and industry; Biosignals; Internet of bodies; Machine and deep learning for biosignal-based algorithms; Neuroergonomics; Cognitive multimodal interfaces; Human factors in XR; Cognitive human-robot interaction, etc.</li>
-                            </ul>
-
-                            <h3>CYBERWORLDS MEET AIGC AND LLM</h3>
-                            <ul>
-                                <li><strong>Artificial Intelligence Generated Content (AIGC):</strong> AIGC in Gaming, Entertainment, and Education; CApplications of AIGC in Cyberworlds, etc.</li>
-                                <li><strong>Large Language Models (LLM):</strong> LLMs in Cyberworlds; Human-AI Interaction in Virtual Spaces; Applications of LLMs in Cyberworlds; Ethics, Privacy, and Security in AI-Driven Cyberworlds; Future Trends and Challenges, etc.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tracing-beam-item">
-                        <div class="badge">Submission Instructions</div>
-                        <h2 class="title">How to Submit Your Paper</h2>
-                        <div class="description">
-                            <p>Submission categories include: full paper (up to 8 pages), short paper (up to 4 pages), and poster paper (up to 2 pages) including references. Please note the different deadlines for the full/short and poster papers. The papers must be written in good English, carefully proofread, and formatted to A4 following the IEEE Manuscript Templates for Conference Proceedings.</p>
-                            <p>The authors are encouraged to submit the title and abstract first while the paper file can be submitted later. The submitted information, paper file and attachments can be edited by the authors as many time as needed before the submission deadline.</p>
-                            <p>Reviewing is double-blind. This means that the reviewers of the paper won’t get to know the identity of the author(s), and the author(s) won’t get to know the identity of the reviewer.</p>
-                            <p>The authors need to ensure that their manuscripts are prepared in a way that does not give away their identity. Please follow these guidelines while preparing and submitting your paper:</p>
-                            <ul>
-                                <li>Remove any identifying information, including author names, from the paper title as well as all the file names and document properties.</li>
-                                <li>Write your papers in the third person to refer to work which was previously undertaken by you, e.g., replace any phrases like “as we have shown before” with “it has been shown before”.</li>
-                                <li>Make sure the figures and figure captions do not contain any affiliation revealing your identity.</li>
-                                <li>Limit self-references only to papers that are relevant for those reviewing the submitted paper.</li>
-                                <li>Cite your own papers as follows: ‘[Anonymous, 2010]’ while in the reference list write, e.g., ‘[Anonymous 2010] Details omitted for double-blind reviewing.’</li>
-                                <li>Remove all references to funding sources.</li>
-                                <li>Do not include acknowledgments.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tracing-beam-item">
-                        <div class="badge">Important Dates</div>
-                        <h2 class="title">Key Dates to Remember</h2>
-                        <div class="description">
-                            <table>
-                                <tr>
-                                    <th>Event</th>
-                                    <th>Date</th>
-                                </tr>
-                                <tr>
-                                    <td>Papers (Full/Short) Submission</td>
-                                    <td>June 13, Friday</td>
-                                </tr>
-                                <tr>
-                                    <td>Papers (Full/Short) Notification</td>
-                                    <td>July 21, Monday</td>
-                                </tr>
-                                <tr>
-                                    <td>Poster papers submission</td>
-                                    <td>Aug 1,  Friday</td>
-                                </tr>
-                                <tr>
-                                    <td>Poster papers notification</td>
-                                    <td>Aug 18, Monday</td>
-                                </tr>
-                                <tr>
-                                    <td>Camera-ready submission</td>
-                                    <td>Sep 5, Friday</td>
-                                </tr>
-                                <tr>
-                                    <td>Author registration</td>
-                                    <td>Sep 5, Friday</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+    <main>
+        <section class="committee-section">
+            <div class="committee-header">
+                <h1>Committee</h1> <!-- 这是需要变大的标题 -->
             </div>
-        </div>
+            
+<p class="committee-role">GENERAL CHAIR</p>
+<div class="committee-general-chair">
+    <div class="committee-member-photo">
+        <img src="weimingqiang.jpg" alt="Mingqiang Wei">
+        <p>Mingqiang Wei <br>(Taiyuan University of Technology)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="R-C.jpg" alt="Yanwen Guo">
+        <p>Yanwen Guo <br>(Nanjing University)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="Qian.jpg" alt="Yvhua Qian">
+        <p>Yvhua Qian<br>(Shanxi University)</p>
+    </div>
+</div>
 
-        <div class="side-content">
-            <div class="side-module">
-                <h3 class="side-module-title">Submission Categories</h3>
-                <ul>
-                    <li>Full paper – up to 8 pages</li>
-                    <li>Short paper – up to 4 pages</li>
-                    <li>Poster paper – up to 2 pages</li>
-                </ul>
-            </div>
 
-            <div class="side-module">
-                <h3 class="side-module-title">Paper Submission</h3>
-                <p>Submission Link: <a href="https://easychair.org/my/conference?conf=cw2025" target="_blank">CW2025 Paper Submission Link</a></p>
-            </div>
+ <p class="committee-role">PROGRAM CHAIR</p>
+<div class="committee-general-chair">
+    <div class="committee-member-photo">
+        <img src="Alexei-Sourin.jpg" alt="Alexei Sourin">
+        <p>Alexei Sourin<br>(Nanyang Technological University)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="chenzehua.jpg" alt="Zehua Chen">
+        <p>Zehua Chen<br>(Taiyuan University of Technology)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="ZHU.jpg" alt="Lei Zhu">
+        <p>Lei Zhu <br>(The Hong Kong University of Science and Technology(GuangZhou))</p>
+    </div>
+</div>
 
-            <div class="side-module">
-                <h3 class="side-module-title">Reviewing Process</h3>
-                <div class="double-blind">DOUBLE-BLIND. This means that the reviewers of the paper won’t get to know the identity of the author(s), and the author(s) won’t get to know the identity of the reviewer.</div>
-                <p>The authors need to ensure that their manuscripts are prepared in a way that DOES NOT GIVE AWAY THEIR IDENTITY to avoid desk rejection. Please follow these guidelines while preparing and submitting your paper:</p>
-                <ul class="guidelines">
-                    <li>Remove any identifying information, including author names, from the paper title as well as all the file names and document properties.</li>
-                    <li>Cite your own relevant papers in the third person, e.g., replace any phrases like “as we have shown before” with “it has been shown before”.</li>
-                    <li>Make sure the figures and figure captions do not contain any affiliation revealing your identity.</li>
-                    <li>Remove all references to funding sources.</li>
-                    <li>Do not include acknowledgment.</li>
-                </ul>
-            </div>
-        </div>
+
+<p class="committee-role">LOCAL ORGANIZATION CHAIR</p>
+<div class="committee-general-chair">
+    <div class="committee-member-photo">
+        <img src="wangjianfeng.jpg" alt="wangjianfeng">
+        <p>Jianfeng Wang<br>(Taiyuan University of Technology)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="Wu.jpg" alt="wuyongfei">
+        <p>Yongfei Wu<br>(Taiyuan University of Technology)</p>
+    </div>
+    <div class="committee-member-photo">
+        <img src="Li.jpg" alt="Feijiang Li">
+        <p>Feijiang Li <br>(Shanxi University)</p>
+    </div>
+</div>
+
+<p class="committee-role">PUBLICATION CHAIR</p>
+<div class="committee-general-chair">
+    <div class="committee-member-photo">
+        <img src="sun.jpg" alt="sun">
+        <p>Chaoli Sun<br>(Taiyuan University of Science and Technology)</p>
+    </div>
+    
+</div>
+
+<p class="committee-role">FINANCIAL CHAIR</p>
+<div class="committee-general-chair">
+    <div class="committee-member-photo">
+        <img src="Y.jpg" alt="Dan Yv">
+        <p>Dan Yv<br>(Taiyuan University of Science and Technology)</p>
+    </div>
+    
+</div>
+
+
+
+            <p class="committee-role">WEB CHAIR</p>
+            <p class="committee-member">Pending update</p>
+
+            <p class="committee-role">COMMITTEE MEMBERS</p>
+            <p class="committee-track">Track on Visual and Interactive Computing</p>
+
+            <!-- 新增的跟踪项 -->
+    
+
+
+            
+            <p class="committee-member">Selim Balcisoy, Sabanci University</p>
+            <p class="committee-member">Saoussen Ben, Jabra University of Sousse</p>
+            <p class="committee-member">Amal Dev Parakkat, Institut Polytechnique de Paris</p>
+            <p class="committee-member">Rae Earnshaw, University of Bradford</p>
+            <p class="committee-member">Issei Fujishiro, Keio University</p>
+            <p class="committee-member">Tsukasa Fukusato, The University of Tokyo</p>
+            <p class="committee-member">Akemi Galvez-Tomida, University of Cantabria</p>
+            <p class="committee-member">Sami Gazzah, Université de Sousse. ISITCOM</p>
+            <p class="committee-member">Yuki Igarashi, Ochanomizu University</p>
+            <p class="committee-member">Tomoya Ito, Hachinohe Institute of Technology</p>
+            <p class="committee-member">Takayuki Itoh, Ochanomizu University</p>
+            <p class="committee-member">Xiaogang Jin, State Key Lab of CAD\&CG, Zhejiang University</p>
+            <p class="committee-member">Kouichi Konno, Iwate University</p>
+            <p class="committee-member">Michel Krämer, Fraunhofer Institute for Computer Graphics Research</p>
+            <p class="committee-member">Hiroyuki Kubo, Chiba University</p>
+            <p class="committee-member">Arjan Kuijper, TU Darmstadt</p>
+            <p class="committee-member">Akinobu Maejima, OLM Digital, Inc.</p>
+            <p class="committee-member">Xiaoyang Mao, University of Yamanashi</p>
+            <p class="committee-member">Shinya Miyazaki, Chukyo University</p>
+            <p class="committee-member">Ming-Yong Pang, Nanjing Normal University</p>
+            <p class="committee-member">Simant Prakoonwit, Bournemouth University</p>
+            <p class="committee-member">Kaisei Sakurai, DWANGO Co., Ltd.</p>
+            <p class="committee-member">Mie Sato, Utsunomiya University</p>
+            <p class="committee-member">Syuhei Sato, Hosei University</p>
+            <p class="committee-member">Michio Shiraishi, Toho University</p>
+            <p class="committee-member">Alexei Sourin, Nanyang Technological University</p>
+            <p class="committee-member">Hiroki Takahashi, The University of Electro-Communications</p>
+            <p class="committee-member">Yuriko Takeshima, Tokyo University of Technology</p>
+            <p class="committee-member">Daniel Thalmann, Ecole Polytechnique Fédérale de Lausanne</p>
+            <p class="committee-member">Masahiro Toyoura, University of Yamanashi</p>
+            <p class="committee-member">Krzysztof Walczak, Poznań University of Economics and Business</p>
+            <p class="committee-member">Mingqiang Wei, Taiyuan University of Technology</p>
+            <p class="committee-member">Zhongke Wu, Beijing Normal University</p>
+            <p class="committee-member">Haoran Xie, Japan Advanced Institute of Science and Technology</p>
+            <p class="committee-member">Norimasa Yoshida, Nihon University</p>
+            <p class="committee-member">Qingshu Yuan, Hangzhou Normal University</p>
+            <p class="committee-member">Jiri Zara Czech, Technical University in Prague</p>
+            <p class="committee-member">Chao Zhang, University of Toyama</p>
+            <p class="committee-member">Jiang Yu, Zheng Purdue University</p>
+
+            <p class="committee-track">Track on Cognitive Human-Machine Interaction</p>
+
+
+
+
+
+            
+            <p class="committee-member">Jian Cui, Zhejiang Lab</p>
+            <p class="committee-member">Andres Iglesias, Prieto University of Cantabria</p>
+            <p class="committee-member">Anastasia Kovaleva, FRC IEBPT</p>
+            <p class="committee-member">Fan Li, Hongkong Polyu</p>
+            <p class="committee-member">Ruilin Li, Nanyang Technological University</p>
+            <p class="committee-member">Wei Lun Lim, Nanyang Technological University</p>
+            <p class="committee-member">Yisi Liu, Singapore Polytechnic</p>
+            <p class="committee-member">Reinhold Scherer, University of Essex</p>
+            <p class="committee-member">Olga Sourina, Nanyang Technological University</p>
+
+
+
+
+  
+
+    
+        </section>
     </main>
 
     <script>
@@ -660,12 +455,13 @@
             const navLinks = document.querySelector('.nav-links');
 
             hamburger.addEventListener('click', function () {
+                // 切换导航栏的显示状态
                 navLinks.classList.toggle('active');
+                // 切换汉堡菜单的动画
                 hamburger.classList.toggle('is-active');
             });
         });
     </script>
 </body>
 </html>
-    
 
