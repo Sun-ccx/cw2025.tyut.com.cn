@@ -5,6 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025 International Conference on Cyberworlds</title>
     <style>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+
+       .cyberworlds-statement {
+    margin: 3rem 0;
+    padding: 0 1rem;
+}
+
+.cyberworlds-border {
+    position: relative;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cyberworlds-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+}
+
+.cyberworlds-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.cyberworlds-content {
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border-left: 4px solid #00d2ff;
+}
+
+.cyberworlds-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    text-align: justify;
+    position: relative;
+}
+
+.cyberworlds-content::before {
+    content: """;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 3em;
+    color: rgba(0, 210, 255, 0.2);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.cyberworlds-content::after {
+    content: """;
+    position: absolute;
+    bottom: -30px;
+    right: -10px;
+    font-size: 3em;
+    color: rgba(58, 123, 213, 0.2);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .cyberworlds-border {
+        padding: 1.5rem;
+    }
+    
+    .cyberworlds-content {
+        padding: 1rem;
+    }
+    
+    .cyberworlds-content p {
+        font-size: 1em;
+    }
+}
+
+
+       
         /* 基础样式 */
         * {
             margin: 0;
@@ -493,6 +593,165 @@
             text-decoration: underline;
         }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* 全息投影标题效果 */
+.holographic-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5, #00d2ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+    animation: holographic-shine 3s linear infinite;
+}
+
+@keyframes holographic-shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* 会议信息卡片样式 */
+.conference-info {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 专题轨道样式 */
+.track {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid #007bff;
+}
+
+.track:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.track h3 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.track h3::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #007bff;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.track ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.track li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.track li::before {
+    content: "•";
+    color: #007bff;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* 关于晋中样式 */
+.about-jinzhong {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23f0f0f0" stroke-width="1"/></svg>');
+    padding: 2.5rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-jinzhong::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+}
+
+.about-jinzhong h2 {
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.about-jinzhong h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+}
+
+.about-jinzhong p {
+    color: #555;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .holographic-title {
+        font-size: 2em;
+    }
+    
+    .conference-info {
+        padding: 1.5rem;
+    }
+    
+    .track {
+        padding: 1.5rem;
+    }
+}
+
+
+
+
+        
       /* 汉堡菜单样式 */
 .hamburger {
     display: none; /* 默认隐藏 */
@@ -794,19 +1053,25 @@
 </div>
 
 <!-- 插入的文字内容 -->
+<!-- 替换原有的文字部分 -->
 <section class="cyberworlds-intro">
-    <div class="container">
-        <p>Cyberworlds are information spaces and communities that immensely augment the way we interact, participate in business and receive information throughout the world. Cyberworlds seriously impact our lives and the evolution of the world economy by taking such forms as social networking services, 3D shared virtual communities and massively multiplayer online role-playing games.</p>
+  <div class="cyberworlds-statement">
+    <div class="cyberworlds-border">
+        <div class="cyberworlds-content">
+            <p>Cyberworlds are information spaces and communities that immensely augment the way we interact, participate in business and receive information throughout the world. Cyberworlds seriously impact our lives and the evolution of the world economy by taking such forms as social networking services, 3D shared virtual communities and massively multiplayer online role-playing games.</p>
+        </div>
+    </div>
+</div>
         
         <div class="conference-info">
-            <h2>Welcome to the 24th International Conference on Cyberworlds (CW 2025)</h2>
-            <p>The 24th International Conference on Cyberworlds will be held from October 14 to 16, 2025, at Taiyuan University of Technology in Jinzhong, Shanxi Province, China. Organized by Taiyuan University of Technology, this conference aims to bring together researchers and practitioners from academia, government, and industry worldwide to discuss the latest advancements in the theory, methods, and applications of cyberspace.</p>
+            <h1 class="holographic-title">Welcome to the 24th International Conference on Cyberworlds (CW 2025)</h1>
+            <p class="conference-description">The 24th International Conference on Cyberworlds will be held from October 14 to 16, 2025, at Taiyuan University of Technology in Jinzhong, Shanxi Province, China. Organized by Taiyuan University of Technology, this conference aims to bring together researchers and practitioners from academia, government, and industry worldwide to discuss the latest advancements in the theory, methods, and applications of cyberspace.</p>
             
-            <h2>Conference Tracks</h2>
-            <p>CW 2025 will feature the following tracks, focusing on emerging areas in cyberworlds:</p>
+            <h2 class="section-title">Conference Tracks</h2>
+            <p class="section-intro">CW 2025 will feature the following tracks, focusing on emerging areas in cyberworlds:</p>
             
             <div class="track">
-                <h3>1. Visual and Interactive Computing in Cyberspace Track</h3>
+                <h3><i class="fas fa-vr-cardboard"></i> Visual and Interactive Computing in Cyberspace Track</h3>
                 <p>This track will explore advancements in virtual and augmented reality applications, computer vision, and interactive systems within cyberspace. Discussion topics include but are not limited to:</p>
                 <ul>
                     <li>Innovative applications of virtual and augmented reality technologies</li>
@@ -816,7 +1081,7 @@
             </div>
             
             <div class="track">
-                <h3>2. Cognitive Human-Machine Interaction Track</h3>
+                <h3><i class="fas fa-brain"></i> Cognitive Human-Machine Interaction Track</h3>
                 <p>Focusing on the intersection of cognitive science and human-machine interaction, this track aims to discuss how technology can enhance the interaction between humans and machines. Key topics include:</p>
                 <ul>
                     <li>Brain-computer interface (BCI) technologies and their applications</li>
@@ -826,7 +1091,7 @@
             </div>
             
             <div class="track">
-                <h3>3. Cyberworlds Meet AIGC and LLM Track</h3>
+                <h3><i class="fas fa-robot"></i> Cyberworlds Meet AIGC and LLM Track</h3>
                 <p>This newly introduced track will delve into the integration and application of Artificial Intelligence Generated Content (AIGC) and Large Language Models (LLM) within cyberworlds. Discussion topics include:</p>
                 <ul>
                     <li>Creation, management, and application of AI-generated content</li>
@@ -837,7 +1102,7 @@
             
             <div class="about-jinzhong">
                 <h2>About Jinzhong</h2>
-                <p>Jinzhong is located in the central-eastern part of Shanxi Province, bordered by the Taihang Mountains to the east and the Fen River to the west, adjacent to the provincial capital, Taiyuan, to the north. The city covers an area of approximately 16,391 square kilometers and has a permanent population of about 3.37 million. Jinzhong boasts a rich historical and cultural heritage, featuring renowned sites such as Pingyao Ancient City, Yuci Old Town, and Zhangbi Ancient Fortress in Jiexiu. Additionally, the city’s well-developed public transportation network allows attendees to easily navigate and explore various attractions and savor local delicacies.</p>
+                <p>Jinzhong is located in the central-eastern part of Shanxi Province, bordered by the Taihang Mountains to the east and the Fen River to the west, adjacent to the provincial capital, Taiyuan, to the north. The city covers an area of approximately 16,391 square kilometers and has a permanent population of about 3.37 million. Jinzhong boasts a rich historical and cultural heritage, featuring renowned sites such as Pingyao Ancient City, Yuci Old Town, and Zhangbi Ancient Fortress in Jiexiu. Additionally, the city's well-developed public transportation network allows attendees to easily navigate and explore various attractions and savor local delicacies.</p>
                 <p>We are committed to planning an extraordinary academic event for you, celebrating together the illustrious</p>
             </div>
         </div>
@@ -929,6 +1194,68 @@
     </footer>
 
 <script>
+    // 在现有的JavaScript中添加
+document.addEventListener('DOMContentLoaded', function() {
+    // 标题动画
+    const titles = document.querySelectorAll('h1, h2, h3');
+    titles.forEach(title => {
+        title.style.opacity = '0';
+        title.style.transform = 'translateY(20px)';
+        title.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    // 段落动画
+    const paragraphs = document.querySelectorAll('.conference-info p, .track p');
+    paragraphs.forEach((p, index) => {
+        p.style.opacity = '0';
+        p.style.transform = 'translateY(20px)';
+        p.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    });
+    
+    // 列表项动画
+    const listItems = document.querySelectorAll('.track li');
+    listItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-20px)';
+        item.style.transition = `opacity 0.4s ease ${index * 0.1}s, transform 0.4s ease ${index * 0.1}s`;
+    });
+    
+    // 触发动画
+    setTimeout(() => {
+        titles.forEach(title => {
+            title.style.opacity = '1';
+            title.style.transform = 'translateY(0)';
+        });
+        
+        paragraphs.forEach(p => {
+            p.style.opacity = '1';
+            p.style.transform = 'translateY(0)';
+        });
+        
+        listItems.forEach(item => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateX(0)';
+        });
+    }, 300);
+    
+    // 滚动动画
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    document.querySelectorAll('.track, .about-jinzhong').forEach(section => {
+        observer.observe(section);
+    });
+});
+
+
+    
    document.addEventListener('DOMContentLoaded', function() {
             const cube = document.getElementById('cube');
             let isDragging = false;
