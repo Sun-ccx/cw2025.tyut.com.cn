@@ -655,6 +655,86 @@
         .acl-2025-dates th {
             background-color: #f0f4f8;
         }
+
+       /* 3D 立方体重要日期样式 */
+        .important-dates {
+            margin: 4rem 0;
+            padding: 2rem 0;
+            perspective: 1000px;
+            height: 500px;
+        }
+
+        .important-dates h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 2rem;
+            font-size: 1.8em;
+        }
+
+        .cube-container {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+       .cube {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            position: relative;
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+       .face-front  { transform: translateZ(200px); background: linear-gradient(135deg, #4CAF50, #8BC34A); }
+        .face-back   { transform: rotateY(180deg) translateZ(200px); background: linear-gradient(135deg, #2196F3, #03A9F4); }
+        .face-right  { transform: rotateY(90deg) translateZ(200px); background: linear-gradient(135deg, #FF9800, #FFC107); }
+        .face-left   { transform: rotateY(-90deg) translateZ(200px); background: linear-gradient(135deg, #9C27B0, #E91E63); }
+        .face-top    { transform: rotateX(90deg) translateZ(200px); background: linear-gradient(135deg, #607D8B, #455A64); }
+        .face-bottom { transform: rotateX(-90deg) translateZ(200px); background: linear-gradient(135deg, #795548, #5D4037); }
+       
+         .date-item {
+            margin-bottom: 10px;
+        }
+
+        .date-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .date-date {
+            font-style: italic;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .cube-container {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .cube-face {
+                font-size: 1em;
+                padding: 15px;
+            }
+        }
+       
+
+       
     </style>
 </head>
 <body>
@@ -802,42 +882,60 @@
     </div>
 </section>
 
-<!-- 重要日期板块 -->
-<section class="important-dates">
-    <div class="container">
-        <h2>Important Dates</h2>
-        <table>
-            <tr>
-                <th>Event</th>
-                <th>Date</th>
-            </tr>
-            <tr>
-                <td>Papers (Full/Short) Submission</td>
-                <td>June 13, Friday</td>
-            </tr>
-            <tr>
-                <td>Papers (Full/Short) Notification</td>
-                <td>July 21, Monday</td>
-            </tr>
-            <tr>
-                <td>Poster papers submission</td>
-                <td>Aug 1,  Friday</td>
-            </tr>
-            <tr>
-                <td>Poster papers notification</td>
-                <td>Aug 18, Monday</td>
-            </tr>
-            <tr>
-                <td>Camera-ready submission</td>
-                <td>Sep 5, Friday</td>
-            </tr>
-            <tr>
-                <td>Author registration</td>
-                <td>Sep 5, Friday</td>
-            </tr>
-        </table>
-    </div>
-</section>
+<!-- 重要日期立方体 -->
+    <section class="important-dates">
+        <div class="container">
+            <h2>Important Dates</h2>
+            <div class="cube-container">
+                <div class="cube" id="cube">
+                    <div class="cube-face face-front">
+                        <div class="date-item">
+                            <div class="date-title">Papers (Full/Short) Submission</div>
+                            <div class="date-date">June 13, Friday</div>
+                        </div>
+                        <div class="date-item">
+                            <div class="date-title">Papers (Full/Short) Notification</div>
+                            <div class="date-date">July 21, Monday</div>
+                        </div>
+                    </div>
+                    <div class="cube-face face-back">
+                        <div class="date-item">
+                            <div class="date-title">Poster papers submission</div>
+                            <div class="date-date">Aug 1, Friday</div>
+                        </div>
+                        <div class="date-item">
+                            <div class="date-title">Poster papers notification</div>
+                            <div class="date-date">Aug 18, Monday</div>
+                        </div>
+                    </div>
+                    <div class="cube-face face-right">
+                        <div class="date-item">
+                            <div class="date-title">Camera-ready submission</div>
+                            <div class="date-date">Sep 5, Friday</div>
+                        </div>
+                    </div>
+                    <div class="cube-face face-left">
+                        <div class="date-item">
+                            <div class="date-title">Author registration</div>
+                            <div class="date-date">Sep 5, Friday</div>
+                        </div>
+                    </div>
+                    <div class="cube-face face-top">
+                        <div class="date-item">
+                            <div class="date-title">Conference Dates</div>
+                            <div class="date-date">October 14-16, 2025</div>
+                        </div>
+                    </div>
+                    <div class="cube-face face-bottom">
+                        <div class="date-item">
+                            <div class="date-title">Early Bird Registration</div>
+                            <div class="date-date">Aug 31, Sunday</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
