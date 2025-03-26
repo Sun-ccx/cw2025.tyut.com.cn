@@ -929,6 +929,113 @@
     </footer>
 
 <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const cube = document.getElementById('cube');
+            let isDragging = false;
+            let startX, startY;
+            let startRotateX = 0;
+            let startRotateY = 0;
+
+            // 鼠标按下开始旋转
+            cube.addEventListener('mousedown', function(e) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                startRotateX = cube.style.transform ? 
+                    parseFloat(cube.style.transform.match(/rotateX\((-?\d+\.?\d*)deg\)/)[1]) : 0;
+                startRotateY = cube.style.transform ? 
+                    parseFloat(cube.style.transform.match(/rotateY\((-?\d+\.?\d*)deg\)/)[1]) : 0;
+            });
+
+            // 鼠标移动时旋转
+            document.addEventListener('mousemove', function(e) {
+                if (!isDragging) return;
+                
+                const deltaX = e.clientX - startX;
+                const deltaY = e.clientY - startY;
+                
+                const rotateX = startRotateX - deltaY * 0.5;
+                const rotateY = startRotateY + deltaX * 0.5;
+                
+                cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            // 鼠标释放结束旋转
+            document.addEventListener('mouseup', function() {
+                isDragging = false;
+            });
+
+            // 触摸设备支持
+            cube.addEventListener('touchstart', function(e) {
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                startRotateX = cube.style.transform ? 
+                    parseFloat(cube.style.transform.match(/rotateX\((-?\d+\.?\d*)deg\)/)[1]) : 0;
+                startRotateY = cube.style.transform ? 
+                    parseFloat(cube.style.transform.match(/rotateY\((-?\d+\.?\d*)deg\)/)[1]) : 0;
+            });
+
+            document.addEventListener('touchmove', function(e) {
+                if (!isDragging) return;
+                
+                const deltaX = e.touches[0].clientX - startX;
+                const deltaY = e.touches[0].clientY - startY;
+                
+                const rotateX = startRotateX - deltaY * 0.5;
+                const rotateY = startRotateY + deltaX * 0.5;
+                
+                cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            document.addEventListener('touchend', function() {
+                isDragging = false;
+            });
+
+            // 添加自动旋转
+            let autoRotateInterval;
+            let isAutoRotating = false;
+
+            function startAutoRotate() {
+                if (isAutoRotating) return;
+                
+                isAutoRotating = true;
+                let rotateY = 0;
+                
+                autoRotateInterval = setInterval(() => {
+                    rotateY += 1;
+                    const currentTransform = cube.style.transform;
+                    let currentRotateX = 0;
+                    
+                    if (currentTransform) {
+                        const rotateXMatch = currentTransform.match(/rotateX\((-?\d+\.?\d*)deg\)/);
+                        if (rotateXMatch) {
+                            currentRotateX = parseFloat(rotateXMatch[1]);
+                        }
+                    }
+                    
+                    cube.style.transform = `rotateX(${currentRotateX}deg) rotateY(${rotateY}deg)`;
+                }, 30);
+            }
+
+            function stopAutoRotate() {
+                clearInterval(autoRotateInterval);
+                isAutoRotating = false;
+            }
+
+            // 鼠标离开时开始自动旋转，鼠标移入时停止
+            cube.addEventListener('mouseleave', startAutoRotate);
+            cube.addEventListener('mouseenter', stopAutoRotate);
+
+            // 初始启动自动旋转
+            startAutoRotate();
+        });
+
+
+
+
+
+   
    let angle = 0;
 const totalSlides = 8; // 图片数量
 
