@@ -877,84 +877,147 @@ h1, h2, h3, h4, h5, h6 {
             background-color: #f0f4f8;
         }
 
-       /* 3D 立方体重要日期样式 */
-        .important-dates {
-            margin: 4rem 0;
-            padding: 2rem 0;
-            perspective: 1000px;
-            height: 500px;
-        }
+  /* 时间轴样式 */
+.timeline-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
 
-        .important-dates h2 {
-            text-align: center;
-            color: #007bff;
-            margin-bottom: 2rem;
-            font-size: 1.8em;
-        }
+.timeline-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #007bff;
+    font-size: 2em;
+    position: relative;
+}
 
-        .cube-container {
-            width: 400px;
-            height: 400px;
-            margin: 0 auto;
-            position: relative;
-        }
-       .cube {
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.8s;
-            position: relative;
-        }
+.timeline-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+}
 
-        .cube-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            box-sizing: border-box;
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-       .face-front  { transform: translateZ(200px); background: linear-gradient(135deg, #4CAF50, #8BC34A); }
-        .face-back   { transform: rotateY(180deg) translateZ(200px); background: linear-gradient(135deg, #2196F3, #03A9F4); }
-        .face-right  { transform: rotateY(90deg) translateZ(200px); background: linear-gradient(135deg, #FF9800, #FFC107); }
-        .face-left   { transform: rotateY(-90deg) translateZ(200px); background: linear-gradient(135deg, #9C27B0, #E91E63); }
-        .face-top    { transform: rotateX(90deg) translateZ(200px); background: linear-gradient(135deg, #607D8B, #455A64); }
-        .face-bottom { transform: rotateX(-90deg) translateZ(200px); background: linear-gradient(135deg, #795548, #5D4037); }
-       
-         .date-item {
-            margin-bottom: 10px;
-        }
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .date-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, #00d2ff, #3a7bd5);
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
 
-        .date-date {
-            font-style: italic;
-        }
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+}
 
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .cube-container {
-                width: 300px;
-                height: 300px;
-            }
-            
-            .cube-face {
-                font-size: 1em;
-                padding: 15px;
-            }
-        }
-       
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
 
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    transform: translateX(-50%);
+    z-index: 1;
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #007bff;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.timeline-content {
+    width: calc(50% - 40px);
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.2em;
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+/* 响应式设计 - 小屏幕改为垂直时间轴 */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+    }
+    
+    .timeline-date {
+        left: 70px;
+        top: 10px;
+        transform: none;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 70px);
+        margin-left: 70px !important;
+        text-align: left !important;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content,
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: 70px !important;
+        text-align: left !important;
+    }
+}
        
     </style>
 </head>
@@ -1109,60 +1172,78 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </section>
 
-<!-- 重要日期立方体 -->
-    <section class="important-dates">
-        <div class="container">
-            <h2>Important Dates</h2>
-            <div class="cube-container">
-                <div class="cube" id="cube">
-                    <div class="cube-face face-front">
-                        <div class="date-item">
-                            <div class="date-title">Papers (Full/Short) Submission</div>
-                            <div class="date-date">June 13, Friday</div>
-                        </div>
-                        <div class="date-item">
-                            <div class="date-title">Papers (Full/Short) Notification</div>
-                            <div class="date-date">July 21, Monday</div>
-                        </div>
-                    </div>
-                    <div class="cube-face face-back">
-                        <div class="date-item">
-                            <div class="date-title">Poster papers submission</div>
-                            <div class="date-date">Aug 1, Friday</div>
-                        </div>
-                        <div class="date-item">
-                            <div class="date-title">Poster papers notification</div>
-                            <div class="date-date">Aug 18, Monday</div>
-                        </div>
-                    </div>
-                    <div class="cube-face face-right">
-                        <div class="date-item">
-                            <div class="date-title">Camera-ready submission</div>
-                            <div class="date-date">Sep 5, Friday</div>
-                        </div>
-                    </div>
-                    <div class="cube-face face-left">
-                        <div class="date-item">
-                            <div class="date-title">Author registration</div>
-                            <div class="date-date">Sep 5, Friday</div>
-                        </div>
-                    </div>
-                    <div class="cube-face face-top">
-                        <div class="date-item">
-                            <div class="date-title">Conference Dates</div>
-                            <div class="date-date">October 14-16, 2025</div>
-                        </div>
-                    </div>
-                    <div class="cube-face face-bottom">
-                        <div class="date-item">
-                            <div class="date-title">Early Bird Registration</div>
-                            <div class="date-date">Aug 31, Sunday</div>
-                        </div>
-                    </div>
+<!-- 替换原有的Important Dates部分 -->
+<section class="timeline-section">
+    <div class="container">
+        <h2 class="timeline-title">Important Dates</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">June 13, Friday</div>
+                <div class="timeline-content">
+                    <h3>Papers (Full/Short) Submission</h3>
+                    <p>Deadline for full and short paper submissions</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">July 21, Monday</div>
+                <div class="timeline-content">
+                    <h3>Papers (Full/Short) Notification</h3>
+                    <p>Notification of acceptance for full and short papers</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Aug 1, Friday</div>
+                <div class="timeline-content">
+                    <h3>Poster Papers Submission</h3>
+                    <p>Deadline for poster paper submissions</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Aug 18, Monday</div>
+                <div class="timeline-content">
+                    <h3>Poster Papers Notification</h3>
+                    <p>Notification of acceptance for poster papers</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Aug 31, Sunday</div>
+                <div class="timeline-content">
+                    <h3>Early Bird Registration</h3>
+                    <p>Early registration deadline with discounted rates</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Sep 5, Friday</div>
+                <div class="timeline-content">
+                    <h3>Camera-ready Submission</h3>
+                    <p>Final camera-ready version submission deadline</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Sep 5, Friday</div>
+                <div class="timeline-content">
+                    <h3>Author Registration</h3>
+                    <p>Deadline for authors to register</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Oct 14-16, 2025</div>
+                <div class="timeline-content">
+                    <h3>Conference Dates</h3>
+                    <p>Main conference events</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -1194,170 +1275,35 @@ h1, h2, h3, h4, h5, h6 {
     </footer>
 
 <script>
-    // 在现有的JavaScript中添加
 document.addEventListener('DOMContentLoaded', function() {
-    // 标题动画
-    const titles = document.querySelectorAll('h1, h2, h3');
-    titles.forEach(title => {
-        title.style.opacity = '0';
-        title.style.transform = 'translateY(20px)';
-        title.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
+    // 时间轴动画
+    const timelineItems = document.querySelectorAll('.timeline-item');
     
-    // 段落动画
-    const paragraphs = document.querySelectorAll('.conference-info p, .track p');
-    paragraphs.forEach((p, index) => {
-        p.style.opacity = '0';
-        p.style.transform = 'translateY(20px)';
-        p.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    });
-    
-    // 列表项动画
-    const listItems = document.querySelectorAll('.track li');
-    listItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-20px)';
-        item.style.transition = `opacity 0.4s ease ${index * 0.1}s, transform 0.4s ease ${index * 0.1}s`;
-    });
-    
-    // 触发动画
-    setTimeout(() => {
-        titles.forEach(title => {
-            title.style.opacity = '1';
-            title.style.transform = 'translateY(0)';
-        });
-        
-        paragraphs.forEach(p => {
-            p.style.opacity = '1';
-            p.style.transform = 'translateY(0)';
-        });
-        
-        listItems.forEach(item => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateX(0)';
-        });
-    }, 300);
-    
-    // 滚动动画
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, {
-        threshold: 0.1
+    }, { threshold: 0.1 });
+    
+    timelineItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+        observer.observe(item);
     });
     
-    document.querySelectorAll('.track, .about-jinzhong').forEach(section => {
-        observer.observe(section);
+    // 点击日期跳转到对应内容
+    const dates = document.querySelectorAll('.timeline-date');
+    dates.forEach(date => {
+        date.addEventListener('click', function() {
+            const content = this.parentElement.querySelector('.timeline-content');
+            content.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
     });
 });
-
-
-    
-   document.addEventListener('DOMContentLoaded', function() {
-            const cube = document.getElementById('cube');
-            let isDragging = false;
-            let startX, startY;
-            let startRotateX = 0;
-            let startRotateY = 0;
-
-            // 鼠标按下开始旋转
-            cube.addEventListener('mousedown', function(e) {
-                isDragging = true;
-                startX = e.clientX;
-                startY = e.clientY;
-                startRotateX = cube.style.transform ? 
-                    parseFloat(cube.style.transform.match(/rotateX\((-?\d+\.?\d*)deg\)/)[1]) : 0;
-                startRotateY = cube.style.transform ? 
-                    parseFloat(cube.style.transform.match(/rotateY\((-?\d+\.?\d*)deg\)/)[1]) : 0;
-            });
-
-            // 鼠标移动时旋转
-            document.addEventListener('mousemove', function(e) {
-                if (!isDragging) return;
-                
-                const deltaX = e.clientX - startX;
-                const deltaY = e.clientY - startY;
-                
-                const rotateX = startRotateX - deltaY * 0.5;
-                const rotateY = startRotateY + deltaX * 0.5;
-                
-                cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
-
-            // 鼠标释放结束旋转
-            document.addEventListener('mouseup', function() {
-                isDragging = false;
-            });
-
-            // 触摸设备支持
-            cube.addEventListener('touchstart', function(e) {
-                isDragging = true;
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                startRotateX = cube.style.transform ? 
-                    parseFloat(cube.style.transform.match(/rotateX\((-?\d+\.?\d*)deg\)/)[1]) : 0;
-                startRotateY = cube.style.transform ? 
-                    parseFloat(cube.style.transform.match(/rotateY\((-?\d+\.?\d*)deg\)/)[1]) : 0;
-            });
-
-            document.addEventListener('touchmove', function(e) {
-                if (!isDragging) return;
-                
-                const deltaX = e.touches[0].clientX - startX;
-                const deltaY = e.touches[0].clientY - startY;
-                
-                const rotateX = startRotateX - deltaY * 0.5;
-                const rotateY = startRotateY + deltaX * 0.5;
-                
-                cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
-
-            document.addEventListener('touchend', function() {
-                isDragging = false;
-            });
-
-            // 添加自动旋转
-            let autoRotateInterval;
-            let isAutoRotating = false;
-
-            function startAutoRotate() {
-                if (isAutoRotating) return;
-                
-                isAutoRotating = true;
-                let rotateY = 0;
-                
-                autoRotateInterval = setInterval(() => {
-                    rotateY += 1;
-                    const currentTransform = cube.style.transform;
-                    let currentRotateX = 0;
-                    
-                    if (currentTransform) {
-                        const rotateXMatch = currentTransform.match(/rotateX\((-?\d+\.?\d*)deg\)/);
-                        if (rotateXMatch) {
-                            currentRotateX = parseFloat(rotateXMatch[1]);
-                        }
-                    }
-                    
-                    cube.style.transform = `rotateX(${currentRotateX}deg) rotateY(${rotateY}deg)`;
-                }, 30);
-            }
-
-            function stopAutoRotate() {
-                clearInterval(autoRotateInterval);
-                isAutoRotating = false;
-            }
-
-            // 鼠标离开时开始自动旋转，鼠标移入时停止
-            cube.addEventListener('mouseleave', startAutoRotate);
-            cube.addEventListener('mouseenter', stopAutoRotate);
-
-            // 初始启动自动旋转
-            startAutoRotate();
-        });
-
 
 
 
