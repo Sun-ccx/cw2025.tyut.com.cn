@@ -23,6 +23,7 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         /* 导航栏样式 */
@@ -33,6 +34,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            padding: 0;
         }
 
         .navbar {
@@ -43,6 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
         }
 
         .logo {
@@ -141,27 +144,15 @@
                 background: #fff;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                 z-index: 1000;
-            }
-
-            .nav-links ul {
-                flex-direction: column;
                 padding: 1rem;
-            }
-
-            .nav-links ul li {
-                margin: 0.5rem 0;
             }
 
             .nav-links.active {
                 display: block;
             }
 
-            .hero-slider {
-                margin-top: 60px;
-            }
-
             .content {
-                flex-direction: column;
+                margin-top: 60px;
             }
 
             .main-content, .side-content {
@@ -172,26 +163,27 @@
 
         /* 内容样式 */
         .content {
-            margin-top: 60px;
+            margin-top: 80px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .main-content {
-            flex: 1;
-            min-width: 60%;
+            flex: 0 0 65%;
+            max-width: 65%;
         }
 
         .side-content {
             flex: 0 0 30%;
-            margin-left: 30px;
+            max-width: 30%;
         }
 
         h1 {
             font-size: 2.5em;
             margin-bottom: 1rem;
             width: 100%;
-            color: #4a90e2; /* 修改为与侧边栏相同的蓝色 */
+            color: #4a90e2;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
@@ -235,70 +227,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .submission-categories {
-            margin-bottom: 2rem;
-        }
-
-        .submission-categories ul {
-            list-style: disc;
-        }
-
-        .paper-submission, .reviewing-process {
-            margin-bottom: 2rem;
-        }
-
-        .double-blind {
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .guidelines {
-            margin-left: 20px;
-        }
-
-        .guidelines li {
-            margin-bottom: 0.5rem;
-        }
-
-        .submission-instructions {
-            margin-top: 2rem;
-            border-top: 1px solid #ddd;
-            padding-top: 1rem;
-        }
-
-        .publication-policy {
-            margin-top: 2rem;
-            border-top: 1px solid #ddd;
-            padding-top: 1rem;
-        }
-
-        .conference-proceedings, .journal-publication {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .important-dates {
-            margin-top: 2rem;
-            border-top: 1px solid #ddd;
-            padding-top: 1rem;
-            width: 100%;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f8f8f8;
-        }
-
         /* 3D效果样式 */
         .module {
             background: #fff;
@@ -317,10 +245,6 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
-        .module-content {
-            margin-top: 10px;
-        }
-
         .side-module {
             background: #fff;
             border-radius: 10px;
@@ -335,108 +259,17 @@
             color: #4a90e2;
         }
 
-        .important-dates table {
+        table {
+            width: 100%;
             border-collapse: separate;
             border-spacing: 0 10px;
         }
 
-        .important-dates th, .important-dates td {
+        th, td {
             padding: 12px;
             background: #f8f9fa;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .important-dates tr:hover td {
-            transform: translateY(-3px);
-            transition: transform 0.3s ease;
-        }
-
-        .content-section {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .content-section > * {
-            margin-bottom: 30px;
-        }
-
-        .content-section h2 {
-            margin-bottom: 15px;
-        }
-
-        .content-section ul {
-            margin-left: 30px;
-        }
-
-        .content-section li {
-            padding: 5px 0;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .content-section li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .content-section li strong {
-            color: #333;
-        }
-
-        .content-section li ul {
-            margin-left: 20px;
-        }
-
-        .content-section li li {
-            padding-left: 10px;
-        }
-
-        .content-section li li::before {
-            content: '◦';
-            left: -10px;
-            color: #6c757d;
-        }
-
-        .content-section h3 {
-            margin-top: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .content-section h3:first-of-type {
-            margin-top: 0;
-        }
-
-        .content-section p {
-            margin-bottom: 15px;
-        }
-
-        .content-section a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .content-section a:hover {
-            text-decoration: underline;
-        }
-
-        .double-blind {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-
-        .guidelines {
-            margin-left: 25px;
-        }
-
-        .guidelines li {
-            margin-bottom: 8px;
         }
 
         /* 新增模块样式 */
@@ -449,7 +282,7 @@
         }
 
         .tracing-beam-content {
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
         }
 
@@ -482,21 +315,16 @@
             line-height: 1.7;
         }
 
-        .image-container {
-            margin: 1rem 0;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .image-container:hover img {
-            transform: scale(1.05);
+        /* 响应式调整 */
+        @media (max-width: 992px) {
+            .main-content, .side-content {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .side-content {
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
@@ -569,14 +397,14 @@
                         <div class="description">
                             <p>Submission categories include: full paper (up to 8 pages), short paper (up to 4 pages), and poster paper (up to 2 pages) including references. Please note the different deadlines for the full/short and poster papers. The papers must be written in good English, carefully proofread, and formatted to A4 following the IEEE Manuscript Templates for Conference Proceedings.</p>
                             <p>The authors are encouraged to submit the title and abstract first while the paper file can be submitted later. The submitted information, paper file, and attachments can be edited by the authors as many times as needed before the submission deadline.</p>
-                            <p>Reviewing is double-blind. This means that the reviewers of the paper won’t get to know the identity of the author(s), and the author(s) won’t get to know the identity of the reviewer.</p>
+                            <p>Reviewing is double-blind. This means that the reviewers of the paper won't get to know the identity of the author(s), and the author(s) won't get to know the identity of the reviewer.</p>
                             <p>The authors must ensure that their manuscripts are prepared in a way that does not give away their identity. Please follow these guidelines while preparing and submitting your paper:</p>
                             <ul>
                                 <li>Remove any identifying information, including author names, from the paper title and all the file names and document properties.</li>
-                                <li>Write your papers in the third person to refer to work that was previously undertaken by you, e.g., replace any phrases like “as we have shown before” with “it has been shown before”.</li>
+                                <li>Write your papers in the third person to refer to work that was previously undertaken by you, e.g., replace any phrases like "as we have shown before" with "it has been shown before".</li>
                                 <li>Make sure the figures and figure captions do not contain any affiliation revealing your identity.</li>
                                 <li>Limit self-references only to papers that are relevant for those reviewing the submitted paper.</li>
-                                <li>Cite your papers as follows: ‘[Anonymous, 2010]’ while in the reference list write, e.g., ‘[Anonymous 2010] Details omitted for double-blind reviewing.’</li>
+                                <li>Cite your papers as follows: '[Anonymous, 2010]' while in the reference list write, e.g., '[Anonymous 2010] Details omitted for double-blind reviewing.'</li>
                                 <li>Remove all references to funding sources.</li>
                                 <li>Do not include acknowledgments.</li>
                             </ul>
@@ -640,11 +468,11 @@
 
             <div class="side-module">
                 <h3 class="side-module-title">Reviewing Process</h3>
-                <div class="double-blind">DOUBLE-BLIND. This means that the reviewers of the paper won’t get to know the identity of the author(s), and the author(s) won’t get to know the identity of the reviewer.</div>
+                <div class="double-blind">DOUBLE-BLIND. This means that the reviewers of the paper won't get to know the identity of the author(s), and the author(s) won't get to know the identity of the reviewer.</div>
                 <p>The authors need to ensure that their manuscripts are prepared in a way that DOES NOT GIVE AWAY THEIR IDENTITY to avoid desk rejection. Please follow these guidelines while preparing and submitting your paper:</p>
                 <ul class="guidelines">
                     <li>Remove any identifying information, including author names, from the paper title as well as all the file names and document properties.</li>
-                    <li>Cite your own relevant papers in the third person, e.g., replace any phrases like “as we have shown before” with “it has been shown before”.</li>
+                    <li>Cite your own relevant papers in the third person, e.g., replace any phrases like "as we have shown before" with "it has been shown before".</li>
                     <li>Make sure the figures and figure captions do not contain any affiliation revealing your identity.</li>
                     <li>Remove all references to funding sources.</li>
                     <li>Do not include acknowledgment.</li>
@@ -679,4 +507,3 @@
     </script>
 </body>
 </html>
-    
