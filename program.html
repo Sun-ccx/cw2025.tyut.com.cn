@@ -240,18 +240,114 @@
                 padding-left: 60px;
             }
         }
+
+
+        /* 汉堡菜单样式 */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger-box {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .hamburger-inner {
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s;
+        }
+
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s;
+        }
+
+        .hamburger-inner::before {
+            top: -6px;
+        }
+
+        .hamburger-inner::after {
+            top: 6px;
+        }
+
+        /* 移动端样式 */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links ul li {
+                margin: 0.5rem 0;
+            }
+
+            .nav-links.active {
+                display: block;
+            }
+
+            .hero-slider {
+                margin-top: 60px;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .main-content, .side-content {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <header class="main-header">
+   <header class="main-header">
         <nav class="navbar">
-            <div class="container">
+            <div class="container" style="padding: 0;">
                 <a href="index.html" class="logo">
-                    <img src="logo1.png" alt="CW Logo">
-                    <span class="logo-text">CyberWorlds 2025</span>
+                    <img src="logo11.png" alt="CW Logo">
                 </a>
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
                 <ul class="nav-links">
-                  <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="flyer.html">Flyer</a></li>
                     <li><a href="Papers.html">Call for papers</a></li>
                     <li><a href="program.html">Conference Program</a></li>
@@ -265,31 +361,23 @@
     <main>
         <section class="program-content">
             <div class="program-header">
-                <h1>Cyberworlds 2025 会议日程</h1>
-                <!p>更新日期：2024年10月17日
+                <h1>Cyberworlds 2025 Conference Program</h1>
+            
             </div>
-            <!div class="program-day-header">
-                <1h2>Day 2: October 30
-            <!/div>
-            <!div class="timeline">
-                <!div class="timeline-item">
-                    <!div class="time-slot">9:20 – 11:00
-                    <!div class="event-content">
-                        <!h3>VIC 1 (Chair: Prof. Alexei Sourin)
-                        <!p>Visualization for Serve Form of Volleyball to Support the Improvement of Serve Technique
-                        <!p>Speaker: Nao Torii and Takayuki Itoh
-                    <!/div>
-                <!/div>
-                <!div class="timeline-item">
-                    <!div class="time-slot">11:00 – 12:30
-                    <!div class="event-content">
-                        <!h3>CWAI 1 (Chair: Prof. Won-Du Chang)
-                        <!p>Analysis of Acute Stress Reaction with EEG using MI-mRMR EEG channel selection and Ensemble Learning with Majority Voting
-                        <!p>Speaker: Muhammad Rasydan Mazlan, Abdul Syafiq Abdull Sukor, and others
-                    <!/div>
-                <!/div>
-            </div>
+            
+            
         </section>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('is-active');
+            });
+        });
+    </script>
 </body>
 </html>
