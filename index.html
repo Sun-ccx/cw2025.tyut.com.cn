@@ -125,7 +125,7 @@
             padding: 0 20px;
         }
 
-        /* 导航栏样式 */
+       /* 导航栏样式 */
         .main-header {
             background: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -162,14 +162,13 @@
             font-weight: bold;
         }
 
-       .nav-links {
+        .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.5rem; /* 减小间距 */
+            gap: 1.6rem; /* 减小间距以确保内容在一行显示 */
             flex-wrap: nowrap; /* 禁止换行 */
-            overflow-x: auto; /* 允许水平滚动 */
-            padding: 0 1rem; /* 添加内边距 */
-            scrollbar-width: none; /* 隐藏滚动条 */
+            overflow-x: auto; /* 如果内容超出屏幕宽度，允许水平滚动 */
+            padding: 0 1rem; /* 添加内边距以避免内容紧贴屏幕边缘 */
         }
 
         .nav-links a {
@@ -177,6 +176,7 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
+            white-space: nowrap; /* 确保文字不换行 */
         }
 
         .nav-links a:hover {
