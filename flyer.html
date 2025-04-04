@@ -64,7 +64,10 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1rem; /* 减小间距以确保内容在一行显示 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 如果内容超出屏幕宽度，允许水平滚动 */
+            padding: 0 1rem; /* 添加内边距以避免内容紧贴屏幕边缘 */
         }
 
         .nav-links a {
@@ -72,272 +75,131 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
+            white-space: nowrap; /* 确保文字不换行 */
         }
 
         .nav-links a:hover {
             color: #007bff;
         }
 
-        /* 会议日程样式 */
-        .program-content {
-            margin-top: 100px;
-            padding: 2rem 0;
-        }
-
-        .program-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .program-header h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .program-header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .program-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #eee;
-        }
-
-        .tab-button {
-            padding: 1rem 2rem;
-            border: none;
-            background: none;
-            font-size: 1.1em;
-            color: #666;
+        /* 汉堡菜单样式 */
+        .hamburger {
+            display: none; /* 默认隐藏 */
             cursor: pointer;
-            transition: all 0.3s;
+            background: none;
+            border: none;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger-box {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
             position: relative;
         }
 
-        .tab-button:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
+        .hamburger-inner {
             width: 100%;
             height: 2px;
-            background: #007bff;
-            transform: scaleX(0);
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s;
+        }
+
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
             transition: transform 0.3s;
         }
 
-        .tab-button.active {
-            color: #007bff;
+        .hamburger-inner::before {
+            top: -6px;
         }
 
-        .tab-button.active:after {
-            transform: scaleX(1);
+        .hamburger-inner::after {
+            top: 6px;
         }
 
-        .program-day {
-            display: none;
-        }
-
-        .program-day.active {
-            display: block;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: #eee;
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-
-        .time-slot {
-            flex: 0 0 150px;
-            text-align: right;
-            padding-right: 2rem;
-            color: #666;
-        }
-
-        .event-content {
-            flex: 0 0 150px;
-            padding-left: 2rem;
-        }
-
-        .event-title {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
-        .event-description {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .event-speaker {
-            color: #007bff;
-            font-style: italic;
-            margin-top: 0.5rem;
-        }
-
-       /* 汉堡菜单样式 */
-.hamburger {
-    display: none; /* 默认隐藏 */
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-    z-index: 1001;
-}
-
-.hamburger-box {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-}
-
-.hamburger-inner {
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s;
-}
-
-.hamburger-inner::before,
-.hamburger-inner::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    transition: transform 0.3s;
-}
-
-.hamburger-inner::before {
-    top: -6px;
-}
-
-.hamburger-inner::after {
-    top: 6px;
-}
-
-/* 移动端样式 */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* 显示汉堡菜单 */
-    }
-
-    .nav-links {
-        display: none; /* 默认隐藏导航链接 */
-        position: absolute;
-        top: 60px; /* 导航栏高度 */
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .nav-links ul li {
-        margin: 0.5rem 0;
-    }
-
-    .nav-links.active {
-        display: block; /* 显示导航链接 */
-    }
-
-    .hero-slider {
-        margin-top: 60px; /* 调整轮播图的顶部间距 */
-    .content {
-                flex-direction: column;
+        /* 移动端样式 */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block; /* 显示汉堡菜单 */
             }
-   .main-content, .side-content {
-                width: 100%;
-                margin-left: 0;
+
+            .nav-links {
+                display: flex; /* 强制显示为 flex */
+                position: static; /* 重置位置 */
+                background: none; /* 重置背景 */
+                box-shadow: none; /* 重置阴影 */
+            }
+
+            .nav-links.active {
+                display: flex; /* 强制显示为 flex */
             }
         }
     </style>
 </head>
 <body>
     <header class="main-header">
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="logo11.png" alt="CW Logo">
-            </a>
-            <!-- 汉堡菜单按钮 -->
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-            <!-- 导航链接 -->
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="flyer.html">Flyer</a></li>
-                <li><a href="Papers.html">Call for Papers</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="speakers.html">Keynote Speakers</a></li>
-                <li><a href="committee.html">Committee</a></li>
-                <li><a href="venue.html">For Attendees</a></li>
-                <li><a href="events.html">Social Events</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-    <main>
-    <section class="flyer-section">
-        <div class="container">
-            <h1 class="flyer-title" style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 2rem;">Flyer</h1>
-            <div class="flyer-image" style="text-align: center;">
-                <img src="flyer.jpg" alt="Flyer" style="max-width: 100%; height: auto; border: 2px solid #eee; border-radius: 10px;">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="logo11.png" alt="CW Logo">
+                </a>
+                <!-- 汉堡菜单按钮 -->
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <!-- 导航链接 -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flyer.html">Flyer</a></li>
+                    <li><a href="Papers.html">Call for Papers</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="speakers.html">Keynote Speakers</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="venue.html">For Attendees</a></li>
+                    <li><a href="events.html">Social Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
-</main>
+        </nav>
+    </header>
+    <main>
+        <section class="flyer-section">
+            <div class="container">
+                <h1 class="flyer-title" style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 2rem;">Flyer</h1>
+                <div class="flyer-image" style="text-align: center;">
+                    <img src="flyer.jpg" alt="Flyer" style="max-width: 100%; height: auto; border: 2px solid #eee; border-radius: 10px;">
+                </div>
+            </div>
+        </section>
+    </main>
 
-<script>
-     document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', function () {
-        // 切换导航栏的显示状态
-        navLinks.classList.toggle('active');
-        // 切换汉堡菜单的动画
-        hamburger.classList.toggle('is-active');
-    });
-});
+            hamburger.addEventListener('click', function () {
+                // 切换导航栏的显示状态
+                navLinks.classList.toggle('active');
+                // 切换汉堡菜单的动画
+                hamburger.classList.toggle('is-active');
+            });
+        });
     </script>
 </body>
 </html>
