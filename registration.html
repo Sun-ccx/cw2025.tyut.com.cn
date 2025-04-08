@@ -127,6 +127,75 @@
             color: #333;
         }
 
+        /* 表格样式 */
+        .registration-fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        .registration-fee-table th,
+        .registration-fee-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        .registration-fee-table th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+
+        .registration-fee-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .registration-fee-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* 注意事项样式 */
+        .note-section {
+            margin-bottom: 2rem;
+        }
+
+        .note-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5rem;
+        }
+
+        .note-section ul {
+            padding-left: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .note-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 收据部分样式 */
+        .receipt-section {
+            margin-bottom: 2rem;
+        }
+
+        .receipt-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5rem;
+        }
+
+        .receipt-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .receipt-section a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .receipt-section a:hover {
+            text-decoration: underline;
+        }
+
       /* 汉堡菜单样式 */
 .hamburger {
     display: none; /* 默认隐藏 */
@@ -245,27 +314,75 @@
 </header>
     <main>
         <section class="registration-section">
-           <div class="registration-header"> 
-            <h1>Registration</h1>
-          
-               </div>
-       
+            <div class="container">
+                <div class="registration-header">
+                    <h1>Registration</h1>
+                    <p>The online registration: <a href="#" style="color: #0066cc;">Cyberworlds 2025 Online Registration</a></p>
+                </div>
+
+                <h2>REGISTRATION FEE:</h2>
+                <table class="registration-fee-table">
+                    <tr>
+                        <th></th>
+                        <th>Fee</th>
+                        
+                    </tr>
+                    <tr>
+                        <td>Full Registration </td>
+                        <td>3300RMB</td>
+                     
+                    </tr>
+                   <!-- <tr>
+                        <td>Full Registration (Non- ACM / EG Member)</td>
+                        <td>JPY77,500</td>
+                        <td>JPY85,000</td>
+                        <td>JPY100,000</td>
+                    </tr> -->
+                    <tr>
+                        <td>Student Registration</td>
+                        <td>2500RMB</td>
+                      
+                    </tr>
+                 <!--   <tr>
+                        <td>Student Registration (Non- ACM / EG Member)</td>
+                        <td>JPY47,500</td>
+                        <td>JPY55,000</td>
+                        <td>JPY70,000</td>
+                    </tr>  -->
+                </table>
+
+                <div class="note-section">
+                    <h3>Note</h3>
+                    <ul>
+                        <li>One Full Registration can only cover one accepted paper, regardless of the paper type.</li>
+                        <li>One accepted full/short paper requires at least one Full Registration.</li>
+                        <li>One accepted poster paper requires at least one Full/Student Registration.</li>
+                    </ul>
+                </div>
+
+                <div class="receipt-section">
+                    <h3>Receipt</h3>
+                    <p>Registree can download a receipt for their registration on Peatix.com.</p>
+                    <p>Tutorial for receipt issue on Peatix.com:</p>
+                    <p><a href="https://help-attendee.peatix.com/en/support/solutions/articles/44001821741-how-to-access-your-receipt" style="color: #0066cc;">https://help-attendee.peatix.com/en/support/solutions/articles/44001821741-how-to-access-your-receipt</a></p>
+                </div>
+            </div>
         </section>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-<script>
- document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', function () {
-        // 切换导航栏的显示状态
-        navLinks.classList.toggle('active');
-        // 切换汉堡菜单的动画
-        hamburger.classList.toggle('is-active');
-    });
-});
-</script>
+            hamburger.addEventListener('click', function () {
+                // 切换导航栏的显示状态
+                navLinks.classList.toggle('active');
+                // 切换汉堡菜单的动画
+                hamburger.classList.toggle('is-active');
+            });
+        });
+    </script>
 </body>
 </html>
+
