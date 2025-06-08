@@ -129,21 +129,47 @@
             top: 6px;
         }
 
-        /* 移动端样式 */
+/* 移动端样式 */
         @media (max-width: 768px) {
             .hamburger {
-                display: block; /* 显示汉堡菜单 */
+                display: block;
             }
 
             .nav-links {
-                display: flex; /* 强制显示为 flex */
-                position: static; /* 重置位置 */
-                background: none; /* 重置背景 */
-                box-shadow: none; /* 重置阴影 */
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links ul li {
+                margin: 0.5rem 0;
             }
 
             .nav-links.active {
-                display: flex; /* 强制显示为 flex */
+                display: block;
+            }
+
+            .hero-slider {
+                margin-top: 60px;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .main-content, .side-content {
+                width: 100%;
+                margin-left: 0;
             }
         }
     </style>
