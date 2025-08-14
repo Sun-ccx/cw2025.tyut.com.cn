@@ -8,11 +8,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-       
-
-
-
-
        .cyberworlds-statement {
     margin: 3rem 0;
     padding: 0 1rem;
@@ -104,8 +99,6 @@
     }
 }
 
-
-       
         /* 基础样式 */
         * {
             margin: 0;
@@ -165,10 +158,10 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.3rem; /* 减小间距以确保内容在一行显示 */
-            flex-wrap: nowrap; /* 禁止换行 */
-            overflow-x: auto; /* 如果内容超出屏幕宽度，允许水平滚动 */
-            padding: 0 1rem; /* 添加内边距以避免内容紧贴屏幕边缘 */
+            gap: 1.3rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 0 1rem;
         }
 
         .nav-links a {
@@ -176,7 +169,7 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
-            white-space: nowrap; /* 确保文字不换行 */
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
@@ -283,6 +276,103 @@
             line-height: 1.6;
         }
 
+        /* 高级导航按钮 */
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+        }
+
+        .slider-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-50%) scale(1.1);
+            opacity: 1;
+        }
+
+        .slider-button.prev {
+            left: 30px;
+        }
+
+        .slider-button.next {
+            right: 30px;
+        }
+
+        /* 现代化指示点 */
+        .slider-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .dot:hover {
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(1.2);
+        }
+
+        .dot.active {
+            background: white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        .dot.active::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
 /* 进度条 */
         .slide-progress {
             position: absolute;
@@ -323,6 +413,7 @@
                 width: 45px;
                 height: 45px;
                 font-size: 1.2em;
+                padding: 10px;
             }
 
             .slider-button.prev {
@@ -386,8 +477,8 @@
             pointer-events: none;
             z-index: 1;
         }
+
 /* 3D 旋转轮播图样式 */
-/* 3D轮播图修复 */
 .carousel {
     position: relative;
     width: 300px;
@@ -414,8 +505,8 @@
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* 按钮样式 */
-.slider-button {
+/* 3D轮播图按钮样式 */
+.carousel .slider-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -427,17 +518,20 @@
     font-size: 1.2em;
     transition: background 0.3s;
     z-index: 10;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
 }
 
-.slider-button:hover {
+.carousel .slider-button:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.slider-button.prev {
+.carousel .slider-button.prev {
     left: -50px;
 }
 
-.slider-button.next {
+.carousel .slider-button.next {
     right: -50px;
 }
 
@@ -450,62 +544,16 @@
     .carousel-item {
         transform: scale(0.8);
     }
-    .slider-button {
+    .carousel .slider-button {
         font-size: 1em;
         padding: 0.8em;
     }
-}
-
-      
-@media (max-width: 768px) {
-    .slider-container {
-        max-width: 100%;
-        overflow: hidden;
-    }
     
-    .slide {
-        width: 100%;
-    }
-    
-    .slide img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .carousel-inner {
-        max-width: 100%;
-        overflow: hidden;
-    }
-    
-    .carousel-item {
-        width: 100%;
-    }
-    
-    .slider-dots {
-        display: flex;
-        justify-content: center;
+    .nav-links {
+        display: none;
     }
 }
 
-
-       
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .important-dates table {
-        font-size: 0.9em;
-    }
-
-    .important-dates th,
-    .important-dates td {
-        padding: 0.6rem;
-    }
-}
-
-
-
-
-        
         /* 主要内容区域样式 */
         main {
             padding: 2rem 0;
@@ -625,26 +673,6 @@
 
             .update-date {
                 margin-bottom: 0.5rem;
-            }
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-slider {
-                height: 400px;
-                margin-top: 60px;
-            }
-
-            .slide-content h2 {
-                font-size: 2em;
-            }
-
-            .slide-content p {
-                font-size: 1em;
             }
         }
 
@@ -884,10 +912,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
-
-
-        
       /* 汉堡菜单样式 */
 .hamburger {
     display: none; /* 默认隐藏 */
@@ -963,10 +987,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-links.active {
         display: block; /* 显示导航链接 */
-    }
-
-    .hero-slider {
-        margin-top: 60px; /* 调整轮播图的顶部间距 */
     }
 }
 
@@ -1328,7 +1348,7 @@ h1, h2, h3, h4, h5, h6 {
                     <li>Roles and impacts of large language models in virtual environments</li>
                     <li>Ethical and societal implications of AIGC and LLM applications</li>
                 </ul>
-            </div>
+                </div>
             
             <div class="about-jinzhong">
                 <h2>About Jinzhong</h2>
@@ -1402,17 +1422,10 @@ h1, h2, h3, h4, h5, h6 {
                     <p>Author registration</p>
                 </div>
             </div>
-            
-      
         </div>
     </div>
 </section>
 
-
-
-    
-    <!-- 待插入 -->
-    
    <section class="sponsors">
     <div class="container">
         <h2>Supported by</h2>
@@ -1433,145 +1446,153 @@ h1, h2, h3, h4, h5, h6 {
     <footer class="main-footer">
         <div class="container">
             <p>&copy; 2025 Cyberworlds Conference. All rights reserved.</p>
-        
         </div>
     </footer>
 
 <script>
+// 清理重复的事件监听器，只保留一个轮播图控制脚本
 document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-            const prevButton = document.querySelector('.slider-button.prev');
-            const nextButton = document.querySelector('.slider-button.next');
-            const progressBar = document.querySelector('.slide-progress');
-            
-            let currentSlide = 0;
-            const slideCount = slides.length;
-            const autoSlideInterval = 5000;
-            let autoSlideTimer;
-            let progressTimer;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevButton = document.querySelector('.slider-button.prev');
+    const nextButton = document.querySelector('.slider-button.next');
+    const progressBar = document.querySelector('.slide-progress');
+    
+    let currentSlide = 0;
+    const slideCount = slides.length;
+    const autoSlideInterval = 5000;
+    let autoSlideTimer;
 
-            function showSlide(index, direction = 'next') {
-                // 移除所有active类
-                slides.forEach(slide => slide.classList.remove('active'));
-                dots.forEach(dot => dot.classList.remove('active'));
-                
-                // 添加当前slide的active类
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-                
-                // 重置并重新开始进度条动画
-                resetProgress();
-            }
+    function showSlide(index) {
+        // 移除所有active类
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // 添加当前slide的active类
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        
+        // 重置并重新开始进度条动画
+        resetProgress();
+    }
 
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slideCount;
-                showSlide(currentSlide, 'next');
-            }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        showSlide(currentSlide);
+    }
 
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-                showSlide(currentSlide, 'prev');
-            }
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        showSlide(currentSlide);
+    }
 
-            function resetProgress() {
-                progressBar.style.animation = 'none';
-                setTimeout(() => {
-                    progressBar.style.animation = `slideProgress ${autoSlideInterval}ms linear`;
-                }, 10);
-            }
+    function resetProgress() {
+        if (progressBar) {
+            progressBar.style.animation = 'none';
+            setTimeout(() => {
+                progressBar.style.animation = `slideProgress ${autoSlideInterval}ms linear`;
+            }, 10);
+        }
+    }
 
-            // 事件监听器
-            prevButton.addEventListener('click', () => {
-                prevSlide();
-                resetAutoSlide();
-            });
+    // 事件监听器
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+    }
 
-            nextButton.addEventListener('click', () => {
-                nextSlide();
-                resetAutoSlide();
-            });
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+    }
 
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentSlide = index;
-                    showSlide(currentSlide);
-                    resetAutoSlide();
-                });
-            });
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+            resetAutoSlide();
+        });
+    });
 
-            // 自动轮播控制
-            function startAutoSlide() {
-                autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
-                resetProgress();
-            }
+    // 自动轮播控制
+    function startAutoSlide() {
+        autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
+        resetProgress();
+    }
 
-            function resetAutoSlide() {
-                clearInterval(autoSlideTimer);
-                startAutoSlide();
-            }
+    function resetAutoSlide() {
+        clearInterval(autoSlideTimer);
+        startAutoSlide();
+    }
 
-            // 鼠标悬停控制
-            const slider = document.querySelector('.hero-slider');
-            slider.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideTimer);
+    // 鼠标悬停控制
+    const slider = document.querySelector('.hero-slider');
+    if (slider) {
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideTimer);
+            if (progressBar) {
                 progressBar.style.animationPlayState = 'paused';
-            });
-
-            slider.addEventListener('mouseleave', () => {
-                startAutoSlide();
-                progressBar.style.animationPlayState = 'running';
-            });
-
-            // 键盘控制
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    prevSlide();
-                    resetAutoSlide();
-                } else if (e.key === 'ArrowRight') {
-                    nextSlide();
-                    resetAutoSlide();
-                }
-            });
-
-            // 触摸支持
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            slider.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            slider.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-
-            function handleSwipe() {
-                const swipeThreshold = 50;
-                const diff = touchStartX - touchEndX;
-                
-                if (Math.abs(diff) > swipeThreshold) {
-                    if (diff > 0) {
-                        nextSlide();
-                    } else {
-                        prevSlide();
-                    }
-                    resetAutoSlide();
-                }
             }
-
-            // 初始化
-            startAutoSlide();
         });
 
+        slider.addEventListener('mouseleave', () => {
+            startAutoSlide();
+            if (progressBar) {
+                progressBar.style.animationPlayState = 'running';
+            }
+        });
+    }
 
+    // 键盘控制
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+            resetAutoSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+            resetAutoSlide();
+        }
+    });
 
+    // 触摸支持
+    let touchStartX = 0;
+    let touchEndX = 0;
 
+    if (slider) {
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
 
-   
+        slider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+            resetAutoSlide();
+        }
+    }
+
+    // 初始化
+    startAutoSlide();
+});
+
+// 时间轴动画
 document.addEventListener('DOMContentLoaded', function() {
-    // 时间轴动画
     const timelineItems = document.querySelectorAll('.timeline-item');
     
     const observer = new IntersectionObserver((entries) => {
@@ -1600,100 +1621,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-   
-   let angle = 0;
-const totalSlides = 8; // 图片数量
+// 3D轮播图控制
+let angle = 0;
+const totalSlides = 8;
 
 function rotateCarousel(direction) {
     angle += (360 / totalSlides) * direction;
-    document.querySelector('.carousel-inner').style.transform = `rotateY(${angle}deg)`;
+    const carouselInner = document.querySelector('.carousel-inner');
+    if (carouselInner) {
+        carouselInner.style.transform = `rotateY(${angle}deg)`;
+    }
 }
 
-// 自动旋转
+// 自动旋转3D轮播图
 setInterval(() => rotateCarousel(1), 5000);
 
-   
-    document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        const prevButton = document.querySelector('.slider-button.prev');
-        const nextButton = document.querySelector('.slider-button.next');
-        let currentSlide = 0;
-        const slideCount = slides.length;
-
-        // 自动轮播间隔（毫秒）
-        const autoSlideInterval = 5000;
-        let autoSlideTimer;
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            slides[index].classList.add('active');
-            dots[index].classList.add('active');
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slideCount;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-            showSlide(currentSlide);
-        }
-
-        prevButton.addEventListener('click', () => {
-            prevSlide();
-            resetAutoSlide();
-        });
-
-        nextButton.addEventListener('click', () => {
-            nextSlide();
-            resetAutoSlide();
-        });
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-                resetAutoSlide();
-            });
-        });
-
-        function startAutoSlide() {
-            autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideTimer);
-            startAutoSlide();
-        }
-
-        const slider = document.querySelector('.hero-slider');
-        slider.addEventListener('mouseenter', () => {
-            clearInterval(autoSlideTimer);
-        });
-
-        slider.addEventListener('mouseleave', () => {
-            startAutoSlide();
-        });
-
-        startAutoSlide();
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
+// 汉堡菜单控制
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', function () {
-        // 切换导航栏的显示状态
-        navLinks.classList.toggle('active');
-        // 切换汉堡菜单的动画
-        hamburger.classList.toggle('is-active');
-    });
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('is-active');
+        });
+    }
 });
 </script>
 </body>
