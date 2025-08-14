@@ -211,14 +211,12 @@
         }
 
         .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            filter: brightness(0.85) contrast(1.1);
-            transition: filter 0.3s ease;
-        }
-
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 从 cover 改为 contain */
+    object-position: center;
+    background: #000; /* 可选：添加背景色填充空白区域 */
+}
         .slide:hover img {
             filter: brightness(0.9) contrast(1.15);
         }
