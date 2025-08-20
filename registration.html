@@ -195,6 +195,22 @@
             line-height: 1.5;
         }
 
+        /* 新增的支付提示部分样式 */
+        .payment-reminder-section {
+            background-color: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .payment-reminder-section p {
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+            color: #92400e;
+            font-weight: 500;
+        }
+
         /* 收款信息部分 */
         .payment-section {
             background-color: #f0fdf4;
@@ -475,27 +491,39 @@
                 <p><strong>Payment Instructions:</strong></p>
                 <p><strong>（1）Regular Paper Registration:</strong> When making your payment, please include a note with your paper ID and surname.<br>
                 For example, if your paper ID is 7670 and the presenter (author)'s name is Jianfeng Wang, the note should be: "7670+Wang".<br>
-                (如果您的论文是Regular Paper，当您缴费付款时，请添加备注，格式是“论文编号+姓”，例如某篇论文的编号是7670，作报告的作者姓名是Jianfeng Wang，那么这篇论文缴费注册时需要备"7670+Wang")<br>
+                (如果您的论文是Regular Paper，当您缴费付款时，请添加备注，格式是"论文编号+姓"，例如某篇论文的编号是7670，作报告的作者姓名是Jianfeng Wang，那么这篇论文缴费注册时需要备"7670+Wang")<br>
                </p>
 
                 <p><strong>（2）Extra Registration:</strong> If you are registering as an Extra, please include a note when making your payment in the format "E+paper ID+Name".<br>
                 For example, if your paper ID is 7670 and your name is Jianfeng Wang, the note should be "E+7670+Jianfeng Wang".<br>
-                (如果您的论文是Regular Paper，当您缴费付款时，请添加备注，格式是“论文编号+姓”，例如某篇论文的编号是7670，作报告的作者姓名是Jianfeng Wang，那么这篇论文缴费注册时需要备"7670+Wang)<br>
+                (如果您的论文是Regular Paper，当您缴费付款时，请添加备注，格式是"论文编号+姓"，例如某篇论文的编号是7670，作报告的作者姓名是Jianfeng Wang，那么这篇论文缴费注册时需要备"7670+Wang)<br>
           
                </p>
 
                 <p><strong>（3）Participant Registration:</strong> If you are registering as a Participant, please include a note when making your payment in the format "P+Name".<br>
                 For example, if your name is Jianfeng Wang, the note should be "P+Jianfeng Wang".<br>
-                (如果您是Participant的注册类型，当您缴费付款时，请添加备注，格式是“P+姓名”，例如Jianfeng Wang，那么缴费注册时需要备注"P+Jianfeng Wang")
+                (如果您是Participant的注册类型，当您缴费付款时，请添加备注，格式是"P+姓名"，例如Jianfeng Wang，那么缴费注册时需要备注"P+Jianfeng Wang")
                 </p>
 
                 
             </div>
 
+            <div class="payment-reminder-section">
+                <p>Please complete the registration payment using the following bank information. After making the payment, registrants are required to send the payment receipt or a screenshot of the transaction, together with the paper ID and title, the registrant’s name, affiliation, and invoice information (invoice title and tax ID, for reimbursement purposes), to cw2025@tyut.edu.cn </p>
+                <p>The email should follow this format:</p>
+                <p>1. Paper ID and Title</p>
+                <p>2. Registrant’s Name</p>
+                <p>3. Registrant’s Affiliation</p>
+                <p>4. Invoice Information (if applicable)</p>
+                <p>5. Payment Receipt or Screenshot</p>
+                <p>请用以下银行信息完成缴费注册。注册者缴费后，请把缴费凭证或缴费截图，连同注册者的论文编号和题目，注册者姓名、单位、发票信息（发票抬头、税号，以便注册者报销）发送到邮箱：cw2025@tyut.edu.cn</p>
+                <p>格式：（1）论文编号、题目（2）注册者姓名；（3）注册者单位；（4）发票信息（如有）（5）缴费凭证或者缴费截图</p>
+            </div>
+
             <div class="payment-section">
                 <h3>Bank Information</h3>
                 <div class="payment-info">
-                    <p>开户名称：山西亿城会务会展有限公司</p>
+                   <p>开户名称：山西亿城会务会展有限公司</p>
                     <p>开户行：中国建设银行股份有限公司太原漪汾街支行（或漪汾街分理处）</p>
                     <p>行号：105161003037</p>
                     <p>税号：91140105MA0LABDN1F</p>
@@ -510,6 +538,17 @@
                         <img src="Payment.jpg" alt="Payment QR Code" class="qr-code-image">
                     </div>
                     <p class="qr-code-caption">请使用微信或支付宝扫描收款码进行支付<br>Please scan the QR code with WeChat or Alipay to make payment</p>
+                </div>
+
+                <div class="payment-info">
+                   <p>If it is not convenient for you to use the above bank information, especially for authors from abroad, you may consider the following three options to complete your registration payment:</p>
+                    <p>* USD account information</p>
+                    <p>* EUR account information</p>
+                    <p>* JPY account information</p>
+                    <p>如果您不方便使用上述银行信息，尤其对于国外作者，您可以考虑以下三个选项，便于您完成缴费注册：</p>
+                    <p>美元账户信息</p>
+                    <p>欧元账户信息</p>
+                    <p>日元账户信息</p>
                 </div>
             </div>
         </div>
