@@ -6,6 +6,17 @@
     <title>For Attendees - Cyberworlds 2025</title>
     <style>
         /* 基础样式 */
+
+
+  .h2-style {
+    font-size: 1.5em;    /* 与h2默认大小相同 */
+    font-weight: bold;   /* 与h2相同的粗体 */
+    display: block;      /* 如果原来是块级元素 */
+    margin: 0.83em 0;    /* 与h2相同的外边距 */
+    color: inherit;      /* 继承父元素颜色 */
+  }
+
+
         * {
             margin: 0;
             padding: 0;
@@ -402,7 +413,7 @@
         <div class="content">
             <div class="section">
                 <div class="section-header">
-                    <h2>Conference Venue: Jinzhong Meiyu International Hotel</h2>
+                    <a href="https://hotels.ctrip.com/hotels/29973737.html" class="h2-style">Conference Venue: Jinzhong Meiyu International Hotel</a>
                 </div>
                 <div class="info-box">
                     <div class="info-item">
@@ -422,13 +433,40 @@
                     </div>
                    <div class="info-item">
     <p class="indent-justify">Phone: 86-18635140903</p>
-    <p class="indent-justify">Address: NO.699 Longhu Street, Yuci Diatrict, Jinzhong, Shanxi</p>
+    <a href="https://cn.bing.com/maps?pglt=419&q=%E6%99%8B%E4%B8%AD%E7%BE%8E%E8%AA%89%E5%9B%BD%E9%99%85%E9%85%92%E5%BA%97&cvid=458318333dc245c0aee5394000553ec1&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQRRg9MgYIAhBFGDzSAQkxNDI3OGowajGoAgiwAgE&FORM=ANNTA1&ucpdpc=UCPD&PC=ASTS" class="indent-justify">Address: NO.699 Longhu Street, Yuci Diatrict, Jinzhong, Shanxi（Click to open the map)</a>
     <p class="indent-justify">Jinzhong Meiyu International Hotel is situated in the core area of the Northern New City in Jinzhong City, along the Longhu Avenue Expressway. Adjacent to Wanda Plaza and the Outlets commercial district, it is approximately a 12-minute drive from the Wusu Expressway Hub. This hotel serves as an ideal venue for hosting large-scale conferences, banquets, and business negotiation activities</p>
     <p class="indent-justify">Versatile Excellence: The pillar-free Meiyu Grand Ballroom, with its soaring 10-meter ceiling, elegantly accommodates high-end banquets or conferences for 600-1,000 guests. Additionally, 12 flexible function rooms of varying sizes cater to events of all scales. Equipped with cutting-edge audiovisual technology and supported by our seasoned butler-style service team, we deliver meticulous, professional coordination to ensure every occasion is flawlessly executed.</p>
     <p class="indent-justify">Lingering Charm: On the second floor, the hotel houses 15 private dining rooms at **Weixiangyuan Chinese Restaurant** (capacity: 5-30 guests), along with **Marco Polo Western Restaurant**, while the 25th-floor executive lounge offers refined ambiance and exquisite cuisine. Guests can savor distinctive culinary styles here—from the bold flavors of Hunan & Sichuan to the hearty Shanxi fare and delicate Cantonese dishes.</p>
             </div>
                     </div>
                 </div>
+
+
+                
+                <div id="container" style="width: 85%; height: 85vh;">map</div>
+                <script type="text/javascript">
+                  window._AMapSecurityConfig = {
+                    serviceHost: "https://cw2025.tyut.edu.cn//_AMapService",
+                    //例如 ：serviceHost:'http://1.1.1.1:80/_AMapService',
+                  };
+                </script>
+                <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=2b7e307f1ab05c623537779d2ff1a8f8"></script>
+                <script type="text/javascript">
+                  //地图初始化应该在地图容器div已经添加到DOM树之后
+
+                  loadAMapSdk(function () {
+        // 方法1：直接使用巴黎圣母院的经纬度坐标（推荐）
+        var map = new AMap.Map('container', {
+          zoom: 15, // 适当放大以更好地查看巴黎圣母院
+          // 更精确的明向校区中心位置
+          center: [112.5985, 37.7182]  // [经度, 纬度]  // [经度, 纬度] // 巴黎圣母院的经纬度 [经度, 纬度]
+        });
+
+                  var map = new AMap.Map("container", {
+                    zoom: 12,
+                  });
+                </script>
+
 
             <div class="content">
                 <!-- 黑神话悟空板块 -->
