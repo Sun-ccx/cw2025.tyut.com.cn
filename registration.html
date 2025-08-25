@@ -1,22 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Attendees - Cyberworlds 2025</title>
+    <title>Registration - Cyberworlds 2025</title>
     <style>
         /* 基础样式 */
-
-
-  .h2-style {
-    font-size: 1.5em;    /* 与h2默认大小相同 */
-    font-weight: bold;   /* 与h2相同的粗体 */
-    display: block;      /* 如果原来是块级元素 */
-    margin: 0.83em 0;    /* 与h2相同的外边距 */
-    color: inherit;      /* 继承父元素颜色 */
-  }
-
-
         * {
             margin: 0;
             padding: 0;
@@ -26,8 +15,6 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
         }
 
         .container {
@@ -77,10 +64,10 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.6rem; /* 减小间距以确保内容在一行显示 */
-            flex-wrap: nowrap; /* 禁止换行 */
-            overflow-x: auto; /* 如果内容超出屏幕宽度，允许水平滚动 */
-            padding: 0 1rem; /* 添加内边距以避免内容紧贴屏幕边缘 */
+            gap: 1.6rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 0 1rem;
         }
 
         .nav-links a {
@@ -88,152 +75,218 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
-            white-space: nowrap; /* 确保文字不换行 */
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
             color: #007bff;
         }
 
-        /* 内容样式 */
-        .content {
-            margin-top: 100px;
-            padding: 2rem 0;
+        /* 注册页面样式 */
+        .registration-section {
+            margin: 100px auto 0;
+            padding: 2rem 1rem;
+            max-width: 1200px;
         }
 
-        .section {
-            margin-bottom: 3rem;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .section-header {
+        .registration-header {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
         }
 
-        .section-header h2 {
-            font-size: 1.5em;
+        .registration-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .registration-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .registration-header a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .registration-header a:hover {
+            text-decoration: underline;
+        }
+
+        /* 表格样式 */
+        .registration-fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .registration-fee-table caption {
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
             color: #333;
         }
 
-        .info-box {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .info-item {
-            flex: 1;
+        .registration-fee-table th,
+        .registration-fee-table td {
+            border: 1px solid #e0e0e0;
             padding: 1rem;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-      /* 首行缩进和两端对齐样式 */
-      .indent-justify {
-         text-indent: 2em; /* 首行缩进 2em */
-         text-align: justify; /* 两端对齐 */
-         text-justify: inter-word; /* 单词间距调整，使对齐更美观 */
-      }
-        
-        .info-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
+            text-align: left;
+            vertical-align: top;
         }
 
-        .info-item p {
-            margin-top: 0.5rem;
-            color: #666;
-        }
-
-        /* 轮播图样式 */
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: auto;
-            display: none;
-            border-radius: 5px;
-        }
-
-        .carousel img.active {
-            display: block;
-        }
-
-        /* 黑神话悟空板块样式 */
-        .wukong-section {
-            background: linear-gradient(to right, #1a1a1a, #333);
-            color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-
-        .wukong-section h2 {
-            font-size: 2em;
-            margin-bottom: 1rem;
-            color: #ffcc00;
-        }
-
-        .wukong-section p {
-            font-size: 1.1em;
-            margin-bottom: 1.5rem;
-            color: #ddd;
-        }
-
-        .wukong-section .keywords {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .wukong-section .keywords span {
-            padding: 0.5rem 1rem;
-            background-color: #444;
-            border-radius: 20px;
-            color: #ffcc00;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .wukong-section .keywords span:hover {
-            background-color: #555;
-        }
-
-        .wukong-section .explore-btn {
-            padding: 0.8rem 2rem;
-            background-color: #ffcc00;
-            border: none;
-            border-radius: 25px;
-            color: #1a1a1a;
-            font-size: 1em;
+        .registration-fee-table th {
+            background-color: #f5f7fa;
             font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            color: #444;
+            text-align: center;
         }
 
-        .wukong-section .explore-btn:hover {
-            background-color: #e6b800;
+        .registration-fee-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .registration-fee-table tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .registration-deadline {
+            text-align: center;
+            font-weight: bold;
+            color: #d32f2f;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 说明部分样式 */
+        .note-section {
+            background-color: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .note-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .note-section ul {
+            padding-left: 1.5rem;
+            margin: 0;
+        }
+
+        .note-section li {
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .note-section p {
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        /* 新增的支付提示部分样式 */
+        .payment-reminder-section {
+            background-color: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .payment-reminder-section p {
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+            color: #92400e;
+            font-weight: 500;
+        }
+
+        /* 收款信息部分 */
+        .payment-section {
+            background-color: #f0fdf4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #10b981;
+        }
+
+        .payment-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .payment-info {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #e5e7eb;
+        }
+
+        .payment-info p {
+            margin-bottom: 0.5rem;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        /* 更新后的收款码样式 */
+        .qr-code-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 3rem 2rem;
+            background-color: #fff;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .qr-code-section h4 {
+            color: #374151;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .qr-code-container {
+            display: inline-block;
+            padding: 1.5rem;
+            background-color: #fafafa;
+            border-radius: 16px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .qr-code-image {
+            width: 320px;
+            height: 320px;
+            border-radius: 12px;
+            display: block;
+            object-fit: contain;
+            background-color: #fff;
+        }
+
+        .qr-code-caption {
+            margin-top: 1.5rem;
+            color: #6b7280;
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.5;
         }
 
         /* 汉堡菜单样式 */
         .hamburger {
-            display: none; /* 默认隐藏 */
+            display: none;
             cursor: pointer;
             background: none;
             border: none;
@@ -280,334 +333,257 @@
 
         /* 移动端样式 */
         @media (max-width: 768px) {
-            /* 确保容器宽度不超出屏幕 */
-            .container {
-                padding: 0 10px; /* 减少内边距 */
+            .hamburger {
+                display: block;
             }
 
-            /* 调整内容区域的顶部间距 */
-            .content {
-                margin-top: 60px; /* 避免被导航栏遮挡 */
-            }
-
-            /* 调整 .section 的内边距 */
-            .section {
-                padding: 1rem; /* 减少内边距 */
-            }
-
-            /* 调整 .info-box 为垂直布局 */
-            .info-box {
-                flex-direction: column;
-            }
-
-            /* 调整 .info-item 的宽度和间距 */
-            .info-item {
-                width: 100%; /* 确保宽度占满 */
-                margin-bottom: 1rem; /* 增加间距 */
-                padding: 0.5rem; /* 减少内边距 */
-            }
-
-            /* 调整轮播图的宽度 */
-            .carousel {
-                max-width: 100%; /* 确保轮播图不溢出 */
-            }
-
-            /* 调整黑神话悟空板块的关键字布局 */
-            .wukong-section .keywords {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .wukong-section .keywords span {
-                width: 100%; /* 关键字占满宽度 */
-            }
-
-            /* 调整视频容器的宽度 */
-            .video-container {
-                width: 100%; /* 视频占满宽度 */
-            }
-
-            video {
-                width: 100%; /* 视频占满宽度 */
-            }
-
-            /* 调整列表和段落的样式 */
-            .info-item ul {
-                padding-left: 1rem; /* 调整列表内边距 */
-            }
-
-            .info-item p {
-                font-size: 0.9em; /* 缩小段落字体 */
-                line-height: 1.4; /* 增加行高 */
-            }
-
-            /* 调整标题字体大小 */
-            .section-header h2 {
-                font-size: 1.2em; /* 缩小标题字体 */
-            }
-
-            .info-item h3 {
-                font-size: 1em; /* 缩小子标题字体 */
-            }
-
-            /* 调整导航栏的布局 */
             .nav-links {
-                display: none; /* 默认隐藏导航链接 */
+                display: none;
                 position: absolute;
-                top: 60px; /* 导航栏高度 */
+                top: 60px;
                 left: 0;
                 width: 100%;
                 background: #fff;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                 z-index: 1000;
+            }
+
+            .nav-links ul {
                 flex-direction: column;
                 padding: 1rem;
             }
 
-            .nav-links.active {
-                display: flex; /* 显示导航链接 */
-            }
-
-            .nav-links li {
+            .nav-links ul li {
                 margin: 0.5rem 0;
             }
 
-            /* 显示汉堡菜单 */
-            .hamburger {
-                display: block; /* 显示汉堡菜单 */
+            .nav-links.active {
+                display: block;
+            }
+
+            .hero-slider {
+                margin-top: 60px;
+            }
+
+            .qr-code-image {
+                width: 280px;
+                height: 280px;
+            }
+
+            .qr-code-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .registration-fee-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .qr-code-image {
+                width: 240px;
+                height: 240px;
+            }
+
+            .qr-code-section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="logo11.png" alt="CW Logo">
-                </a>
-                <!-- 汉堡菜单按钮 -->
-                <button class="hamburger" aria-label="Toggle navigation">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-                <!-- 导航链接 -->
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="flyer.html">Flyer</a></li>
-                    <li><a href="Papers.html">Call for Papers</a></li>
-                    <li><a href="program.html">Program</a></li>
-                    <li><a href="awards.html">Awards</a></li>
-                    <li><a href="speakers.html">Keynote Speakers</a></li>
-                    <li><a href="committee.html">Committee</a></li>
-                    <li><a href="registration.html">Registration</a></li>
-                    <li><a href="venue.html">For Attendees</a></li>
-                    <li><a href="events.html">Social Events</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="content">
-            <div class="section">
-                <div class="section-header">
-                    <a href="https://hotels.ctrip.com/hotels/29973737.html" class="h2-style">Conference Venue: Jinzhong Meiyu International Hotel</a>
-                </div>
-                <div class="info-box">
-                    <div class="info-item">
-                        <div class="carousel">
-                            <img src="1.jpg" alt="Taiyuan University of Technology" class="active">
-                           
-                            <img src="3.jpg" alt="Taiyuan University of Technology">
-                            <img src="4.jpg" alt="Taiyuan University of Technology">
-                            
-                             <img src="6.jpg" alt="Taiyuan University of Technology">
-                             <img src="7.jpg" alt="Taiyuan University of Technology">
-                             <img src="8.jpg" alt="Taiyuan University of Technology">
-                             <img src="9.jpg" alt="Taiyuan University of Technology">
-                             <img src="10.jpg" alt="Taiyuan University of Technology">
-                    
-                        </div>
-                    </div>
-                   <div class="info-item">
-    <p class="indent-justify">Phone: 86-18635140903</p>
-    <a href="https://cn.bing.com/maps?pglt=419&q=%E6%99%8B%E4%B8%AD%E7%BE%8E%E8%AA%89%E5%9B%BD%E9%99%85%E9%85%92%E5%BA%97&cvid=458318333dc245c0aee5394000553ec1&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQRRg9MgYIAhBFGDzSAQkxNDI3OGowajGoAgiwAgE&FORM=ANNTA1&ucpdpc=UCPD&PC=ASTS" class="indent-justify">Address: NO.699 Longhu Street, Yuci Diatrict, Jinzhong, Shanxi（Click to open the map)</a>
-    <p class="indent-justify">Jinzhong Meiyu International Hotel is situated in the core area of the Northern New City in Jinzhong City, along the Longhu Avenue Expressway. Adjacent to Wanda Plaza and the Outlets commercial district, it is approximately a 12-minute drive from the Wusu Expressway Hub. This hotel serves as an ideal venue for hosting large-scale conferences, banquets, and business negotiation activities</p>
-    <p class="indent-justify">Versatile Excellence: The pillar-free Meiyu Grand Ballroom, with its soaring 10-meter ceiling, elegantly accommodates high-end banquets or conferences for 600-1,000 guests. Additionally, 12 flexible function rooms of varying sizes cater to events of all scales. Equipped with cutting-edge audiovisual technology and supported by our seasoned butler-style service team, we deliver meticulous, professional coordination to ensure every occasion is flawlessly executed.</p>
-    <p class="indent-justify">Lingering Charm: On the second floor, the hotel houses 15 private dining rooms at **Weixiangyuan Chinese Restaurant** (capacity: 5-30 guests), along with **Marco Polo Western Restaurant**, while the 25th-floor executive lounge offers refined ambiance and exquisite cuisine. Guests can savor distinctive culinary styles here—from the bold flavors of Hunan & Sichuan to the hearty Shanxi fare and delicate Cantonese dishes.</p>
-            </div>
-                    </div>
-                </div>
+   <header class="main-header">
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo11.png" alt="CW Logo">
+            </a>
+            <!-- 汉堡菜单按钮 -->
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <!-- 导航链接 -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flyer.html">Flyer</a></li>
+              <li><a href="Papers.html">Call for Papers</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="speakers.html">Keynote Speakers</a></li>
+                <li><a href="committee.html">Committee</a></li>
+              <li><a href="registration.html">Registration</a></li>
+                <li><a href="venue.html">For Attendees</a></li>
+              <li><a href="events.html">Social Events</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
+<main>
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-header">
+                <h1>Registration</h1>
+                <p>The online registration: <a href="#">Cyberworlds 2025 Online Registration</a></p>
+                <p>The registration system will become opened before 20 August.</p>
+            </div>
+
+            <div class="registration-deadline">
+                (All registration must be completed by 5 September 2025)
+            </div>
+
+            <table class="registration-fee-table">
+                <caption>REGISTRATION FEE:</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Registration Type</th>
+                        <th scope="col">Fee</th>
+                        <th scope="col">Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4"><strong>Regular</strong></td>
+                        <td>Full Registration for Full and Short Papers</td>
+                        <td>3800 CNY (520 USD)</td>
+                        <td>Each full registration covers only one accepted paper, regardless of paper type.</td>
+                    </tr>
+                    <tr>
+                        <td>Second Full/Short Paper Registration (Same Author)</td>
+                        <td>3040 CNY (416 USD)</td>
+                        <td>For the same author(s), the first paper requires full registration; the second paper receives a 20% discount.</td>
+                    </tr>
+                    <tr>
+                        <td>Third or Additional Full/Short Papers (Same Author)</td>
+                        <td>2660 CNY (364 USD)</td>
+                        <td>For the same author(s), the first paper requires full registration; the second paper receives a 20% discount, and the third or subsequent papers receive a 30% discount.</td>
+                    </tr>
+                    <tr>
+                        <td>Poster Papers</td>
+                        <td>3040 CNY (416 USD)</td>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Extra</strong></td>
+                        <td>Accompanying Person Fee</td>
+                        <td>3040 CNY (416 USD)</td>
+                        <td>Applicable if she/he has one or more accepted papers.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Participant</strong></td>
+                        <td>Listener Fee</td>
+                        <td>3040 CNY (416 USD)</td>
+                        <td>Applicable to participants without any accepted papers.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="note-section">
+                <h3>Note</h3>
+                <p><strong>All registration types include:</strong> access to all technical sessions, a conference bag, the final program, buffet lunches and dinners, the conference banquet, and refreshment breaks throughout the event.</p>
+                
+                <p><strong>Payment Instructions:</strong></p>
+                <p><strong>（1）Regular Paper Registration:</strong> When making your payment, please include a note with your paper ID and surname.<br>
+                For example, if your paper ID is 7670 and the presenter (author)'s name is Jianfeng Wang, the note should be: "7670+Wang".<br>
+                (如果您的论文是Regular Paper，当您缴费付款时，请添加备注，格式是"论文编号+姓"，例如某篇论文的编号是7670，作报告的作者姓名是Jianfeng Wang，那么这篇论文缴费注册时需要备"7670+Wang")<br>
+               </p>
+
+                <p><strong>（2）Extra Registration:</strong> If you are registering as an Extra, please include a note when making your payment in the format "E+paper ID+Name".<br>
+                For example, if your paper ID is 7670 and your name is Jianfeng Wang, the note should be "E+7670+Jianfeng Wang".<br>
+                (如果您的论文是Regular Paper，当您缴费付款时，请添加备注，格式是"论文编号+姓"，例如某篇论文的编号是7670，作报告的作者姓名是Jianfeng Wang，那么这篇论文缴费注册时需要备"7670+Wang)<br>
+          
+               </p>
+
+                <p><strong>（3）Participant Registration:</strong> If you are registering as a Participant, please include a note when making your payment in the format "P+Name".<br>
+                For example, if your name is Jianfeng Wang, the note should be "P+Jianfeng Wang".<br>
+                (如果您是Participant的注册类型，当您缴费付款时，请添加备注，格式是"P+姓名"，例如Jianfeng Wang，那么缴费注册时需要备注"P+Jianfeng Wang")
+                </p>
 
                 
-                <div id="container" style="width: 85%; height: 85vh;">map</div>
-                <script type="text/javascript">
-                  window._AMapSecurityConfig = {
-                    serviceHost: "https://cw2025.tyut.edu.cn//_AMapService",
-                    //例如 ：serviceHost:'http://1.1.1.1:80/_AMapService',
-                  };
-                </script>
-                <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=2b7e307f1ab05c623537779d2ff1a8f8"></script>
-                <script type="text/javascript">
-                  //地图初始化应该在地图容器div已经添加到DOM树之后
-
-                  loadAMapSdk(function () {
-        // 方法1：直接使用巴黎圣母院的经纬度坐标（推荐）
-        var map = new AMap.Map('container', {
-          zoom: 15, // 适当放大以更好地查看巴黎圣母院
-          // 更精确的明向校区中心位置
-          center: [112.5985, 37.7182]  // [经度, 纬度]  // [经度, 纬度] // 巴黎圣母院的经纬度 [经度, 纬度]
-        });
-
-                  var map = new AMap.Map("container", {
-                    zoom: 12,
-                  });
-                </script>
-
-
-            <div class="content">
-                <!-- 黑神话悟空板块 -->
-                <div class="wukong-section">
-                    <h2>Black Myth: Wukong and Shanxi</h2>
-                    <p>The creative inspiration for Black Myth: Wukong largely originates from the profound cultural heritage of Shanxi. The game scenes blend seamlessly with the ancient architecture and mythological tales of Shanxi, taking you on a journey to explore the beauty of Eastern fantasy.</p>
-                    
-                    <!-- 视频插入 -->
-                    <div class="video-container">
-                        <video controls width="100%">
-                            <source src="wokong2026.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
             </div>
 
-            <div class="section">
-                <div class="section-header">
-                    <h2>Transportation Guide</h2>
-                </div>
-                <div class="info-box">
-                    <div class="info-item">
-                        <h3>From Taiyuan Wusu Airport</h3>
-                        <p></p>
-                        <ul>
-                            <li>Way1: You can take a taxi directly from Taiyuan Wusu Airport to Jinzhong Meiyu International Hotel, with an estimated travel time of 30 minutes.</li>
-                            <p></p>
-                            <li>Way2: Take Bus 201 from the airport terminal bus stop, get off at the Taiyulu Rongjun Nanjiekou bus stop, then transfer to Special Bus 2/Bethune Hospital Line, and get off at Longhujie Xinjian Lukou bus stop. Walk 332 meters to reach Jinzhong Meiyu International Hotel. The entire journey takes approximately 1 hour and 20 minutes.</li>
-                            <p></p>
-                            <li>Way3: Take Bus G4 from the airport terminal bus stop, get off at Nanzhonghuan Metro Station bus stop, then transfer to Special Bus 2/Bethune Hospital Line, and get off at Longhujie Xinjian Lukou bus stop. Walk 332 meters to reach Jinzhong Meiyu International Hotel. The entire journey takes approximately 1 hour and 45 minutes.</li>
-                        </ul>
-                    </div>
-                    <div class="info-item">
-                        <h3>From Taiyuan Railway Station</h3>
-                        <p></p>
-                        <ul>
-                            <li>Way1: You can take a taxi directly from Taiyuan South Railway Station to Jinzhong Meiyu International Hotel, with an estimated travel time of 20 minutes.</li>
-                            <p></p>
-                            <li>Way2: Take Special Bus 2/Bethune Hospital Line from Taiyuan South Railway Station bus stop, get off directly at Longhujie Xinjian Lukou bus stop, and walk 332 meters to reach Jinzhong Meiyu International Hotel. The entire journey takes approximately 1 hour.</li>
-                            <p></p>
-                            <li>Way3: Take Bus K903/903 Main Line from Taiyuan South Railway Station bus stop, get off at Shanxi Vocational University of Engineering Science and Technology South Gate East bus stop, then transfer to Bus 11, and get off at Jinzhong Wanda Plaza West Jinyuan bus stop. Walk 332 meters to reach Jinzhong Meiyu International Hotel. The entire journey takes approximately 1 hour and 20 minutes.</li>
-                        </ul>
-                    </div>
-                    <div class="info-item">
-                        <h3>From Jinzhong Railway Station</h3>
-                        <p></p>
-                        <ul>
-                            <li>Way1: You can take a taxi directly from Taiyuan South Railway Station to Jinzhong Meiyu International Hotel, with an estimated travel time of 20 minutes. </li>
-                        <p></p>
-                            <li>Way2: Take Bus 201 from Jinzhong Railway Station bus stop, get off at Yijia Home Furnishing East bus stop, then transfer to Bus 11 from Yujing Residential Area bus stop, and get off at Jinzhong Wanda Plaza West Jinyuan bus stop. Walk 332 meters to reach Jinzhong Meiyu International Hotel. The entire journey takes approximately 1 hour and 10 minutes.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="payment-reminder-section">
+                <p>Please complete the registration payment using the following bank information. After making the payment, registrants are required to send the payment receipt or a screenshot of the transaction, together with the paper ID and title, the registrant’s name, affiliation, and invoice information (invoice title and tax ID, for reimbursement purposes), to cw2025@tyut.edu.cn </p>
+                <p>The email should follow this format:</p>
+                <p>1. Paper ID and Title</p>
+                <p>2. Registrant’s Name</p>
+                <p>3. Registrant’s Affiliation</p>
+                <p>4. Invoice Information (if applicable)</p>
+                <p>5. Payment Receipt or Screenshot</p>
+                <p>请用以下银行信息完成缴费注册。注册者缴费后，请把缴费凭证或缴费截图，连同注册者的论文编号和题目，注册者姓名、单位、发票信息（发票抬头、税号，以便注册者报销）发送到邮箱：cw2025@tyut.edu.cn</p>
+                <p>格式：（1）论文编号、题目（2）注册者姓名；（3）注册者单位；（4）发票信息（如有）（5）缴费凭证或者缴费截图</p>
             </div>
 
-            <div class="section">
-                <div class="section-header">
-                    <h2>Local Attractions</h2>
+            <div class="payment-section">
+                <h3>Bank Information</h3>
+                <div class="payment-info">
+                   <p>开户名称：山西亿城会务会展有限公司</p>
+                    <p>开户行：中国建设银行股份有限公司太原漪汾街支行（或漪汾街分理处）</p>
+                    <p>行号：105161003037</p>
+                    <p>税号：91140105MA0LABDN1F</p>
+                    <p>账号：1405 0183 6108 0000 0814</p>
+                    <p>地址:山西太原小店区长治路北美新天地御苑B座1612室</p>
+                    <p>电话：0351-2581258</p>
                 </div>
-                <div class="info-box">
-                    <div class="info-item">
-                        <div class="carousel">
-                            <img src="jinci1.jpg" alt="Jinci Temple" class="active">
-                            <img src="jinci2.jpg" alt="Jinci Temple">
-                            <img src="jinci3.jpg" alt="Jinci Temple">
-                        </div>
-                        <p>Jinci Temple<br>A royal sacrificial garden in Taiyuan,Shanxi,with a long history and exquisite architecture.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="carousel">
-                            <img src="wutaishan1.jpg" alt="Wutai Mountain" class="active">
-                            <img src="wutaishan2.jpg" alt="Wutai Mountain">
-                            <img src="wutaishan3.jpg" alt="Wutai Mountain">
-                        </div>
-                        <p>Wutai Mountain<br>A Buddhist holy land in Xinzhou,Shanxi,one of China's Four Sacred Mountains,known for its temples and scenic beauty.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="carousel">
-                            <img src="qjdy.jpg" alt="Jinci Temple" class="active">
-                            <img src="qiaojia2.jpg" alt="Jinci Temple">
-                            <img src="qiaojia3.jpg" alt="Jinci Temple">
-                        </div>
-                        <p>Qiao Family Compound<br>A cluster of ancient buildings from the Ming and Qing dynasties in Qixian,Shanxi,showcasing the essence of Jin merchant culture.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="section">
-                <div class="section-header">
-                    <h2>Practical Information</h2>
+                <div class="qr-code-section">
+                    <h4>收款码 Payment QR Code</h4>
+                    <div class="qr-code-container">
+                        <img src="Payment.jpg" alt="Payment QR Code" class="qr-code-image">
+                    </div>
+                    <p class="qr-code-caption">请使用微信或支付宝扫描收款码进行支付<br>Please scan the QR code with WeChat or Alipay to make payment</p>
                 </div>
-                <div class="info-box">
-                    <div class="info-item">
-                        <h3>Conference Service Desk</h3>
-                        <p>Email:cw2025@tyut.edu.cn</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>Weather</h3>
-                        <p>Average temperature in October: 15-20°C<br>It is recommended to bring a light jacket.</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>Currency</h3>
-                        <p>Renminbi and Dollar<br>Credit cards are accepted at most places.</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>Emergency Contacts</h3>
-                        <p>Police: 110<br>Ambulance: 120<br>Security Department(tyut):+86 0351-6010350<br>School hospital:+86 0351-6010690</p>
-                    </div>
+
+                <div class="payment-info">
+                   <p>If it is not convenient for you to use the above bank information, especially for authors from outside China, you may consider the following three options to complete your registration payment.</p>
+                
+                    <p>After making the payment, registrants are required to send the payment receipt or a screenshot of the transaction, together with the paper ID and title, the registrant’s name, affiliation, and invoice information, to cw2025@tyut.edu.cn</p>
+                    <p>The email should follow this format (email title: Paper ID + Registration):</p>
+                    <p>1. Paper ID and Title</p>
+                    <p>2. Registrant’s Name</p>
+                    <p>3. Registrant’s Affiliation</p>
+                    <p>4. Invoice Information (if applicable)</p>
+                    <p>5. Payment Receipt or Screenshot</p>
+                    <p>                        </p>
+                    <p>* USD Account Information</p>
+                    <p>BANK NAME：CHINA CONSTRUCTION BANK CORPORATIONG TAIYUAN HEXI SUB-BRANCH  </p>
+                    <p>BANK ADDRESS：NO.100 YINGZE WEST STREET TAIYUAN SHANXI PROVINCE CHINA </p>
+                    <P>SWIFT CODE：PCBCCNBJIXA</P>
+                    <P>Company Name： Shanxi Yicheng Conference and Exhibition Co., Ltd.</P>
+                    <P>Account No.：140 5018 3610 8000 00815，United States Dollar</P>
+                    <P>                       </P>
+                    <P>* EUR Account Information</P>
+                    <P>BANK NAME：CHINA CONSTRUCTION BANK CORPORATIONG TAIYUAN HEXI SUB-BRANCH  </P>
+                    <P>BANK ADDRESS：NO.100 YINGZE WEST STREET TAIYUAN SHANXI PROVINCE CHINA </P>
+                    <P>SWIFT CODE：PCBCCNBJIXA</P>
+                    <P>Company Name：Shanxi Yicheng Conference and Exhibition Co., Ltd.</P>
+                    <P>Account No.：140 5018 3610 8000 00816，Euro</P>
+                    <P>                          </P>
+                  
                 </div>
             </div>
         </div>
-    </main>
-    <script>
-        // 轮播图逻辑
-        const carousels = document.querySelectorAll('.carousel');
+    </section>
+</main>
 
-        carousels.forEach(carousel => {
-            const images = carousel.querySelectorAll('img');
-            let currentIndex = 0;
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
 
-            function showNextImage() {
-                images[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex + 1) % images.length;
-                images[currentIndex].classList.add('active');
-            }
-
-            setInterval(showNextImage, 2400); // 2.4秒切换一次
+        hamburger.addEventListener('click', function () {
+            // 切换导航栏的显示状态
+            navLinks.classList.toggle('active');
+            // 切换汉堡菜单的动画
+            hamburger.classList.toggle('is-active');
         });
-
-        // 汉堡菜单逻辑
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', function () {
-                // 切换导航栏的显示状态
-                navLinks.classList.toggle('active');
-                // 切换汉堡菜单的动画
-                hamburger.classList.toggle('is-active');
-            });
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
