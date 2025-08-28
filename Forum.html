@@ -387,6 +387,78 @@
                 width: 100%;
                 margin-left: 0;
             }
+
+            .forum-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.forum {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 左右板块区分 */
+.youth-scholars h2 {
+  color: #1e90ff;
+  border-bottom: 2px solid #1e90ff;
+}
+
+.doctoral-students h2 {
+  color: #28a745;
+  border-bottom: 2px solid #28a745;
+}
+
+/* 报告内部样式 */
+.report {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #fff;
+  border-left: 4px solid #ccc;
+  border-radius: 8px;
+}
+
+.report-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.abstract {
+  font-style: italic;
+  color: #555;
+  margin: 6px 0;
+}
+
+.biography {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ====== 移动端适配 ====== */
+@media (max-width: 768px) {
+  .forum-sections {
+    flex-direction: column;   /* 改为上下堆叠 */
+  }
+
+  .forum {
+    width: 100%;             /* 占满屏幕宽度 */
+    margin-bottom: 20px;     /* 板块之间留间距 */
+  }
+
+  .report-title {
+    font-size: 16px;         /* 缩小一点，便于阅读 */
+  }
+
+  .abstract, .biography {
+    font-size: 13px;
+  }
+}
+
         }
     </style>
 </head>
@@ -445,7 +517,7 @@
           <p class="abstract">Abstract</p>
           <p class="biography">Biography</p>
         </div>
-        
+
       </section>
 
       <!-- Right Page: Outstanding Doctoral Students Forum -->
