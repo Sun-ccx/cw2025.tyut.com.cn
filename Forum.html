@@ -24,6 +24,58 @@
             padding: 0 20px;
         }
 
+.forum-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.forum {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 左右板块区分 */
+.youth-scholars h2 {
+  color: #1e90ff;   /* 蓝色 */
+  border-bottom: 2px solid #1e90ff;
+}
+
+.doctoral-students h2 {
+  color: #28a745;   /* 绿色 */
+  border-bottom: 2px solid #28a745;
+}
+
+/* 报告内部样式 */
+.report {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #fff;
+  border-left: 4px solid #ccc;
+  border-radius: 8px;
+}
+
+.report-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.abstract {
+  font-style: italic;
+  color: #555;
+  margin: 6px 0;
+}
+
+.biography {
+  font-size: 14px;
+  color: #666;
+}
+
+
         /* 导航栏样式 */
         .main-header {
             background: #fff;
@@ -369,16 +421,53 @@
         </nav>
     </header>
     <main>
-        <section class="program-content">
-           <div class="program-header">
-                <h1>Cyberworlds 2025 Forum</h1>
-                <h3>Pending update</h3>
-            
-            </div>
-            
-            
-        </section>
-    </main>
+  <section class="program-content">
+    <div class="program-header">
+      <h1>Cyberworlds 2025 Forum</h1>
+      <h3>Pending update</h3>
+    </div>
+
+    <div class="forum-sections">
+      <!-- Left Page: Youth Scholars Forum -->
+      <section class="forum youth-scholars">
+        <h2>Youth Scholars Forum</h2>
+
+        
+
+        <div class="report">
+          <h3 class="report-title">Report Title：3D Measurement Data Processing, Analysis, and Generation</h3>
+          <p class="abstract">Abstract：With the rapid development of 3D sensing and imaging technologies, the acquisition, processing, and understanding of high-quality 3D data are becoming fundamental to fields such as intelligent manufacturing, robotic perception, and digital twins. This report focuses on the theme of “Research on 3D Geometric Learning in Practical Applications” and systematically presents our progress and achievements in 3D measurement data processing, analysis, and generation. Specifically, the report will cover topics including 3D data denoising, registration, completion and reconstruction, feature computation, as well as 3D editing and generation methods incorporating priors from pre-trained models. In addition, the report will explore future research directions that integrate 3D geometry with physical motion attributes, aiming to achieve unified perception and generation of object shape, physical properties, and dynamic behaviors in complex scenes.</p>
+          <p class="biography">Biography：Honghua Chen is a Research Assistant Professor at Lingnan University, Hong Kong. He received his Ph.D. degree from Nanjing University of Aeronautics and Astronautics in 2022. From December 2020 to April 2022, he was a Research Assistant at The Chinese University of Hong Kong. From January 2023 to July 2025, he worked as a Research Fellow at MMLab@NTU and S-Lab, Nanyang Technological University, Singapore. His main research interests lie in computer-aided design and intelligent manufacturing, with a focus on high-precision 3D measurement data processing, analysis, generation, and assembly quality control. He has published multiple papers in top-tier international conferences and journals (SIGGRAPH & SIGGRAPH Asia, CVPR, ICCV, TPAMI, IJCV, TVCG, CAD, etc.) and holds more than ten granted national invention patents. He was awarded the CCF-CAD&CG Doctoral Dissertation Incentive Award (2024) and the First Prize of the China Invention Association Invention and Innovation Award.</p>
+        </div>
+        
+        <div class="report">
+          <h3 class="report-title">Report Title</h3>
+          <p class="abstract">Abstract</p>
+          <p class="biography">Biography</p>
+        </div>
+        
+      </section>
+
+      <!-- Right Page: Outstanding Doctoral Students Forum -->
+      <section class="forum doctoral-students">
+        <h2>Outstanding Doctoral Students Forum</h2>
+
+        <div class="report">
+          <h3 class="report-title">Report Title</h3>
+          <p class="abstract">Abstract</p>
+          <p class="biography">Biography</p>
+        </div>
+
+        <div class="report">
+          <h3 class="report-title">Report Title</h3>
+          <p class="abstract">Abstract</p>
+          <p class="biography">Biography</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
