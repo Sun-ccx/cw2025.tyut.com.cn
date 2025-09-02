@@ -136,6 +136,25 @@
             font-size: 14px;
             text-align: center;
         }
+        
+        /* 控制照片显示 - 新增和修改的样式 */
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            display: block; /* 移除图片下方间隙 */
+        }
+        
+        /* 处理图片加载失败的情况 */
+        .profile-photo img:not([src]) {
+            display: none;
+        }
+        
+        .profile-photo:has(img:not([src]))::before {
+            content: "No Photo";
+            color: #999;
+        }
 
         .photo-placeholder {
             padding: 10px;
@@ -368,7 +387,7 @@
                     <div class="doctoral-report">
                         <div class="photo-container">
                             <div class="profile-photo">
-                                <img src="Jinfeng-Xu.jpg" alt="Jinfeng Xu">
+                                <img src="Jinfeng-Xu.jpg" alt="Jinfeng Xu's profile photo">
                             </div>
                         </div>
                         <div class="doctoral-content">
@@ -382,7 +401,7 @@
                     <div class="doctoral-report">
                         <div class="photo-container">
                             <div class="profile-photo">
-                                <img src="Wuzhou-Quan.jpg" alt="Wuzhou Quan">
+                                <img src="Wuzhou-Quan.jpg" alt="Wuzhou Quan's profile photo">
                             </div>
                         </div>
                         <div class="doctoral-content">
@@ -396,7 +415,7 @@
                     <div class="doctoral-report">
                         <div class="photo-container">
                             <div class="profile-photo">
-                                <img src="Yang-Zhigang.jpg" alt="Yang Zhigang">
+                                <img src="Yang-Zhigang.jpg" alt="Yang Zhigang's profile photo">
                             </div>
                         </div>
                         <div class="doctoral-content">
@@ -411,7 +430,7 @@
                     <div class="doctoral-report">
                         <div class="photo-container">
                             <div class="profile-photo">
-                                <img src="Min-Yang.jpg" alt="Min Yang">
+                                <img src="Min-Yang.jpg" alt="Min Yang's profile photo">
                             </div>
                         </div>
                         <div class="doctoral-content">
@@ -425,7 +444,7 @@
                     <div class="doctoral-report">
                         <div class="photo-container">
                             <div class="profile-photo">
-                                <img src="Xueyu-Liu.jpg" alt="Xueyu Liu">
+                                <img src="Xueyu-Liu.jpg" alt="Xueyu Liu's profile photo">
                             </div>
                         </div>
                         <div class="doctoral-content">
@@ -455,3 +474,4 @@
     </script>
 </body>
 </html>
+
