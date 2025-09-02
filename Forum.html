@@ -15,6 +15,8 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            background-color: #f5f7fa;
+            color: #333;
         }
 
         .container {
@@ -24,57 +26,124 @@
             padding: 0 20px;
         }
 
-.forum-sections {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
+        /* 论坛区域样式 */
+        .forum-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 100px;
+            padding: 20px;
+        }
 
-.forum {
-  flex: 1;
-  padding: 15px;
-  border-radius: 12px;
-  background: #f9f9f9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
+        .forum {
+            padding: 25px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* 左右板块区分 */
-.youth-scholars h2 {
-  color: #1e90ff;   /* 蓝色 */
-  border-bottom: 2px solid #1e90ff;
-}
+        .forum:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
 
-.doctoral-students h2 {
-  color: #28a745;   /* 绿色 */
-  border-bottom: 2px solid #28a745;
-}
+        /* 左右板块区分 */
+        .youth-scholars h2 {
+            color: #1e90ff;
+            border-bottom: 2px solid #1e90ff;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
 
-/* 报告内部样式 */
-.report {
-  margin-bottom: 20px;
-  padding: 10px;
-  background: #fff;
-  border-left: 4px solid #ccc;
-  border-radius: 8px;
-}
+        .doctoral-students h2 {
+            color: #28a745;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
 
-.report-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
+        /* 报告内部样式 */
+        .report {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #ccc;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
 
-.abstract {
-  font-style: italic;
-  color: #555;
-  margin: 6px 0;
-}
+        .report:hover {
+            border-left-color: #666;
+            background: #f0f0f0;
+        }
 
-.biography {
-  font-size: 14px;
-  color: #666;
-}
+        .report-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
 
+        .abstract {
+            font-style: italic;
+            color: #555;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .biography {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 博士生论坛特定样式 - 带照片的布局 */
+        .doctoral-report {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #28a745;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .doctoral-report:hover {
+            border-left-width: 6px;
+            background: #f0f0f0;
+        }
+
+        .photo-container {
+            flex: 0 0 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #ddd;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .photo-placeholder {
+            padding: 10px;
+        }
+
+        .doctoral-content {
+            flex: 1;
+        }
 
         /* 导航栏样式 */
         .main-header {
@@ -116,10 +185,10 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.6rem; /* 减小间距以确保内容在一行显示 */
-            flex-wrap: nowrap; /* 禁止换行 */
-            overflow-x: auto; /* 如果内容超出屏幕宽度，允许水平滚动 */
-            padding: 0 1rem; /* 添加内边距以避免内容紧贴屏幕边缘 */
+            gap: 1.6rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 0 1rem;
         }
 
         .nav-links a {
@@ -127,22 +196,18 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
-            white-space: nowrap; /* 确保文字不换行 */
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
             color: #007bff;
         }
 
-        /* 会议日程样式 */
-        .program-content {
-            margin-top: 100px;
-            padding: 2rem 0;
-        }
-
+        /* 页面标题样式 */
         .program-header {
             text-align: center;
             margin-bottom: 3rem;
+            padding-top: 20px;
         }
 
         .program-header h1 {
@@ -151,152 +216,45 @@
             margin-bottom: 1rem;
         }
 
-        .program-header p {
+        .program-header h3 {
             color: #666;
-            font-size: 1.1em;
-        }
-
-        .program-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #eee;
-        }
-
-        .tab-button {
-            padding: 1rem 2rem;
-            border: none;
-            background: none;
-            font-size: 1.1em;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .tab-button:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #007bff;
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .tab-button.active {
-            color: #007bff;
-        }
-
-        .tab-button.active:after {
-            transform: scaleX(1);
-        }
-
-        .program-day {
-            display: none;
-        }
-
-        .program-day.active {
-            display: block;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: flex-start; /* Align items to the left */
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-
-        .time-slot {
-            flex: 0 0 150px;
-            text-align: right;
-            padding-right: 2rem;
-            color: #666;
-        }
-
-        .event-content {
-            flex: 1;  /* Allow the content to take up the remaining space */
-            padding-left: 2rem;  /* Add padding to the left */
-            padding-right: 2rem;  /* Add padding to the right for spacing */
-            max-width: calc(100% - 150px);  /* Ensure it takes the full remaining space minus the time slot width */
-        }
-
-        .event-title {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
-        .event-description {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .event-speaker {
-            color: #007bff;
+            font-weight: normal;
             font-style: italic;
-            margin-top: 0.5rem;
         }
 
-        /* 日期与时间样式 */
-        .program-day-header {
-            background: #f7f7f7;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            text-align: center;  /* Center the Day header text */
-        }
-
-        .program-day-header h2 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .event-item {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1rem;
-        }
-
-        .event-item h3 {
-            font-size: 1.2em;
-            margin-bottom: 0.3rem;
-            color: #333;
-        }
-
-        .event-item p {
-            font-size: 1em;
-            color: #666;
-        }
-
+        /* 移动端适配 */
         @media (max-width: 768px) {
+            .doctoral-report {
+                flex-direction: column;
+            }
+            
+            .photo-container {
+                align-self: center;
+                margin-bottom: 15px;
+            }
+            
+            .profile-photo {
+                width: 100px;
+                height: 130px;
+            }
+            
             .nav-links {
                 display: none;
             }
-
-            .timeline-item {
-                flex-direction: column;
+            
+            .hamburger {
+                display: block;
             }
-
-            .time-slot {
-                text-align: left;
-                padding-right: 0;
-                padding-left: 60px;
-                margin-bottom: 0.5rem;
+            
+            .forum-sections {
+                margin-top: 80px;
+                padding: 10px;
             }
-
-            .event-content {
-                padding-left: 60px;
+            
+            .report, .doctoral-report {
+                padding: 15px;
             }
         }
-
 
         /* 汉堡菜单样式 */
         .hamburger {
@@ -344,122 +302,6 @@
         .hamburger-inner::after {
             top: 6px;
         }
-
-        /* 移动端样式 */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background: #fff;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-            }
-
-            .nav-links ul {
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .nav-links ul li {
-                margin: 0.5rem 0;
-            }
-
-            .nav-links.active {
-                display: block;
-            }
-
-            .hero-slider {
-                margin-top: 60px;
-            }
-
-            .content {
-                flex-direction: column;
-            }
-
-            .main-content, .side-content {
-                width: 100%;
-                margin-left: 0;
-            }
-
-            .forum-sections {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.forum {
-  flex: 1;
-  padding: 15px;
-  border-radius: 12px;
-  background: #f9f9f9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* 左右板块区分 */
-.youth-scholars h2 {
-  color: #1e90ff;
-  border-bottom: 2px solid #1e90ff;
-}
-
-.doctoral-students h2 {
-  color: #28a745;
-  border-bottom: 2px solid #28a745;
-}
-
-/* 报告内部样式 */
-.report {
-  margin-bottom: 20px;
-  padding: 10px;
-  background: #fff;
-  border-left: 4px solid #ccc;
-  border-radius: 8px;
-}
-
-.report-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
-
-.abstract {
-  font-style: italic;
-  color: #555;
-  margin: 6px 0;
-}
-
-.biography {
-  font-size: 14px;
-  color: #666;
-}
-
-/* ====== 移动端适配 ====== */
-@media (max-width: 768px) {
-  .forum-sections {
-    flex-direction: column;   /* 改为上下堆叠 */
-  }
-
-  .forum {
-    width: 100%;             /* 占满屏幕宽度 */
-    margin-bottom: 20px;     /* 板块之间留间距 */
-  }
-
-  .report-title {
-    font-size: 16px;         /* 缩小一点，便于阅读 */
-  }
-
-  .abstract, .biography {
-    font-size: 13px;
-  }
-}
-
-        }
     </style>
 </head>
 <body>
@@ -493,52 +335,112 @@
         </nav>
     </header>
     <main>
-  <section class="program-content">
-    <div class="program-header">
-      <h1>Cyberworlds 2025 Forum</h1>
-      <h3>Pending update</h3>
-    </div>
+        <section class="program-content">
+            <div class="program-header">
+                <h1>Cyberworlds 2025 Forum</h1>
+                <h3>Pending update</h3>
+            </div>
 
-    <div class="forum-sections">
-      <!-- Left Page: Youth Scholars Forum -->
-      <section class="forum youth-scholars">
-        <h2>Youth Scholars Forum</h2>
+            <div class="forum-sections">
+                <!-- 青年学者论坛 -->
+                <section class="forum youth-scholars">
+                    <h2>Youth Scholars Forum</h2>
 
-        
+                    <div class="report">
+                        <h3 class="report-title">3D Measurement Data Processing, Analysis, and Generation</h3>
+                        <p class="report-title">Speaker: Honghua Chen</p>
+                        <p class="abstract"><strong>Abstract:</strong> With the rapid development of 3D sensing and imaging technologies, the acquisition, processing, and understanding of high-quality 3D data are becoming fundamental to fields such as intelligent manufacturing, robotic perception, and digital twins. This report focuses on the theme of "Research on 3D Geometric Learning in Practical Applications" and systematically presents our progress and achievements in 3D measurement data processing, analysis, and generation. Specifically, the report will cover topics including 3D data denoising, registration, completion and reconstruction, feature computation, as well as 3D editing and generation methods incorporating priors from pre-trained models. In addition, the report will explore future research directions that integrate 3D geometry with physical motion attributes, aiming to achieve unified perception and generation of object shape, physical properties, and dynamic behaviors in complex scenes.</p>
+                        <p class="biography"><strong>Biography:</strong> Honghua Chen is a Research Assistant Professor at Lingnan University, Hong Kong. He received his Ph.D. degree from Nanjing University of Aeronautics and Astronautics in 2022. From December 2020 to April 2022, he was a Research Assistant at The Chinese University of Hong Kong. From January 2023 to July 2025, he worked as a Research Fellow at MMLab@NTU and S-Lab, Nanyang Technological University, Singapore. His main research interests lie in computer-aided design and intelligent manufacturing, with a focus on high-precision 3D measurement data processing, analysis, generation, and assembly quality control. He has published multiple papers in top-tier international conferences and journals (SIGGRAPH & SIGGRAPH Asia, CVPR, ICCV, TPAMI, IJCV, TVCG, CAD, etc.) and holds more than ten granted national invention patents. He was awarded the CCF-CAD&CG Doctoral Dissertation Incentive Award (2024) and the First Prize of the China Invention Association Invention and Innovation Award.</p>
+                    </div>
+                    
+                    <div class="report">
+                        <h3 class="report-title">Towards Cognitive Trustworthiness: Mechanisms and Governance of Hallucinations in Large Language Models</h3>
+                        <p class="report-title">Speaker: Xiang Chen</p>
+                        <p class="abstract"><strong>Abstract:</strong> Large Language Models (LLMs), while transformative, are hindered by "hallucinations"—factual errors and fabrications—that undermine their cognitive trustworthiness and limit applications in critical domains. This report dissects the underlying mechanisms of hallucination by drawing on interpretability research into "knowledge neurons" and "neural circuits." Based on this analysis, we introduce the governance framework structured around prevention (e.g., alignment via reinforcement learning), mitigation (e.g., retrieval-augmentation and decoding interventions), and measurement (e.g., standardized evaluation). The report concludes by outlining future research paths toward building more reliable and trustworthy LLMs.</p>
+                        <p class="biography"><strong>Biography:</strong> Prof. Xiang Chen Professor, School of Computer Science and Technology, Nanjing University of Aeronautics and Astronautics,  China.</p>
+                    </div>
+                </section>
 
-        <div class="report">
-          <h3 class="report-title">Report Title：3D Measurement Data Processing, Analysis, and Generation</h3>
-          <p class="abstract">Abstract：With the rapid development of 3D sensing and imaging technologies, the acquisition, processing, and understanding of high-quality 3D data are becoming fundamental to fields such as intelligent manufacturing, robotic perception, and digital twins. This report focuses on the theme of “Research on 3D Geometric Learning in Practical Applications” and systematically presents our progress and achievements in 3D measurement data processing, analysis, and generation. Specifically, the report will cover topics including 3D data denoising, registration, completion and reconstruction, feature computation, as well as 3D editing and generation methods incorporating priors from pre-trained models. In addition, the report will explore future research directions that integrate 3D geometry with physical motion attributes, aiming to achieve unified perception and generation of object shape, physical properties, and dynamic behaviors in complex scenes.</p>
-          <p class="biography">Biography：Honghua Chen is a Research Assistant Professor at Lingnan University, Hong Kong. He received his Ph.D. degree from Nanjing University of Aeronautics and Astronautics in 2022. From December 2020 to April 2022, he was a Research Assistant at The Chinese University of Hong Kong. From January 2023 to July 2025, he worked as a Research Fellow at MMLab@NTU and S-Lab, Nanyang Technological University, Singapore. His main research interests lie in computer-aided design and intelligent manufacturing, with a focus on high-precision 3D measurement data processing, analysis, generation, and assembly quality control. He has published multiple papers in top-tier international conferences and journals (SIGGRAPH & SIGGRAPH Asia, CVPR, ICCV, TPAMI, IJCV, TVCG, CAD, etc.) and holds more than ten granted national invention patents. He was awarded the CCF-CAD&CG Doctoral Dissertation Incentive Award (2024) and the First Prize of the China Invention Association Invention and Innovation Award.</p>
-        </div>
-        
-        <div class="report">
-          <h3 class="report-title">Report Title</h3>
-          <p class="abstract">Abstract</p>
-          <p class="biography">Biography</p>
-        </div>
+                <!-- 博士生论坛 -->
+                <section class="forum doctoral-students">
+                    <h2>Outstanding Doctoral Students Forum</h2>
 
-      </section>
+                    <div class="doctoral-report">
+                        <div class="photo-container">
+                            <div class="profile-photo">
+                                <img src="Jinfeng-Xu.jpg" alt="Jinfeng Xu">
+                            </div>
+                        </div>
+                        <div class="doctoral-content">
+                            <h3 class="report-title">Advancing Open World 3D Point Cloud Understanding with Uncertainty and Structural Awareness</h3>
+                            <p>Speaker: Jinfeng Xu</p>
+                            <p class="abstract"><strong>Abstract:</strong>3D point cloud understanding is essential for applications such as robotics, autonomous driving, and immersive environments. However, most existing methods operate under the closed-set assumption, which restricts their ability to generalize in real-world scenarios filled with unknown objects and evolving contexts. To address this limitation, our research explores open world 3D point cloud understanding, aiming to recognize known classes while effectively discovering and adapting to unknown categories.<br>At the object level, we introduce a saliency-aware structural perception approach that decomposes objects into salient and non-salient parts. This structural separation not only strengthens the representation of known categories but also enables the synthesis of pseudo-unknowns, thereby enhancing open set recognition. Beyond individual objects, at the scene level we propose a probability-driven framework that leverages uncertainty estimation to uncover novel geometric patterns in large-scale environments and incorporates incremental knowledge distillation to continuously assimilate new classes while mitigating catastrophic forgetting.<br>Although designed at different granularities, both approaches share the common goal of moving beyond the closed-set assumption. Together, they demonstrate that combining structural perception at the object level with probabilistic modeling at the scene level provides a robust pathway for advancing open world 3D point cloud understanding. Extensive experiments on benchmarks including ShapeNet, ModelNet, S3DIS, and ScanNet validate the effectiveness of this line of research, highlighting its potential for building resilient 3D perception systems in open environments.</p>
+                            <p class="biography"><strong>Biography:</strong>Jinfeng Xu is currently pursuing a Ph.D. degree in Computer Science at Huazhong University of Science and Technology (HUST). His research interests lie in 3D vision, scene understanding, and open world learning. He has published as first author in top-tier conferences, including AAAI and CVPR (two papers), and has also co-authored papers in prestigious journals and conferences such as ACM Transactions on Graphics (TOG), IEEE Transactions on Visualization and Computer Graphics (TVCG), and ACM Multimedia (MM).</p>
+                        </div>
+                    </div>
 
-      <!-- Right Page: Outstanding Doctoral Students Forum -->
-      <section class="forum doctoral-students">
-        <h2>Outstanding Doctoral Students Forum</h2>
+                    <div class="doctoral-report">
+                        <div class="photo-container">
+                            <div class="profile-photo">
+                                <img src="Wuzhou-Quan.jpg" alt="Wuzhou Quan">
+                            </div>
+                        </div>
+                        <div class="doctoral-content">
+                            <h3 class="report-title"> Representation and Low-Level Vision for Multi-/Hyperspectral Remote Sensing</h3>
+                            <p>Speaker: Wuzhou Quan</p>
+                            <p class="abstract"><strong>Abstract:</strong>Multi- and hyperspectral remote sensing imagery provides Earth observation with an extremely rich array of spectral dimensions and spatial detail. However, their high dimensionality and cross-modal nature also present fundamental challenges for representation learning and low-level vision: on the one hand, how to establish consistent representations between spectral and spatial representations to avoid distortion and bias; on the other hand, how to achieve robust and universal understanding given the prevalence of heterogeneous structures and uncertainty. Focusing on this core issue, this paper explores a holistic approach from representation to learning mechanisms, emphasizing the integration of information in high-dimensional vision, the resolution of heterogeneity, and the introduction of cognitive-driven uncertainty modeling, thereby advancing multi- and hyperspectral remote sensing towards more reliable and intelligent approaches.</p>
+                            <p class="biography"><strong>Biography:</strong>Quan Wuzhou is currently a ph.D. student at the School of Computer Science and Technology, Nanjing University of Aeronautics and Astronautics. His research focuses on pattern recognition, computer vision, remote sensing imagery, and infrared image processing. His work has been published in journals such as TGRS and TOMM. His recent research focuses on the representation of multispectral and hyperspectral data, as well as low-level vision tasks such as pan-sharpening and classification, aiming to improve the effectiveness and reliability of optical remote sensing image analysis.</p>
+                        </div>
+                    </div>
 
-        <div class="report">
-          <h3 class="report-title">Report Title</h3>
-          <p class="abstract">Abstract</p>
-          <p class="biography">Biography</p>
-        </div>
+                    <div class="doctoral-report">
+                        <div class="photo-container">
+                            <div class="profile-photo">
+                                <img src="Yang-Zhigang.jpg" alt="Yang Zhigang">
+                            </div>
+                        </div>
+                        <div class="doctoral-content">
+                            <h3 class="report-title">Research on Empowering Technologies of Remote Sensing Image Visual-Language Models for Smart Cities </h3>
+                            <p>Speaker: Yang Zhigang</p>
+                            <p class="abstract"><strong>Abstract:</strong>In the context of smart city construction, remote sensing images, as important geospatial data sources, play a significant role in urban planning and management through their efficient interpretation and application. This research proposes a multi-task integrated remote sensing image visual-language model, which aims to enhance the intelligence level of remote sensing images in urban applications by integrating visual and language information. The research covers the following key tasks: 1. Pixel-level tasks: This research proposes a remote sensing image segmentation method for urban element segmentation (including roads, buildings, traffic targets, etc.) and introduces a directional segmentation task. Guided by textual prompt information, this method can achieve fine segmentation of specific targets in remote sensing images, meeting the needs for personalized target identification and localization. 2. Semantic-level tasks: This research designs semantic description generation and visual question answering tasks for remote sensing images. The semantic description generation task uses natural language generation technology to automatically generate accurate descriptions of remote sensing image content. These two tasks, starting from the perspectives of generation and reasoning, comprehensively improve the model's semantic understanding ability of remote sensing images and provide a new technical approach for intelligent interpretation of remote sensing data. 3. Temporal tasks: This research further expands the application scope of the model. Through temporal analysis technology, it unifies various change detection tasks, providing strong support for dynamic urban monitoring and management. </p>
+                            <p class="biography"><strong>Biography:</strong> Zhang Wei is a third-year Ph.D. student at the School of Information Science and Technology, Zhejiang University, advised by Professor Liu Yang. His research interests include computer vision, 3D deep learning, and scene understanding. He has published papers at CVPR and ICCV, and was awarded the Microsoft Research Asia Fellowship in 2024.</p>
+                        </div>
+                    </div>
 
-        <div class="report">
-          <h3 class="report-title">Report Title</h3>
-          <p class="abstract">Abstract</p>
-          <p class="biography">Biography</p>
-        </div>
-      </section>
-    </div>
-  </section>
-</main>
+
+                    <div class="doctoral-report">
+                        <div class="photo-container">
+                            <div class="profile-photo">
+                                <img src="Min-Yang.jpg" alt="Min Yang">
+                            </div>
+                        </div>
+                        <div class="doctoral-content">
+                            <h3 class="report-title">Video temporal understanding in complex scenes: detection, retrieval, grounding..</h3>
+                            <p>Speaker: Min Yang - PHD Candidate, Multimedia Computing Group, Nanjing University</p>
+                            <p class="abstract"><strong>Abstract:</strong> How to comprehend the temporal sequence in videos has always been a crucial issue in the field of video understanding. With the further development of online media and video recording equipment, video scenes have become more diverse, and users are constantly emerging with new demands. Video temporal understanding models are evolving towards higher efficiency, faster processing, and the ability to comprehend more complex scenes and tasks. Here, we focus on three fundamental tasks in video temporal understanding: detection, retrieval, and grounding. I will introduce the related work within our group. The work presented here covers small models deployed on the mobile device to large multimodal models with real-time response. We have put a lot of effort into efficiently deploying practical end-to-end video temporal understanding models, hoping to inspire further exploration in video temporal understanding in subsequent work.</p>
+                            <p class="biography"><strong>Biography:</strong> Min Yang is a Ph.D. candidate in the Multimedia Computing Group at Nanjing University. He received his B.Eng. degree from the School of Software, Jilin University in 2020, and subsequently entered the Ph.D. program at Nanjing University under the supervision of Prof. Limin Wang. His research interests include temporal action detection, video retrieval, and multimodal large models. He has published several papers at leading computer vision conferences (CVPR, ICCV) and has served as a reviewer for multiple top-tier conferences and journals.</p>
+                        </div>
+                    </div>
+
+                    <div class="doctoral-report">
+                        <div class="photo-container">
+                            <div class="profile-photo">
+                                <img src="Xueyu-Liu.jpg" alt="Xueyu Liu">
+                            </div>
+                        </div>
+                        <div class="doctoral-content">
+                            <h3 class="report-title">Research on Geometry-Prompt-Driven Adaptive Segmentation with SAM</h3>
+                            <p>Speaker: Xueyu Liu</p>
+                            <p class="abstract"><strong>Abstract:</strong> Image segmentation tasks face significant challenges in practical applications due to their reliance on large-scale pixel-level annotations, leading to high labeling costs, modality diversity, and limited generalization capability. The Segment Anything Model (SAM) simplifies the segmentation process through geometric prompts, yet its interactive mode constrains automated deployment. Moreover, generating effective prompts to enhance segmentation accuracy remains a critical issue. To address this, this study proposes a geometry-prompt-driven adaptive segmentation method based on SAM, introducing two optimization strategies: (1) a cyclic dual-space prompt engineering approach that jointly optimizes prompt points in the physical and feature spaces; and (2) a dual-space prompt engineering approach with automated optimization of heterogeneous graph structures, which organizes prompt points by integrating physical and feature relationships. The proposed method enables automatic generation of high-quality prompts, reduces manual intervention, and improves both the performance and adaptability of SAM in segmentation tasks.</p>
+                            <p class="biography"><strong>Biography:</strong>  Xueyu Liu is currently a Tenure-track Associate Professor and Master’s Supervisor at the College of Artificial Intelligence, Taiyuan University of Technology, China. He has published more than ten papers in SCI-indexed journals and prestigious conferences such as CVPR and MedIA. He is a member of the Institute of Electrical and Electronics Engineers (IEEE), the China Computer Federation (CCF), the China Society of Image and Graphics (CSIG), and the Chinese Association for Artificial Intelligence (CAAI). Xueyu Liu’s research focuses on computer vision and medical data analytics. His interests include foundation models, meta-learning, weakly supervised learning, and few-shot learning in computer vision, as well as pathological image analysis and multimodal data analysis in medical data analytics.</p>
+                        </div>
+                    </div>
+
+                    
+                </section>
+            </div>
+        </section>
+    </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
