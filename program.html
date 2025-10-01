@@ -226,28 +226,6 @@
 
 
 
-
-
-        
-        /* 议程无缝横排 */
-.agenda-wrap {
-    overflow-x: auto;
-    margin-top: 30px;
-}
-
-.agenda-track {
-    display: inline-flex;
-    gap: 0; /* 取消图片之间的空隙，确保首尾贴合 */
-}
-
-.agenda-track img {
-    width: 300px;
-    height: auto;
-    flex: 0 0 auto;
-    display: block;
-}
-
-
         
 
         @media (max-width: 768px) {
@@ -400,18 +378,12 @@
                 <h1>Cyberworlds 2025 Conference Program</h1>
             </div>
             <!-- 新增的四张会议议程图片区域 -->
-    <div class="agenda-wrap">
-    <div class="agenda-track">
-        <img src="agenda1.jpg" alt="agenda1">
-        <img src="agenda2.jpg" alt="agenda2">
-        <img src="agenda3.jpg" alt="agenda3">
-        <img src="agenda4.jpg" alt="agenda4">
-        <!-- 重复一组，实现尾部接头部的无缝衔接 -->
-        <img src="agenda1.jpg" alt="agenda1-dup">
-        <img src="agenda2.jpg" alt="agenda2-dup">
-        <img src="agenda3.jpg" alt="agenda3-dup">
-        <img src="agenda4.jpg" alt="agenda4-dup">
-    </div>
+   <!-- 新增的四张会议议程图片区域 -->
+<div style="display: flex; flex-direction: column; gap: 20px; padding: 20px 0; margin-top: 30px; overflow-y: auto;">
+    <img src="agenda1.jpg" style="width: 300px; height: auto;">
+    <img src="agenda2.jpg" style="width: 300px; height: auto;">
+    <img src="agenda3.jpg" style="width: 300px; height: auto;">
+    <img src="agenda4.jpg" style="width: 300px; height: auto;">
 </div>
             
             
