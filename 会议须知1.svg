@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 446.2 642.21">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-4 {
+        font-size: 15px;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        font-family: SimSun, SimSun;
+      }
+
+      .cls-12 {
+        letter-spacing: .25em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: .42em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+
+      .cls-16 {
+        letter-spacing: .25em;
+      }
+
+      .cls-17 {
+        letter-spacing: 0em;
+      }
+
+      .cls-18 {
+        letter-spacing: .18em;
+      }
+
+      .cls-19 {
+        letter-spacing: 0em;
+      }
+
+      .cls-20 {
+        letter-spacing: 0em;
+      }
+
+      .cls-21 {
+        letter-spacing: .17em;
+      }
+
+      .cls-22 {
+        letter-spacing: 0em;
+      }
+
+      .cls-23 {
+        letter-spacing: 0em;
+      }
+
+      .cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        letter-spacing: .26em;
+      }
+
+      .cls-26 {
+        letter-spacing: .18em;
+      }
+
+      .cls-27 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        font-size: 12px;
+      }
+
+      .cls-6 {
+        font-size: 7.8px;
+      }
+
+      .cls-28 {
+        letter-spacing: .17em;
+      }
+
+      .cls-29 {
+        letter-spacing: .01em;
+      }
+
+      .cls-30 {
+        letter-spacing: .43em;
+      }
+
+      .cls-31 {
+        letter-spacing: 0em;
+      }
+
+      .cls-32 {
+        font-family: CIDFont+F1, CIDFont+F1;
+      }
+
+      .cls-32, .cls-8, .cls-9 {
+        font-size: 12px;
+      }
+
+      .cls-33 {
+        letter-spacing: .26em;
+      }
+
+      .cls-34 {
+        letter-spacing: 0em;
+      }
+
+      .cls-35 {
+        letter-spacing: 0em;
+      }
+
+      .cls-36 {
+        letter-spacing: .26em;
+      }
+
+      .cls-37 {
+        letter-spacing: 0em;
+      }
+
+      .cls-38 {
+        letter-spacing: 0em;
+      }
+
+      .cls-39 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-40 {
+        letter-spacing: 0em;
+      }
+
+      .cls-41 {
+        letter-spacing: 0em;
+      }
+
+      .cls-42 {
+        letter-spacing: .26em;
+      }
+
+      .cls-43 {
+        letter-spacing: .25em;
+      }
+
+      .cls-44 {
+        letter-spacing: .26em;
+      }
+
+      .cls-45 {
+        letter-spacing: .24em;
+      }
+
+      .cls-46 {
+        letter-spacing: 0em;
+      }
+
+      .cls-47 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7, .cls-11 {
+        font-size: 15px;
+      }
+
+      .cls-48 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-49 {
+        letter-spacing: .25em;
+      }
+
+      .cls-50 {
+        letter-spacing: .25em;
+      }
+
+      .cls-51 {
+        letter-spacing: .25em;
+      }
+
+      .cls-8, .cls-11 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: .41px;
+      }
+
+      .cls-52 {
+        letter-spacing: .02em;
+      }
+
+      .cls-53 {
+        letter-spacing: 0em;
+      }
+
+      .cls-54 {
+        letter-spacing: .25em;
+      }
+
+      .cls-55 {
+        letter-spacing: .25em;
+      }
+
+      .cls-56 {
+        letter-spacing: .25em;
+      }
+
+      .cls-57 {
+        letter-spacing: 0em;
+      }
+
+      .cls-58 {
+        letter-spacing: .26em;
+      }
+
+      .cls-59 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-60 {
+        letter-spacing: 0em;
+      }
+
+      .cls-61 {
+        letter-spacing: 0em;
+      }
+
+      .cls-62 {
+        letter-spacing: 0em;
+      }
+
+      .cls-63 {
+        letter-spacing: .26em;
+      }
+
+      .cls-64 {
+        letter-spacing: 0em;
+      }
+
+      .cls-65 {
+        letter-spacing: .25em;
+      }
+
+      .cls-66 {
+        letter-spacing: .24em;
+      }
+
+      .cls-67 {
+        letter-spacing: .26em;
+      }
+
+      .cls-10 {
+        font-size: 11.23px;
+      }
+
+      .cls-68 {
+        letter-spacing: .27em;
+      }
+
+      .cls-69 {
+        letter-spacing: 0em;
+      }
+
+      .cls-70 {
+        letter-spacing: 0em;
+      }
+
+      .cls-71 {
+        letter-spacing: 0em;
+      }
+
+      .cls-72 {
+        letter-spacing: 0em;
+      }
+
+      .cls-73 {
+        letter-spacing: 0em;
+      }
+
+      .cls-74 {
+        letter-spacing: 0em;
+      }
+
+      .cls-75 {
+        letter-spacing: .26em;
+      }
+
+      .cls-76 {
+        letter-spacing: .25em;
+      }
+
+      .cls-77 {
+        letter-spacing: 1em;
+      }
+
+      .cls-78 {
+        letter-spacing: .24em;
+      }
+
+      .cls-79 {
+        letter-spacing: 0em;
+      }
+
+      .cls-80 {
+        letter-spacing: 0em;
+      }
+
+      .cls-81 {
+        letter-spacing: .27em;
+      }
+
+      .cls-82 {
+        letter-spacing: 0em;
+      }
+
+      .cls-83 {
+        letter-spacing: 0em;
+      }
+
+      .cls-84 {
+        letter-spacing: 0em;
+      }
+
+      .cls-85 {
+        letter-spacing: .24em;
+      }
+
+      .cls-86 {
+        letter-spacing: .27em;
+      }
+
+      .cls-87 {
+        letter-spacing: .27em;
+      }
+
+      .cls-88 {
+        letter-spacing: 0em;
+      }
+
+      .cls-89 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-90 {
+        letter-spacing: 0em;
+      }
+
+      .cls-91 {
+        letter-spacing: .43em;
+      }
+
+      .cls-92 {
+        letter-spacing: 0em;
+      }
+
+      .cls-93 {
+        letter-spacing: 0em;
+      }
+
+      .cls-94 {
+        letter-spacing: 0em;
+      }
+
+      .cls-95 {
+        letter-spacing: .26em;
+      }
+
+      .cls-96 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <text class="cls-7" transform="translate(97.29 13.1)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-11" transform="translate(97.29 13.1)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-7" transform="translate(112.29 13.1)"><tspan x="0" y="0">议</tspan></text>
+  <text class="cls-11" transform="translate(112.29 13.1)"><tspan x="0" y="0">议</tspan></text>
+  <text class="cls-7" transform="translate(127.44 13.1)"><tspan x="0" y="0">须</tspan></text>
+  <text class="cls-11" transform="translate(127.44 13.1)"><tspan x="0" y="0">须</tspan></text>
+  <text class="cls-7" transform="translate(142.44 13.1)"><tspan x="0" y="0">知</tspan></text>
+  <text class="cls-11" transform="translate(142.44 13.1)"><tspan x="0" y="0">知</tspan></text>
+  <text class="cls-4" transform="translate(164.96 12.99)"><tspan class="cls-36" x="0" y="0">/</tspan><tspan class="cls-57" x="11.43" y="0">C</tspan><tspan x="18.9" y="0">o</tspan><tspan class="cls-1" x="26.4" y="0">n</tspan><tspan class="cls-41" x="33.81" y="0">f</tspan><tspan class="cls-61" x="41.4" y="0">ere</tspan><tspan class="cls-88" x="63.76" y="0">n</tspan><tspan class="cls-64" x="71.31" y="0">c</tspan><tspan class="cls-33" x="78.76" y="0">e</tspan><tspan class="cls-47" x="90.1" y="0">G</tspan><tspan class="cls-88" x="97.63" y="0">u</tspan><tspan class="cls-47" x="105.18" y="0">i</tspan><tspan class="cls-17" x="112.71" y="0">d</tspan><tspan class="cls-64" x="120.12" y="0">e</tspan><tspan class="cls-47" x="127.57" y="0">li</tspan><tspan class="cls-88" x="142.63" y="0">n</tspan><tspan class="cls-64" x="150.18" y="0">e</tspan><tspan x="157.63" y="0">s</tspan></text>
+  <text class="cls-9" transform="translate(.21 49.34)"><tspan x="0" y="0">一</tspan></text>
+  <text class="cls-8" transform="translate(.21 49.34)"><tspan x="0" y="0">一</tspan></text>
+  <text class="cls-9" transform="translate(12.21 49.34)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-8" transform="translate(12.21 49.34)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-9" transform="translate(24.33 49.34)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-8" transform="translate(24.33 49.34)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-9" transform="translate(36.33 49.34)"><tspan x="0" y="0">议</tspan></text>
+  <text class="cls-8" transform="translate(36.33 49.34)"><tspan x="0" y="0">议</tspan></text>
+  <text class="cls-9" transform="translate(48.44 49.34)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-8" transform="translate(48.44 49.34)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-9" transform="translate(60.44 49.34)"><tspan x="0" y="0">到</tspan></text>
+  <text class="cls-8" transform="translate(60.44 49.34)"><tspan x="0" y="0">到</tspan></text>
+  <text class="cls-5" transform="translate(72.45 49.35)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-92" x="6.02" y="0">R</tspan><tspan class="cls-90" x="12" y="0">e</tspan><tspan x="17.96" y="0">g</tspan><tspan class="cls-34" x="23.96" y="0">i</tspan><tspan x="29.99" y="0">s</tspan><tspan class="cls-90" x="35.99" y="0">tr</tspan><tspan x="47.92" y="0">a</tspan><tspan class="cls-52" x="53.92" y="0">t</tspan><tspan class="cls-34" x="60.11" y="0">i</tspan><tspan x="66.13" y="0">on</tspan></text>
+  <text class="cls-9" transform="translate(36.21 78.97)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-8" transform="translate(36.21 78.97)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-9" transform="translate(48.21 78.97)"><tspan x="0" y="0">到</tspan></text>
+  <text class="cls-8" transform="translate(48.21 78.97)"><tspan x="0" y="0">到</tspan></text>
+  <text class="cls-9" transform="translate(60.33 78.97)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-8" transform="translate(60.33 78.97)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-9" transform="translate(72.33 78.97)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-8" transform="translate(72.33 78.97)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-5" transform="translate(84.32 78.99)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-23" x="6.02" y="0">T</tspan><tspan class="cls-34" x="12.06" y="0">i</tspan><tspan class="cls-96" x="18.08" y="0">m</tspan><tspan x="23.93" y="0">e</tspan></text>
+  <text class="cls-5" transform="translate(114.32 78.99)"><tspan class="cls-49" x="0" y="0">:</tspan><tspan class="cls-92" x="9.02" y="0">O</tspan><tspan class="cls-90" x="15" y="0">c</tspan><tspan class="cls-34" x="20.96" y="0">t</tspan><tspan x="26.99" y="0">ob</tspan><tspan class="cls-62" x="38.99" y="0">e</tspan><tspan class="cls-43" x="45.06" y="0">r</tspan><tspan x="54.01" y="0">13–16</tspan><tspan class="cls-55" x="90.01" y="0">,</tspan><tspan class="cls-84" x="99" y="0">2025</tspan><tspan class="cls-56" x="123" y="0">,</tspan><tspan x="132" y="0">9</tspan><tspan class="cls-82" x="138" y="0">:</tspan><tspan x="144.02" y="0">00–20</tspan><tspan class="cls-74" x="180.02" y="0">:</tspan><tspan x="186.05" y="0">00</tspan></text>
+  <text class="cls-9" transform="translate(36.21 94.58)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-8" transform="translate(36.21 94.58)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-9" transform="translate(48.21 94.58)"><tspan x="0" y="0">到</tspan></text>
+  <text class="cls-8" transform="translate(48.21 94.58)"><tspan x="0" y="0">到</tspan></text>
+  <text class="cls-9" transform="translate(60.33 94.58)"><tspan x="0" y="0">地</tspan></text>
+  <text class="cls-8" transform="translate(60.33 94.58)"><tspan x="0" y="0">地</tspan></text>
+  <text class="cls-9" transform="translate(72.33 94.58)"><tspan x="0" y="0">点</tspan></text>
+  <text class="cls-8" transform="translate(72.33 94.58)"><tspan x="0" y="0">点</tspan></text>
+  <text class="cls-5" transform="translate(84.32 94.59)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-92" x="6.02" y="0">V</tspan><tspan class="cls-90" x="12" y="0">e</tspan><tspan class="cls-23" x="17.96" y="0">nu</tspan><tspan x="30.04" y="0">e</tspan></text>
+  <text class="cls-5" transform="translate(120.32 94.59)"><tspan x="0" y="0">:</tspan></text>
+  <text class="cls-9" transform="translate(129.67 94.58)"><tspan x="0" y="0">山西晋中市美域国际酒店一楼大厅</tspan></text>
+  <text class="cls-5" transform="translate(36.21 110.18)"><tspan class="cls-3" x="0" y="0">L</tspan><tspan class="cls-69" x="5.88" y="0">o</tspan><tspan x="11.99" y="0">bb</tspan><tspan class="cls-71" x="23.99" y="0">y</tspan><tspan class="cls-67" x="29.88" y="0">,</tspan><tspan x="38.99" y="0">1</tspan></text>
+  <text class="cls-6" transform="translate(79.52 106.11)"><tspan class="cls-79" x="0" y="0">s</tspan><tspan x="3.83" y="0">t</tspan></text>
+  <text class="cls-5" transform="translate(87.69 110.18)"><tspan class="cls-60" x="0" y="0">F</tspan><tspan class="cls-34" x="5.93" y="0">l</tspan><tspan x="11.95" y="0">oo</tspan><tspan class="cls-90" x="23.95" y="0">r</tspan><tspan class="cls-67" x="29.92" y="0">,</tspan><tspan x="39.02" y="0">M</tspan><tspan class="cls-90" x="45.02" y="0">e</tspan><tspan class="cls-34" x="50.99" y="0">i</tspan><tspan class="cls-39" x="57.01" y="0">y</tspan><tspan class="cls-87" x="62.77" y="0">u</tspan><tspan class="cls-48" x="72.01" y="0">I</tspan><tspan x="77.86" y="0">n</tspan><tspan class="cls-34" x="83.86" y="0">t</tspan><tspan class="cls-94" x="89.88" y="0">e</tspan><tspan class="cls-90" x="95.95" y="0">r</tspan><tspan x="101.92" y="0">n</tspan><tspan class="cls-72" x="107.92" y="0">a</tspan><tspan class="cls-74" x="113.88" y="0">ti</tspan><tspan x="125.93" y="0">on</tspan><tspan class="cls-90" x="137.93" y="0">a</tspan><tspan class="cls-50" x="143.89" y="0">l</tspan><tspan class="cls-38" x="152.92" y="0">H</tspan><tspan x="158.89" y="0">o</tspan><tspan class="cls-82" x="164.89" y="0">t</tspan><tspan class="cls-90" x="170.92" y="0">e</tspan><tspan class="cls-74" x="176.88" y="0">l</tspan><tspan class="cls-42" x="182.9" y="0">,</tspan><tspan x="192.01" y="0">J</tspan><tspan class="cls-74" x="198.01" y="0">i</tspan><tspan x="204.04" y="0">n</tspan><tspan class="cls-62" x="210.04" y="0">z</tspan><tspan x="216.11" y="0">hon</tspan><tspan class="cls-24" x="234.11" y="0">g</tspan><tspan class="cls-51" x="240" y="0">,</tspan><tspan class="cls-23" x="248.99" y="0">S</tspan><tspan x="255.02" y="0">h</tspan><tspan class="cls-90" x="261.02" y="0">a</tspan><tspan x="266.99" y="0">nxi</tspan></text>
+  <text class="cls-9" transform="translate(.21 139.81)"><tspan x="0" y="0">二</tspan></text>
+  <text class="cls-8" transform="translate(.21 139.81)"><tspan x="0" y="0">二</tspan></text>
+  <text class="cls-9" transform="translate(12.21 139.81)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-8" transform="translate(12.21 139.81)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-9" transform="translate(24.33 139.81)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-8" transform="translate(24.33 139.81)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-9" transform="translate(36.33 139.81)"><tspan x="0" y="0">场</tspan></text>
+  <text class="cls-8" transform="translate(36.33 139.81)"><tspan x="0" y="0">场</tspan></text>
+  <text class="cls-9" transform="translate(48.44 139.81)"><tspan x="0" y="0">纪</tspan></text>
+  <text class="cls-8" transform="translate(48.44 139.81)"><tspan x="0" y="0">纪</tspan></text>
+  <text class="cls-9" transform="translate(60.44 139.81)"><tspan x="0" y="0">律</tspan></text>
+  <text class="cls-8" transform="translate(60.44 139.81)"><tspan x="0" y="0">律</tspan></text>
+  <text class="cls-5" transform="translate(72.45 139.7)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-92" x="6.02" y="0">C</tspan><tspan x="12" y="0">o</tspan><tspan class="cls-23" x="18" y="0">n</tspan><tspan class="cls-90" x="24.04" y="0">fer</tspan><tspan class="cls-62" x="41.93" y="0">e</tspan><tspan class="cls-35" x="48" y="0">n</tspan><tspan class="cls-72" x="54.04" y="0">c</tspan><tspan class="cls-44" x="60" y="0">e</tspan><tspan class="cls-92" x="69.07" y="0">R</tspan><tspan class="cls-23" x="75.05" y="0">u</tspan><tspan class="cls-34" x="81.08" y="0">l</tspan><tspan class="cls-90" x="87.11" y="0">e</tspan><tspan x="93.07" y="0">s</tspan></text>
+  <text class="cls-5" transform="translate(18.21 169.35)"><tspan x="0" y="0">1.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 169.34)"><tspan x="0" y="0">请提前</tspan></text>
+  <text class="cls-5" transform="translate(75.21 169.35)"><tspan x="0" y="0">10</tspan></text>
+  <text class="cls-9" transform="translate(90.21 169.34)"><tspan x="0" y="0">分钟进入会场</tspan></text>
+  <text class="cls-5" transform="translate(36.21 184.94)"><tspan class="cls-23" x="0" y="0">P</tspan><tspan class="cls-34" x="6.04" y="0">l</tspan><tspan class="cls-90" x="12.06" y="0">ea</tspan><tspan x="23.99" y="0">s</tspan><tspan class="cls-65" x="29.99" y="0">e</tspan><tspan class="cls-90" x="38.94" y="0">arr</tspan><tspan class="cls-34" x="56.83" y="0">i</tspan><tspan x="62.86" y="0">v</tspan><tspan class="cls-44" x="68.86" y="0">e</tspan><tspan class="cls-90" x="77.93" y="0">a</tspan><tspan class="cls-49" x="83.89" y="0">t</tspan><tspan class="cls-82" x="92.92" y="0">t</tspan><tspan x="98.94" y="0">h</tspan><tspan class="cls-44" x="104.94" y="0">e</tspan><tspan x="114.01" y="0">v</tspan><tspan class="cls-90" x="120.01" y="0">e</tspan><tspan x="125.98" y="0">nu</tspan><tspan class="cls-95" x="137.98" y="0">e</tspan><tspan x="147.05" y="0">1</tspan><tspan class="cls-55" x="153.05" y="0">0</tspan><tspan class="cls-34" x="162.04" y="0">mi</tspan><tspan x="174.08" y="0">nu</tspan><tspan class="cls-74" x="186.08" y="0">t</tspan><tspan class="cls-90" x="192.11" y="0">e</tspan><tspan class="cls-66" x="198.07" y="0">s</tspan><tspan class="cls-82" x="206.95" y="0">i</tspan><tspan class="cls-56" x="212.98" y="0">n</tspan><tspan class="cls-90" x="221.98" y="0">a</tspan><tspan x="227.94" y="0">dv</tspan><tspan class="cls-90" x="239.94" y="0">a</tspan><tspan x="245.9" y="0">n</tspan><tspan class="cls-90" x="251.9" y="0">c</tspan><tspan x="257.87" y="0">e</tspan></text>
+  <text class="cls-5" transform="translate(18.21 200.55)"><tspan x="0" y="0">2.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 200.56)"><tspan x="0" y="0">开会期间请将手机关闭或者设置为静音</tspan></text>
+  <text class="cls-5" transform="translate(36.21 216.15)"><tspan class="cls-23" x="0" y="0">P</tspan><tspan class="cls-34" x="6.04" y="0">l</tspan><tspan class="cls-90" x="12.06" y="0">ea</tspan><tspan x="23.99" y="0">s</tspan><tspan class="cls-65" x="29.99" y="0">e</tspan><tspan class="cls-34" x="38.94" y="0">t</tspan><tspan x="44.96" y="0">u</tspan><tspan class="cls-90" x="50.96" y="0">r</tspan><tspan class="cls-51" x="56.93" y="0">n</tspan><tspan x="65.92" y="0">o</tspan><tspan class="cls-90" x="71.92" y="0">f</tspan><tspan class="cls-44" x="77.88" y="0">f</tspan><tspan x="86.95" y="0">o</tspan><tspan class="cls-65" x="92.95" y="0">r</tspan><tspan class="cls-34" x="101.9" y="0">m</tspan><tspan x="107.93" y="0">u</tspan><tspan class="cls-34" x="113.93" y="0">t</tspan><tspan class="cls-65" x="119.95" y="0">e</tspan><tspan class="cls-89" x="128.9" y="0">y</tspan><tspan class="cls-69" x="134.66" y="0">o</tspan><tspan x="140.77" y="0">u</tspan><tspan class="cls-81" x="146.77" y="0">r</tspan><tspan class="cls-82" x="155.96" y="0">m</tspan><tspan x="161.99" y="0">ob</tspan><tspan class="cls-82" x="173.99" y="0">i</tspan><tspan class="cls-19" x="180.01" y="0">l</tspan><tspan class="cls-65" x="185.93" y="0">e</tspan><tspan x="194.88" y="0">phon</tspan><tspan class="cls-58" x="218.88" y="0">e</tspan><tspan x="227.95" y="0">du</tspan><tspan class="cls-90" x="239.95" y="0">r</tspan><tspan class="cls-82" x="245.92" y="0">i</tspan><tspan x="251.94" y="0">n</tspan><tspan class="cls-66" x="257.94" y="0">g</tspan><tspan x="266.82" y="0">s</tspan><tspan class="cls-90" x="272.82" y="0">e</tspan><tspan class="cls-29" x="278.78" y="0">s</tspan><tspan x="284.9" y="0">s</tspan><tspan class="cls-82" x="290.9" y="0">i</tspan><tspan x="296.93" y="0">ons</tspan></text>
+  <text class="cls-5" transform="translate(18.21 231.75)"><tspan x="0" y="0">3.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 231.73)"><tspan x="0" y="0">会议期间凭代表证出入所有场合，并在参加各项活动时佩戴</tspan></text>
+  <text class="cls-5" transform="translate(36.21 247.35)"><tspan class="cls-92" x="0" y="0">A</tspan><tspan class="cls-90" x="5.98" y="0">cc</tspan><tspan class="cls-62" x="17.9" y="0">e</tspan><tspan class="cls-37" x="23.98" y="0">s</tspan><tspan class="cls-85" x="30.1" y="0">s</tspan><tspan class="cls-34" x="38.98" y="0">t</tspan><tspan class="cls-56" x="45" y="0">o</tspan><tspan class="cls-90" x="54" y="0">a</tspan><tspan class="cls-34" x="59.96" y="0">l</tspan><tspan class="cls-49" x="65.99" y="0">l</tspan><tspan x="75.01" y="0">v</tspan><tspan class="cls-90" x="81.01" y="0">e</tspan><tspan x="86.98" y="0">nu</tspan><tspan class="cls-72" x="98.98" y="0">e</tspan><tspan class="cls-56" x="104.94" y="0">s</tspan><tspan class="cls-90" x="113.94" y="0">re</tspan><tspan x="125.87" y="0">qu</tspan><tspan class="cls-34" x="137.87" y="0">i</tspan><tspan class="cls-90" x="143.89" y="0">r</tspan><tspan class="cls-62" x="149.86" y="0">e</tspan><tspan class="cls-56" x="155.93" y="0">s</tspan><tspan class="cls-95" x="164.93" y="0">a</tspan><tspan x="174" y="0">d</tspan><tspan class="cls-90" x="180" y="0">e</tspan><tspan class="cls-74" x="185.96" y="0">l</tspan><tspan class="cls-90" x="191.99" y="0">e</tspan><tspan x="197.95" y="0">g</tspan><tspan class="cls-90" x="203.95" y="0">a</tspan><tspan class="cls-82" x="209.92" y="0">t</tspan><tspan class="cls-95" x="215.94" y="0">e</tspan><tspan x="225.01" y="0">b</tspan><tspan class="cls-90" x="231.01" y="0">a</tspan><tspan x="236.98" y="0">dge</tspan></text>
+  <text class="cls-9" transform="translate(.21 276.97)"><tspan x="0" y="0">三</tspan></text>
+  <text class="cls-8" transform="translate(.21 276.97)"><tspan x="0" y="0">三</tspan></text>
+  <text class="cls-9" transform="translate(12.21 276.97)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-8" transform="translate(12.21 276.97)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-9" transform="translate(24.33 276.97)"><tspan x="0" y="0">用</tspan></text>
+  <text class="cls-8" transform="translate(24.33 276.97)"><tspan x="0" y="0">用</tspan></text>
+  <text class="cls-9" transform="translate(36.33 276.97)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-8" transform="translate(36.33 276.97)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-9" transform="translate(48.44 276.97)"><tspan x="0" y="0">安</tspan></text>
+  <text class="cls-8" transform="translate(48.44 276.97)"><tspan x="0" y="0">安</tspan></text>
+  <text class="cls-9" transform="translate(60.44 276.97)"><tspan x="0" y="0">排</tspan></text>
+  <text class="cls-8" transform="translate(60.44 276.97)"><tspan x="0" y="0">排</tspan></text>
+  <text class="cls-5" transform="translate(72.45 276.99)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-90" x="6.02" y="0">Me</tspan><tspan x="17.95" y="0">a</tspan><tspan class="cls-34" x="23.95" y="0">l</tspan><tspan class="cls-56" x="29.98" y="0">s</tspan><tspan class="cls-38" x="38.98" y="0">A</tspan><tspan class="cls-72" x="44.95" y="0">rr</tspan><tspan x="56.88" y="0">a</tspan><tspan class="cls-23" x="62.88" y="0">n</tspan><tspan x="68.92" y="0">g</tspan><tspan class="cls-90" x="74.92" y="0">em</tspan><tspan class="cls-94" x="86.84" y="0">e</tspan><tspan class="cls-23" x="92.92" y="0">n</tspan><tspan x="98.95" y="0">t</tspan></text>
+  <text class="cls-9" transform="translate(36.21 306.64)"><tspan x="0" y="0">自</tspan></text>
+  <text class="cls-8" transform="translate(36.21 306.64)"><tspan x="0" y="0">自</tspan></text>
+  <text class="cls-9" transform="translate(48.21 306.64)"><tspan x="0" y="0">助</tspan></text>
+  <text class="cls-8" transform="translate(48.21 306.64)"><tspan x="0" y="0">助</tspan></text>
+  <text class="cls-9" transform="translate(60.33 306.64)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-8" transform="translate(60.33 306.64)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-9" transform="translate(72.33 306.64)"><tspan x="0" y="0">地</tspan></text>
+  <text class="cls-8" transform="translate(72.33 306.64)"><tspan x="0" y="0">地</tspan></text>
+  <text class="cls-9" transform="translate(84.44 306.64)"><tspan x="0" y="0">点</tspan></text>
+  <text class="cls-8" transform="translate(84.44 306.64)"><tspan x="0" y="0">点</tspan></text>
+  <text class="cls-5" transform="translate(96.44 306.51)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-23" x="6.02" y="0">B</tspan><tspan class="cls-2" x="12.06" y="0">u</tspan><tspan class="cls-62" x="17.99" y="0">f</tspan><tspan class="cls-90" x="24.06" y="0">fe</tspan><tspan class="cls-65" x="35.99" y="0">t</tspan><tspan class="cls-92" x="44.94" y="0">V</tspan><tspan class="cls-90" x="50.92" y="0">e</tspan><tspan class="cls-23" x="56.88" y="0">nu</tspan><tspan x="68.95" y="0">e</tspan></text>
+  <text class="cls-5" transform="translate(167.37 306.51)"><tspan x="0" y="0">:</tspan></text>
+  <text class="cls-9" transform="translate(176.74 306.64)"><tspan x="0" y="0">二楼西餐厅</tspan></text>
+  <text class="cls-5" transform="translate(236.72 306.51)"><tspan class="cls-82" x="0" y="0">/</tspan><tspan class="cls-83" x="6.02" y="0">W</tspan><tspan class="cls-90" x="12.1" y="0">e</tspan><tspan x="18.06" y="0">s</tspan><tspan class="cls-82" x="24.06" y="0">t</tspan><tspan class="cls-90" x="30.08" y="0">er</tspan><tspan class="cls-51" x="42.01" y="0">n</tspan><tspan class="cls-23" x="51" y="0">R</tspan><tspan class="cls-90" x="57.04" y="0">e</tspan><tspan class="cls-29" x="63" y="0">s</tspan><tspan class="cls-19" x="69.12" y="0">t</tspan><tspan class="cls-83" x="75.04" y="0">a</tspan><tspan x="81.11" y="0">u</tspan><tspan class="cls-90" x="87.11" y="0">ra</tspan><tspan x="99.04" y="0">n</tspan><tspan class="cls-74" x="105.04" y="0">t</tspan><tspan class="cls-51" x="111.06" y="0">,</tspan><tspan x="120.05" y="0">2</tspan></text>
+  <text class="cls-6" transform="translate(346.4 302.54)"><tspan class="cls-79" x="0" y="0" xml:space="preserve">    n</tspan><tspan x="19.15" y="0">d</tspan></text>
+  <text class="cls-5" transform="translate(357.09 306.51)"><tspan class="cls-2" x="0" y="0" xml:space="preserve">   F</tspan><tspan class="cls-82" x="23.71" y="0">l</tspan><tspan x="29.74" y="0">oor</tspan></text>
+  <text class="cls-9" transform="translate(36.21 322.25)"><tspan x="0" y="0">早</tspan></text>
+  <text class="cls-8" transform="translate(36.21 322.25)"><tspan x="0" y="0">早</tspan></text>
+  <text class="cls-9" transform="translate(48.21 322.25)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-8" transform="translate(48.21 322.25)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-9" transform="translate(60.33 322.25)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-8" transform="translate(60.33 322.25)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-9" transform="translate(72.33 322.25)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-8" transform="translate(72.33 322.25)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-5" transform="translate(84.32 322.11)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-23" x="6.02" y="0">B</tspan><tspan class="cls-90" x="12.06" y="0">re</tspan><tspan x="23.99" y="0">a</tspan><tspan class="cls-23" x="29.99" y="0">k</tspan><tspan class="cls-94" x="36.02" y="0">f</tspan><tspan x="42.1" y="0">ast</tspan></text>
+  <text class="cls-5" transform="translate(137.72 322.11)"><tspan class="cls-45" x="0" y="0">:</tspan><tspan x="8.9" y="0">7</tspan><tspan class="cls-34" x="14.9" y="0">:</tspan><tspan x="20.93" y="0">00–9</tspan><tspan class="cls-34" x="50.93" y="0">:</tspan><tspan x="56.95" y="0">30</tspan></text>
+  <text class="cls-9" transform="translate(36.21 337.81)"><tspan x="0" y="0">午</tspan></text>
+  <text class="cls-8" transform="translate(36.21 337.81)"><tspan x="0" y="0">午</tspan></text>
+  <text class="cls-9" transform="translate(48.21 337.81)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-8" transform="translate(48.21 337.81)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-9" transform="translate(60.33 337.81)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-8" transform="translate(60.33 337.81)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-9" transform="translate(72.33 337.81)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-8" transform="translate(72.33 337.81)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-5" transform="translate(84.32 337.7)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-23" x="6.02" y="0">Lu</tspan><tspan class="cls-2" x="18.1" y="0">n</tspan><tspan class="cls-90" x="24.02" y="0">c</tspan><tspan x="29.99" y="0">h</tspan></text>
+  <text class="cls-5" transform="translate(121.04 337.7)"><tspan class="cls-49" x="0" y="0">:</tspan><tspan x="9.02" y="0">12</tspan><tspan class="cls-34" x="21.02" y="0">:</tspan><tspan x="27.05" y="0">0</tspan><tspan class="cls-71" x="33.05" y="0">0</tspan><tspan x="38.94" y="0">–13</tspan><tspan class="cls-34" x="62.94" y="0">:</tspan><tspan x="68.96" y="0">30</tspan></text>
+  <text class="cls-9" transform="translate(36.21 353.42)"><tspan x="0" y="0">晚</tspan></text>
+  <text class="cls-8" transform="translate(36.21 353.42)"><tspan x="0" y="0">晚</tspan></text>
+  <text class="cls-9" transform="translate(48.21 353.42)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-8" transform="translate(48.21 353.42)"><tspan x="0" y="0">餐</tspan></text>
+  <text class="cls-9" transform="translate(60.33 353.42)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-8" transform="translate(60.33 353.42)"><tspan x="0" y="0">时</tspan></text>
+  <text class="cls-9" transform="translate(72.33 353.42)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-8" transform="translate(72.33 353.42)"><tspan x="0" y="0">间</tspan></text>
+  <text class="cls-5" transform="translate(84.32 353.31)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-92" x="6.02" y="0">D</tspan><tspan class="cls-34" x="12" y="0">i</tspan><tspan class="cls-23" x="18.02" y="0">n</tspan><tspan class="cls-2" x="24.06" y="0">n</tspan><tspan class="cls-62" x="29.99" y="0">e</tspan><tspan x="36.06" y="0">r</tspan></text>
+  <text class="cls-5" transform="translate(123.69 353.31)"><tspan class="cls-49" x="0" y="0">:</tspan><tspan x="9.02" y="0">18</tspan><tspan class="cls-34" x="21.02" y="0">:</tspan><tspan x="27.05" y="0">00–19</tspan><tspan class="cls-34" x="63.05" y="0">:</tspan><tspan x="69.07" y="0">30</tspan></text>
+  <text class="cls-9" transform="translate(36.21 369.03)"><tspan x="0" y="0">晚</tspan></text>
+  <text class="cls-8" transform="translate(36.21 369.03)"><tspan x="0" y="0">晚</tspan></text>
+  <text class="cls-9" transform="translate(48.21 369.03)"><tspan x="0" y="0">宴</tspan></text>
+  <text class="cls-8" transform="translate(48.21 369.03)"><tspan x="0" y="0">宴</tspan></text>
+  <text class="cls-5" transform="translate(60.21 368.9)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-23" x="6.02" y="0">B</tspan><tspan x="12.06" y="0">a</tspan><tspan class="cls-35" x="18.06" y="0">n</tspan><tspan class="cls-60" x="24.1" y="0">q</tspan><tspan class="cls-23" x="30.02" y="0">u</tspan><tspan class="cls-90" x="36.06" y="0">e</tspan><tspan x="42.02" y="0">t</tspan></text>
+  <text class="cls-5" transform="translate(107 368.9)"><tspan class="cls-45" x="0" y="0">:</tspan><tspan class="cls-92" x="8.9" y="0">O</tspan><tspan class="cls-90" x="14.88" y="0">c</tspan><tspan class="cls-82" x="20.84" y="0">t</tspan><tspan class="cls-67" x="26.87" y="0">.</tspan><tspan x="35.98" y="0">15</tspan><tspan class="cls-55" x="47.98" y="0">,</tspan><tspan x="56.96" y="0">18</tspan><tspan class="cls-34" x="68.96" y="0">:</tspan><tspan x="74.99" y="0">30–20</tspan><tspan class="cls-19" x="110.99" y="0">:</tspan><tspan x="116.9" y="0">30,</tspan></text>
+  <text class="cls-32" transform="translate(240.38 369.73)"><tspan x="0" y="0">三楼如意厅</tspan></text>
+  <text class="cls-10" transform="translate(284.66 369.01) scale(1.06 1)"><tspan class="cls-53" x="0" y="0" xml:space="preserve">   /</tspan><tspan class="cls-22" x="22.54" y="0">R</tspan><tspan class="cls-40" x="28.19" y="0">u</tspan><tspan class="cls-59" x="33.8" y="0">y</tspan><tspan class="cls-68" x="39.19" y="0">i</tspan><tspan class="cls-27" x="47.85" y="0">H</tspan><tspan class="cls-93" x="53.44" y="0">a</tspan><tspan class="cls-53" x="59.02" y="0">ll</tspan><tspan class="cls-12" x="70.29" y="0">,</tspan><tspan x="78.7" y="0">3</tspan></text>
+  <text class="cls-6" transform="translate(346.64 364.94)"><tspan class="cls-73" x="0" y="0" xml:space="preserve">   r</tspan><tspan x="15.79" y="0">d</tspan></text>
+  <text class="cls-5" transform="translate(356 368.9)"><tspan class="cls-2" x="0" y="0" xml:space="preserve">  F</tspan><tspan class="cls-74" x="17.78" y="0">l</tspan><tspan x="23.81" y="0">oor</tspan></text>
+  <text class="cls-9" transform="translate(.21 398.56)"><tspan x="0" y="0">四</tspan></text>
+  <text class="cls-8" transform="translate(.21 398.56)"><tspan x="0" y="0">四</tspan></text>
+  <text class="cls-9" transform="translate(12.21 398.56)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-8" transform="translate(12.21 398.56)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-9" transform="translate(24.21 398.56)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-8" transform="translate(24.21 398.56)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-9" transform="translate(36.33 398.56)"><tspan x="0" y="0">议</tspan></text>
+  <text class="cls-8" transform="translate(36.33 398.56)"><tspan x="0" y="0">议</tspan></text>
+  <text class="cls-9" transform="translate(48.33 398.56)"><tspan x="0" y="0">室</tspan></text>
+  <text class="cls-8" transform="translate(48.33 398.56)"><tspan x="0" y="0">室</tspan></text>
+  <text class="cls-9" transform="translate(60.44 398.56)"><tspan x="0" y="0">地</tspan></text>
+  <text class="cls-8" transform="translate(60.44 398.56)"><tspan x="0" y="0">地</tspan></text>
+  <text class="cls-9" transform="translate(72.44 398.56)"><tspan x="0" y="0">点</tspan></text>
+  <text class="cls-8" transform="translate(72.44 398.56)"><tspan x="0" y="0">点</tspan></text>
+  <text class="cls-5" transform="translate(84.45 398.55)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-90" x="6.02" y="0">Me</tspan><tspan class="cls-94" x="17.95" y="0">et</tspan><tspan class="cls-82" x="30.1" y="0">i</tspan><tspan class="cls-2" x="36.12" y="0">n</tspan><tspan class="cls-55" x="42.05" y="0">g</tspan><tspan class="cls-92" x="51.04" y="0">R</tspan><tspan x="57.01" y="0">oo</tspan><tspan class="cls-90" x="69.01" y="0">m</tspan><tspan x="74.98" y="0">s</tspan></text>
+  <text class="cls-5" transform="translate(18.21 428.18)"><tspan x="0" y="0">1.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 428.19)"><tspan x="0" y="0">吉</tspan></text>
+  <text class="cls-8" transform="translate(36.21 428.19)"><tspan x="0" y="0">吉</tspan></text>
+  <text class="cls-9" transform="translate(48.21 428.19)"><tspan x="0" y="0">祥</tspan></text>
+  <text class="cls-8" transform="translate(48.21 428.19)"><tspan x="0" y="0">祥</tspan></text>
+  <text class="cls-9" transform="translate(60.33 428.19)"><tspan x="0" y="0">厅</tspan></text>
+  <text class="cls-8" transform="translate(60.33 428.19)"><tspan x="0" y="0">厅</tspan></text>
+  <text class="cls-5" transform="translate(72.32 428.18)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan x="6.02" y="0">J</tspan><tspan class="cls-34" x="12.02" y="0">i</tspan><tspan x="18.05" y="0">x</tspan><tspan class="cls-34" x="24.05" y="0">i</tspan><tspan x="30.07" y="0">a</tspan><tspan class="cls-60" x="36.07" y="0">n</tspan><tspan class="cls-55" x="42" y="0">g</tspan><tspan class="cls-34" x="50.99" y="0">H</tspan><tspan x="57.01" y="0">a</tspan><tspan class="cls-34" x="63.01" y="0">l</tspan><tspan x="69.04" y="0">l</tspan></text>
+  <text class="cls-5" transform="translate(140.96 428.18)"><tspan x="0" y="0">–</tspan></text>
+  <text class="cls-9" transform="translate(152.97 428.19)"><tspan x="0" y="0">酒店三楼</tspan></text>
+  <text class="cls-5" transform="translate(200.96 428.18)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-84" x="6.02" y="0">3</tspan></text>
+  <text class="cls-6" transform="translate(210.32 424.1)"><tspan class="cls-73" x="0" y="0" xml:space="preserve"> r</tspan><tspan x="7.89" y="0">d</tspan></text>
+  <text class="cls-5" transform="translate(219.8 428.18)"><tspan class="cls-2" x="0" y="0" xml:space="preserve"> F</tspan><tspan class="cls-74" x="11.86" y="0">l</tspan><tspan x="17.88" y="0">oor</tspan></text>
+  <text class="cls-5" transform="translate(18.21 443.79)"><tspan x="0" y="0">2.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 443.8)"><tspan x="0" y="0">牡</tspan></text>
+  <text class="cls-8" transform="translate(36.21 443.8)"><tspan x="0" y="0">牡</tspan></text>
+  <text class="cls-9" transform="translate(48.21 443.8)"><tspan x="0" y="0">丹</tspan></text>
+  <text class="cls-8" transform="translate(48.21 443.8)"><tspan x="0" y="0">丹</tspan></text>
+  <text class="cls-9" transform="translate(60.33 443.8)"><tspan x="0" y="0">厅</tspan></text>
+  <text class="cls-8" transform="translate(60.33 443.8)"><tspan x="0" y="0">厅</tspan></text>
+  <text class="cls-5" transform="translate(72.32 443.79)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-90" x="6.02" y="0">M</tspan><tspan class="cls-23" x="11.99" y="0">ud</tspan><tspan x="24.06" y="0">a</tspan><tspan class="cls-78" x="30.06" y="0">n</tspan><tspan class="cls-34" x="38.98" y="0">H</tspan><tspan x="45" y="0">a</tspan><tspan class="cls-34" x="51" y="0">l</tspan><tspan x="57.02" y="0">l</tspan></text>
+  <text class="cls-5" transform="translate(140.96 443.79)"><tspan x="0" y="0">–</tspan></text>
+  <text class="cls-9" transform="translate(152.97 443.8)"><tspan x="0" y="0">酒店二楼</tspan></text>
+  <text class="cls-5" transform="translate(200.96 443.79)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-84" x="6.02" y="0">2</tspan></text>
+  <text class="cls-6" transform="translate(210.32 439.7)"><tspan class="cls-80" x="0" y="0" xml:space="preserve"> n</tspan><tspan class="cls-13" x="7.94" y="0">d</tspan></text>
+  <text class="cls-5" transform="translate(221.13 443.79)"><tspan class="cls-2" x="0" y="0" xml:space="preserve"> F</tspan><tspan class="cls-74" x="11.86" y="0">l</tspan><tspan x="17.88" y="0">oor</tspan></text>
+  <text class="cls-5" transform="translate(18.21 459.38)"><tspan x="0" y="0">3.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 459.4)"><tspan x="0" y="0">万</tspan></text>
+  <text class="cls-8" transform="translate(36.21 459.4)"><tspan x="0" y="0">万</tspan></text>
+  <text class="cls-9" transform="translate(48.21 459.4)"><tspan x="0" y="0">里</tspan></text>
+  <text class="cls-8" transform="translate(48.21 459.4)"><tspan x="0" y="0">里</tspan></text>
+  <text class="cls-9" transform="translate(60.33 459.4)"><tspan x="0" y="0">春</tspan></text>
+  <text class="cls-8" transform="translate(60.33 459.4)"><tspan x="0" y="0">春</tspan></text>
+  <text class="cls-9" transform="translate(72.33 459.4)"><tspan x="0" y="0">厅</tspan></text>
+  <text class="cls-8" transform="translate(72.33 459.4)"><tspan x="0" y="0">厅</tspan></text>
+  <text class="cls-5" transform="translate(84.32 459.38)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan x="6.02" y="0">Wa</tspan><tspan class="cls-23" x="18.02" y="0">n</tspan><tspan class="cls-34" x="24.06" y="0">l</tspan><tspan class="cls-19" x="30.08" y="0">i</tspan><tspan class="cls-90" x="36" y="0">c</tspan><tspan class="cls-23" x="41.96" y="0">h</tspan><tspan class="cls-2" x="48" y="0">u</tspan><tspan class="cls-25" x="53.93" y="0">n</tspan><tspan class="cls-34" x="63.08" y="0">H</tspan><tspan x="69.11" y="0">a</tspan><tspan class="cls-34" x="75.11" y="0">l</tspan><tspan x="81.13" y="0">l</tspan></text>
+  <text class="cls-5" transform="translate(172.41 459.38)"><tspan x="0" y="0">–</tspan></text>
+  <text class="cls-9" transform="translate(184.42 459.4)"><tspan x="0" y="0">酒店三楼</tspan></text>
+  <text class="cls-5" transform="translate(232.41 459.38)"><tspan class="cls-82" x="0" y="0">/</tspan><tspan x="6.02" y="0">3</tspan></text>
+  <text class="cls-6" transform="translate(241.64 455.3)"><tspan class="cls-73" x="0" y="0" xml:space="preserve"> r</tspan><tspan x="7.89" y="0">d</tspan></text>
+  <text class="cls-5" transform="translate(251.24 459.38)"><tspan class="cls-2" x="0" y="0" xml:space="preserve"> F</tspan><tspan class="cls-74" x="11.86" y="0">l</tspan><tspan x="17.88" y="0">oor</tspan></text>
+  <text class="cls-9" transform="translate(.21 489.03)"><tspan x="0" y="0">五</tspan></text>
+  <text class="cls-8" transform="translate(.21 489.03)"><tspan x="0" y="0">五</tspan></text>
+  <text class="cls-9" transform="translate(12.21 489.03)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-8" transform="translate(12.21 489.03)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-9" transform="translate(24.33 489.03)"><tspan x="0" y="0">论</tspan></text>
+  <text class="cls-8" transform="translate(24.33 489.03)"><tspan x="0" y="0">论</tspan></text>
+  <text class="cls-9" transform="translate(36.33 489.03)"><tspan x="0" y="0">文</tspan></text>
+  <text class="cls-8" transform="translate(36.33 489.03)"><tspan x="0" y="0">文</tspan></text>
+  <text class="cls-9" transform="translate(48.44 489.03)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-8" transform="translate(48.44 489.03)"><tspan x="0" y="0">报</tspan></text>
+  <text class="cls-9" transform="translate(60.44 489.03)"><tspan x="0" y="0">告</tspan></text>
+  <text class="cls-8" transform="translate(60.44 489.03)"><tspan x="0" y="0">告</tspan></text>
+  <text class="cls-5" transform="translate(72.45 488.91)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-3" x="6.02" y="0">P</tspan><tspan x="11.9" y="0">a</tspan><tspan class="cls-23" x="17.9" y="0">p</tspan><tspan class="cls-90" x="23.94" y="0">e</tspan><tspan class="cls-95" x="29.9" y="0">r</tspan><tspan x="38.98" y="0">P</tspan><tspan class="cls-90" x="44.98" y="0">re</tspan><tspan x="56.9" y="0">s</tspan><tspan class="cls-94" x="62.9" y="0">e</tspan><tspan class="cls-23" x="68.98" y="0">n</tspan><tspan class="cls-90" x="75.01" y="0">t</tspan><tspan x="80.98" y="0">a</tspan><tspan class="cls-72" x="86.98" y="0">t</tspan><tspan class="cls-34" x="92.94" y="0">i</tspan><tspan x="98.96" y="0">on</tspan></text>
+  <text class="cls-5" transform="translate(18.21 518.55)"><tspan x="0" y="0">1.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 518.56)"><tspan x="0" y="0">长文</tspan></text>
+  <text class="cls-5" transform="translate(60.21 518.55)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-60" x="6.02" y="0">F</tspan><tspan x="11.95" y="0">u</tspan><tspan class="cls-34" x="17.95" y="0">l</tspan><tspan class="cls-49" x="23.98" y="0">l</tspan><tspan class="cls-23" x="33" y="0">P</tspan><tspan class="cls-90" x="39.04" y="0">a</tspan><tspan x="45" y="0">p</tspan><tspan class="cls-90" x="51" y="0">e</tspan><tspan class="cls-77" x="56.96" y="0">r</tspan><tspan class="cls-56" x="74.92" y="0">–</tspan><tspan class="cls-20" x="89.92" y="0">15</tspan><tspan class="cls-82" x="101.92" y="0">mi</tspan><tspan class="cls-56" x="113.96" y="0">n</tspan><tspan x="122.96" y="0">o</tspan><tspan class="cls-90" x="128.96" y="0">ra</tspan><tspan class="cls-50" x="140.89" y="0">l</tspan><tspan x="149.92" y="0">p</tspan><tspan class="cls-90" x="155.92" y="0">re</tspan><tspan x="167.84" y="0">s</tspan><tspan class="cls-62" x="173.84" y="0">e</tspan><tspan x="179.92" y="0">n</tspan><tspan class="cls-15" x="185.92" y="0">t</tspan><tspan class="cls-62" x="191.83" y="0">a</tspan><tspan class="cls-82" x="197.9" y="0">ti</tspan><tspan x="209.95" y="0">o</tspan><tspan class="cls-56" x="215.95" y="0">n</tspan><tspan class="cls-65" x="224.95" y="0">+</tspan><tspan x="233.9" y="0">5</tspan><tspan class="cls-82" x="239.9" y="0">mi</tspan><tspan class="cls-51" x="251.95" y="0">n</tspan><tspan class="cls-38" x="260.94" y="0">Q</tspan><tspan class="cls-82" x="266.92" y="0">/</tspan><tspan x="272.94" y="0">A</tspan></text>
+  <text class="cls-5" transform="translate(18.21 534.15)"><tspan x="0" y="0">2.</tspan></text>
+  <text class="cls-9" transform="translate(36.21 534.17)"><tspan x="0" y="0">短文</tspan></text>
+  <text class="cls-5" transform="translate(60.21 534.15)"><tspan class="cls-19" x="0" y="0">/</tspan><tspan class="cls-23" x="5.92" y="0">S</tspan><tspan x="11.95" y="0">ho</tspan><tspan class="cls-90" x="23.95" y="0">r</tspan><tspan class="cls-49" x="29.92" y="0">t</tspan><tspan class="cls-23" x="38.94" y="0">P</tspan><tspan class="cls-90" x="44.98" y="0">a</tspan><tspan x="50.94" y="0">p</tspan><tspan class="cls-90" x="56.94" y="0">e</tspan><tspan class="cls-44" x="62.9" y="0">r</tspan><tspan class="cls-56" x="71.98" y="0">–</tspan><tspan x="86.98" y="0">10</tspan><tspan class="cls-34" x="98.98" y="0">mi</tspan><tspan class="cls-66" x="111.02" y="0">n</tspan><tspan x="119.9" y="0">o</tspan><tspan class="cls-90" x="125.9" y="0">ra</tspan><tspan class="cls-63" x="137.83" y="0">l</tspan><tspan x="146.98" y="0">p</tspan><tspan class="cls-90" x="152.98" y="0">re</tspan><tspan x="164.9" y="0">s</tspan><tspan class="cls-90" x="170.9" y="0">e</tspan><tspan x="176.87" y="0">n</tspan><tspan class="cls-82" x="182.87" y="0">t</tspan><tspan class="cls-62" x="188.89" y="0">a</tspan><tspan class="cls-74" x="194.96" y="0">ti</tspan><tspan x="207.01" y="0">o</tspan><tspan class="cls-54" x="213.01" y="0">n</tspan><tspan class="cls-65" x="222" y="0">+</tspan><tspan x="230.95" y="0">5</tspan><tspan class="cls-82" x="236.95" y="0">mi</tspan><tspan class="cls-51" x="249" y="0">n</tspan><tspan class="cls-38" x="257.99" y="0">Q</tspan><tspan class="cls-82" x="263.96" y="0">/</tspan><tspan x="269.99" y="0">A</tspan></text>
+  <text class="cls-9" transform="translate(.21 563.8)"><tspan x="0" y="0">六</tspan></text>
+  <text class="cls-8" transform="translate(.21 563.8)"><tspan x="0" y="0">六</tspan></text>
+  <text class="cls-9" transform="translate(12.21 563.8)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-8" transform="translate(12.21 563.8)"><tspan x="0" y="0">、</tspan></text>
+  <text class="cls-9" transform="translate(24.21 563.8)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-8" transform="translate(24.21 563.8)"><tspan x="0" y="0">会</tspan></text>
+  <text class="cls-9" transform="translate(36.33 563.8)"><tspan x="0" y="0">务</tspan></text>
+  <text class="cls-8" transform="translate(36.33 563.8)"><tspan x="0" y="0">务</tspan></text>
+  <text class="cls-9" transform="translate(48.33 563.8)"><tspan x="0" y="0">联</tspan></text>
+  <text class="cls-8" transform="translate(48.33 563.8)"><tspan x="0" y="0">联</tspan></text>
+  <text class="cls-9" transform="translate(60.44 563.8)"><tspan x="0" y="0">络</tspan></text>
+  <text class="cls-8" transform="translate(60.44 563.8)"><tspan x="0" y="0">络</tspan></text>
+  <text class="cls-5" transform="translate(72.45 563.79)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-92" x="6.02" y="0">C</tspan><tspan x="12" y="0">o</tspan><tspan class="cls-23" x="18" y="0">n</tspan><tspan class="cls-90" x="24.04" y="0">t</tspan><tspan x="30" y="0">a</tspan><tspan class="cls-90" x="36" y="0">ct</tspan><tspan x="47.93" y="0">s</tspan></text>
+  <text class="cls-9" transform="translate(36.21 593.42)"><tspan x="0" y="0">于</tspan></text>
+  <text class="cls-8" transform="translate(36.21 593.42)"><tspan x="0" y="0">于</tspan></text>
+  <text class="cls-9" transform="translate(48.21 593.42)"><tspan x="0" y="0">丹</tspan></text>
+  <text class="cls-8" transform="translate(48.21 593.42)"><tspan x="0" y="0">丹</tspan></text>
+  <text class="cls-5" transform="translate(60.21 593.31)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-92" x="6.02" y="0">Y</tspan><tspan class="cls-76" x="12" y="0">u</tspan><tspan class="cls-38" x="21.04" y="0">D</tspan><tspan x="27.01" y="0">an</tspan></text>
+  <text class="cls-5" transform="translate(103.28 593.31)"><tspan class="cls-55" x="0" y="0">,</tspan><tspan x="8.99" y="0">T</tspan><tspan class="cls-72" x="14.99" y="0">a</tspan><tspan class="cls-34" x="20.95" y="0">i</tspan><tspan class="cls-24" x="26.98" y="0">y</tspan><tspan class="cls-70" x="32.87" y="0">u</tspan><tspan class="cls-90" x="38.98" y="0">a</tspan><tspan class="cls-67" x="44.94" y="0">n</tspan><tspan class="cls-92" x="54.05" y="0">U</tspan><tspan x="60.02" y="0">n</tspan><tspan class="cls-34" x="66.02" y="0">i</tspan><tspan x="72.05" y="0">v</tspan><tspan class="cls-90" x="78.05" y="0">er</tspan><tspan x="89.98" y="0">s</tspan><tspan class="cls-34" x="95.98" y="0">it</tspan><tspan class="cls-16" x="108.02" y="0">y</tspan><tspan x="117.02" y="0">o</tspan><tspan class="cls-65" x="123.02" y="0">f</tspan><tspan x="131.98" y="0">T</tspan><tspan class="cls-90" x="137.98" y="0">ec</tspan><tspan x="149.9" y="0">hno</tspan><tspan class="cls-74" x="167.9" y="0">l</tspan><tspan x="173.93" y="0">og</tspan><tspan class="cls-46" x="185.93" y="0">y</tspan><tspan class="cls-86" x="191.82" y="0">,</tspan><tspan x="201.06" y="0">T</tspan><tspan class="cls-31" x="207.06" y="0">e</tspan><tspan class="cls-74" x="213.02" y="0">l</tspan><tspan class="cls-50" x="219.05" y="0">:</tspan><tspan x="228.07" y="0">18</tspan><tspan class="cls-54" x="240.07" y="0">1</tspan><tspan x="249.06" y="0">035</tspan><tspan class="cls-56" x="267.06" y="0">1</tspan><tspan x="276.06" y="0">3601</tspan></text>
+  <text class="cls-9" transform="translate(36.21 609.03)"><tspan x="0" y="0">刘</tspan></text>
+  <text class="cls-8" transform="translate(36.21 609.03)"><tspan x="0" y="0">刘</tspan></text>
+  <text class="cls-9" transform="translate(48.21 609.03)"><tspan x="0" y="0">雪</tspan></text>
+  <text class="cls-8" transform="translate(48.21 609.03)"><tspan x="0" y="0">雪</tspan></text>
+  <text class="cls-9" transform="translate(60.33 609.03)"><tspan x="0" y="0">宇</tspan></text>
+  <text class="cls-8" transform="translate(60.33 609.03)"><tspan x="0" y="0">宇</tspan></text>
+  <text class="cls-5" transform="translate(72.32 608.9)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-23" x="6.02" y="0">L</tspan><tspan class="cls-34" x="12.06" y="0">i</tspan><tspan class="cls-78" x="18.08" y="0">u</tspan><tspan class="cls-92" x="27" y="0">X</tspan><tspan class="cls-35" x="32.98" y="0">u</tspan><tspan class="cls-72" x="39.01" y="0">e</tspan><tspan x="44.98" y="0">yu</tspan></text>
+  <text class="cls-5" transform="translate(130.04 608.9)"><tspan class="cls-55" x="0" y="0">,</tspan><tspan x="8.99" y="0">T</tspan><tspan class="cls-72" x="14.99" y="0">a</tspan><tspan class="cls-34" x="20.95" y="0">i</tspan><tspan class="cls-89" x="26.98" y="0">y</tspan><tspan class="cls-69" x="32.74" y="0">u</tspan><tspan class="cls-62" x="38.84" y="0">a</tspan><tspan class="cls-56" x="44.92" y="0">n</tspan><tspan class="cls-92" x="53.92" y="0">U</tspan><tspan class="cls-20" x="59.89" y="0">n</tspan><tspan class="cls-82" x="65.89" y="0">i</tspan><tspan class="cls-20" x="71.92" y="0">v</tspan><tspan class="cls-72" x="77.92" y="0">er</tspan><tspan x="89.84" y="0">s</tspan><tspan class="cls-74" x="95.84" y="0">it</tspan><tspan class="cls-75" x="107.89" y="0">y</tspan><tspan x="117" y="0">o</tspan><tspan class="cls-65" x="123" y="0">f</tspan><tspan x="131.95" y="0">T</tspan><tspan class="cls-90" x="137.95" y="0">ec</tspan><tspan x="149.88" y="0">hno</tspan><tspan class="cls-82" x="167.88" y="0">l</tspan><tspan x="173.9" y="0">og</tspan><tspan class="cls-24" x="185.9" y="0">y</tspan><tspan class="cls-42" x="191.8" y="0">,</tspan><tspan x="200.9" y="0">T</tspan><tspan class="cls-90" x="206.9" y="0">e</tspan><tspan class="cls-74" x="212.87" y="0">l</tspan><tspan class="cls-50" x="218.89" y="0">:</tspan><tspan x="227.92" y="0">15</tspan><tspan class="cls-56" x="239.92" y="0">7</tspan><tspan x="248.92" y="0">351</tspan><tspan class="cls-54" x="266.92" y="0">8</tspan><tspan x="275.9" y="0">5876</tspan></text>
+  <text class="cls-9" transform="translate(36.21 624.64)"><tspan x="0" y="0">高</tspan></text>
+  <text class="cls-8" transform="translate(36.21 624.64)"><tspan x="0" y="0">高</tspan></text>
+  <text class="cls-9" transform="translate(50.25 624.64)"><tspan x="0" y="0">一</tspan></text>
+  <text class="cls-8" transform="translate(50.25 624.64)"><tspan x="0" y="0">一</tspan></text>
+  <text class="cls-9" transform="translate(64.41 624.64)"><tspan x="0" y="0">峰</tspan></text>
+  <text class="cls-8" transform="translate(64.41 624.64)"><tspan x="0" y="0">峰</tspan></text>
+  <text class="cls-5" transform="translate(78.45 624.51)"><tspan class="cls-34" x="0" y="0">/</tspan><tspan class="cls-19" x="6.02" y="0">G</tspan><tspan x="11.94" y="0">a</tspan><tspan class="cls-30" x="17.94" y="0">o</tspan><tspan class="cls-92" x="29.09" y="0">Y</tspan><tspan class="cls-34" x="35.06" y="0">i</tspan><tspan class="cls-94" x="41.09" y="0">f</tspan><tspan class="cls-72" x="47.16" y="0">e</tspan><tspan class="cls-35" x="53.12" y="0">n</tspan><tspan x="59.16" y="0">g</tspan></text>
+  <text class="cls-5" transform="translate(142.17 624.51)"><tspan x="0" y="0">,</tspan></text>
+  <text class="cls-9" transform="translate(153.21 624.64)"><tspan class="cls-28" x="0" y="0">美域国际酒</tspan><tspan class="cls-18" x="70.14" y="0">店</tspan><tspan class="cls-21" x="84.29" y="0">大</tspan><tspan class="cls-26" x="98.32" y="0">堂</tspan><tspan class="cls-21" x="112.46" y="0">经</tspan><tspan x="126.49" y="0">理</tspan></text>
+  <text class="cls-5" transform="translate(293.72 624.51)"><tspan class="cls-82" x="0" y="0">/</tspan><tspan class="cls-3" x="6.02" y="0">L</tspan><tspan x="11.9" y="0">obb</tspan><tspan class="cls-91" x="29.9" y="0">y</tspan><tspan x="41.05" y="0">M</tspan><tspan class="cls-90" x="47.05" y="0">a</tspan><tspan x="53.02" y="0">n</tspan><tspan class="cls-62" x="59.02" y="0">a</tspan><tspan x="65.09" y="0">g</tspan><tspan class="cls-62" x="71.09" y="0">e</tspan><tspan class="cls-90" x="77.16" y="0">r</tspan><tspan class="cls-14" x="83.12" y="0">,</tspan><tspan x="94.15" y="0">M</tspan><tspan class="cls-31" x="100.15" y="0">e</tspan><tspan class="cls-74" x="106.12" y="0">i</tspan><tspan class="cls-89" x="112.14" y="0">y</tspan><tspan x="117.9" y="0">u</tspan></text>
+  <text class="cls-5" transform="translate(35.69 640.52)"><tspan class="cls-96" x="0" y="0">I</tspan><tspan class="cls-70" x="5.84" y="0">n</tspan><tspan class="cls-34" x="11.95" y="0">t</tspan><tspan class="cls-90" x="17.98" y="0">er</tspan><tspan x="29.9" y="0">n</tspan><tspan class="cls-62" x="35.9" y="0">a</tspan><tspan class="cls-34" x="41.98" y="0">ti</tspan><tspan x="54.02" y="0">on</tspan><tspan class="cls-90" x="66.02" y="0">a</tspan><tspan class="cls-49" x="71.99" y="0">l</tspan><tspan class="cls-92" x="81.01" y="0">H</tspan><tspan x="86.99" y="0">o</tspan><tspan class="cls-34" x="92.99" y="0">t</tspan><tspan class="cls-90" x="99.01" y="0">e</tspan><tspan class="cls-34" x="104.98" y="0">l</tspan><tspan class="cls-51" x="111" y="0">,</tspan><tspan x="119.99" y="0">T</tspan><tspan class="cls-90" x="125.99" y="0">e</tspan><tspan class="cls-34" x="131.95" y="0">l</tspan><tspan class="cls-49" x="137.98" y="0">:</tspan><tspan x="147" y="0">18</tspan><tspan class="cls-51" x="159" y="0">6</tspan><tspan class="cls-20" x="167.99" y="0">351</tspan><tspan class="cls-51" x="185.99" y="0">4</tspan><tspan x="194.98" y="0">0903</tspan></text>
+</svg>
