@@ -1302,52 +1302,104 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- 插入的文字内容 -->
 
+
+
    
-   <!-- 微信二维码悬浮 -->
-<div class="wechat-float">
-    <img src="cwqun.jpg" alt="WeChat Group">
-    <span>进群交流</span>
+   <!-- 微信二维码悬停放大 -->
+<div class="qr-trigger" id="qrTrigger">
+  <img src="cwqun.jpg" alt="WeChat">
+  <span>Join the group to chat</span>
+</div>
+
+<div class="qr-overlay" id="qrOverlay">
+  <div class="qr-large">
+    <img src="cwqun" alt="WeChat QR">
+    <p>Scan the code to join the group chat</p>
+  </div>
 </div>
 
 <style>
-/* 微信悬浮二维码样式 */
-.wechat-float{
+/* ===== 小触发器 ===== */
+.qr-trigger{
     position:fixed;
     right:20px;
-    bottom:80px;          /* 在页脚之上，不遮挡内容 */
-    width:60px;
-    height:60px;
-    border-radius:50%;
+    bottom:80px;
+    width:120px;
+    height:120px;
+    background:#fff;
+    border-radius:8px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.25);
+    box-shadow:0 6px 20px rgba(0,0,0,.2);
     cursor:pointer;
     z-index:999;
     transition:.3s;
 }
-.wechat-float:hover{
-    transform:scale(1.1);
-}
-.wechat-float img{
+.qr-trigger img{
     width:100%;
     height:100%;
     object-fit:cover;
+    display:block;
 }
-.wechat-float span{
+.qr-trigger span{
     position:absolute;
-    bottom:-20px;
+    bottom:-22px;
     left:50%;
     transform:translateX(-50%);
-    font-size:12px;
+    font-size:13px;
     color:#007bff;
     white-space:nowrap;
     opacity:0;
     transition:.3s;
 }
-.wechat-float:hover span{
+.qr-trigger:hover span{opacity:1;bottom:-20px;}
+
+/* ===== 大浮层 ===== */
+.qr-overlay{
+    position:fixed;
+    inset:0;                 /* top/right/bottom/left:0 */
+    background:rgba(0,0,0,.6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:2000;
+}
+.qr-overlay.show{
     opacity:1;
-    bottom:-18px;
+    visibility:visible;
+}
+.qr-large{
+    width:600px;
+    height:600px;
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 12px 40px rgba(0,0,0,.3);
+    text-align:center;
+}
+.qr-large img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+.qr-large p{
+    margin:10px 0 0;
+    color:#007bff;
+    font-size:16px;
 }
 </style>
+
+<script>
+const trigger = document.getElementById('qrTrigger');
+const overlay = document.getElementById('qrOverlay');
+
+trigger.addEventListener('mouseenter', () => overlay.classList.add('show'));
+overlay.addEventListener('mouseleave', () => overlay.classList.remove('show'));
+</script>
+
+
 
    
 <!-- 替换原有的文字部分 -->
