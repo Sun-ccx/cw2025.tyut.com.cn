@@ -15,6 +15,8 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
         }
 
         .container {
@@ -64,10 +66,10 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.6rem; /* 减小间距以确保内容在一行显示 */
-            flex-wrap: nowrap; /* 禁止换行 */
-            overflow-x: auto; /* 如果内容超出屏幕宽度，允许水平滚动 */
-            padding: 0 1rem; /* 添加内边距以避免内容紧贴屏幕边缘 */
+            gap: 1.6rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 0 1rem;
         }
 
         .nav-links a {
@@ -75,18 +77,18 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
-            white-space: nowrap; /* 确保文字不换行 */
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
             color: #007bff;
         }
 
-        /* 奖项样式 */
+        /* 联系页面样式 */
         .contact-section {
             margin-top: 100px;
             padding: 2rem 0;
-            text-align: center; /* 添加居中样式 */
+            text-align: center;
         }
 
         .contact-header {
@@ -100,118 +102,157 @@
             margin-bottom: 1rem;
         }
 
-        .contact-header p {
-            color: #666;
-            font-size: 1.1em;
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-    
-
-        .event{
-            margin-bottom: 2rem;
-            padding: 1rem 2rem;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            display: inline-block; /* 使奖项块在容器中居中 */
-            width: 80%; /* 限制宽度，使其在大屏幕上不会过宽 */
+        .contact-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
         }
 
-        .event-title {
-            font-size: 1.5em;
+        .contact-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .contact-name {
             font-weight: bold;
+            font-size: 1.2em;
             margin-bottom: 0.5rem;
-        }
-
-        .event-recipients {
-            font-size: 1em;
             color: #333;
         }
 
-      /* 汉堡菜单样式 */
-.hamburger {
-    display: none; /* 默认隐藏 */
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-    z-index: 1001;
-}
+        .contact-detail {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
 
-.hamburger-box {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-}
+        .contact-detail i {
+            margin-right: 10px;
+            color: #007bff;
+            width: 20px;
+            text-align: center;
+        }
 
-.hamburger-inner {
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s;
-}
+        .contact-email {
+            color: #007bff;
+            text-decoration: none;
+        }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    transition: transform 0.3s;
-}
+        .contact-phone {
+            color: #333;
+        }
 
-.hamburger-inner::before {
-    top: -6px;
-}
+        .contact-role {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
 
-.hamburger-inner::after {
-    top: 6px;
-}
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-section {
+                margin-top: 80px;
+            }
+        }
 
-/* 移动端样式 */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* 显示汉堡菜单 */
-    }
+        /* 汉堡菜单样式 */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+            z-index: 1001;
+        }
 
-    .nav-links {
-        display: none; /* 默认隐藏导航链接 */
-        position: absolute;
-        top: 60px; /* 导航栏高度 */
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
+        .hamburger-box {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+        }
 
-    .nav-links ul {
-        flex-direction: column;
-        padding: 1rem;
-    }
+        .hamburger-inner {
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s;
+        }
 
-    .nav-links ul li {
-        margin: 0.5rem 0;
-    }
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s;
+        }
 
-    .nav-links.active {
-        display: block; /* 显示导航链接 */
-    }
+        .hamburger-inner::before {
+            top: -6px;
+        }
 
-    .hero-slider {
-        margin-top: 60px; /* 调整轮播图的顶部间距 */
-    }
-}
+        .hamburger-inner::after {
+            top: 6px;
+        }
 
+        /* 移动端样式 */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
 
-        
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
    <header class="main-header">
@@ -248,12 +289,47 @@
         <section class="contact-section">
            <div class="contact-header"> 
             <h1>Contact</h1>
-          <h3>Pending update</h3>
+           </div>
+           
+           <div class="contact-content">
+               <div class="contact-card">
+                   <div class="contact-item">
+                       <div class="contact-detail">
+                           <i class="fas fa-envelope"></i>
+                           <a href="mailto:cw2025@tyut.edu.cn" class="contact-email">cw2025@tyut.edu.cn</a>
+                       </div>
+                   </div>
+                   
+                   <div class="contact-item">
+                       <div class="contact-name">于丹 / Yu Dan</div>
+                       <div class="contact-role">Taiyuan University of Technology</div>
+                       <div class="contact-detail">
+                           <i class="fas fa-phone"></i>
+                           <span class="contact-phone">181 0351 3601</span>
+                       </div>
+                   </div>
+                   
+                   <div class="contact-item">
+                       <div class="contact-name">刘雪宇 / Liu Xueyu</div>
+                       <div class="contact-role">Taiyuan University of Technology</div>
+                       <div class="contact-detail">
+                           <i class="fas fa-phone"></i>
+                           <span class="contact-phone">157 3518 5876</span>
+                       </div>
+                   </div>
+                   
+                   <div class="contact-item">
+                       <div class="contact-name">高一峰 / Gao Yifeng</div>
+                       <div class="contact-role">美域国际酒店大堂经理 / Lobby Manager, Meiyu International Hotel</div>
+                       <div class="contact-detail">
+                           <i class="fas fa-phone"></i>
+                           <span class="contact-phone">186 3514 0903</span>
+                       </div>
+                   </div>
                </div>
-       
+           </div>
         </section>
     </main>
-
 
 <script>
  document.addEventListener('DOMContentLoaded', function () {
