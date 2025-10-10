@@ -1306,119 +1306,194 @@ h1, h2, h3, h4, h5, h6 {
 
    
   <!-- 上方邀请函 -->
-<div class="qr-trigger" id="qrTrigger" style="bottom:260px;">
-  <img src="yaoqinghan.jpg" alt="Conference Invitation">
-  <span>Conference Invitation</span>
-</div>
 
-<!-- 下方二维码 -->
-<div class="qr-trigger" id="qrTrigger2" style="bottom:80px;">
-  <img src="cwqun1.jpg" alt="WeChat">
-  <span>Join the group to chat</span>
-</div>
 
-<!-- 上方大图浮层 -->
-<div class="qr-overlay" id="qrOverlay1">
-  <div class="qr-large">
-    <img src="yaoqinghan.jpg" alt="Conference Invitation">
-    <p>Conference Invitation</p>
-  </div>
-</div>
+    <style>
+        /* ===== 小触发器 ===== */
+        .qr-trigger {
+            position: fixed;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,.2);
+            cursor: pointer;
+            z-index: 999;
+            transition: .3s;
+        }
+        
+        .qr-trigger img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .qr-trigger span {
+            position: absolute;
+            bottom: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 13px;
+            color: #007bff;
+            white-space: nowrap;
+            opacity: 0;
+            transition: .3s;
+        }
+        
+        .qr-trigger:hover span {
+            opacity: 1;
+            bottom: -20px;
+        }
 
-<!-- 下方大图浮层 -->
-<div class="qr-overlay" id="qrOverlay2">
-  <div class="qr-large">
-    <img src="cwqun1.jpg" alt="WeChat QR 2">
-    <p>Scan the code to join the group chat</p>
-  </div>
-</div>
-   
+        /* ===== 大浮层 ===== */
+        .qr-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            z-index: 2000;
+        }
+        
+        .qr-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .qr-large {
+            width: 600px;
+            height: 600px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 12px 40px rgba(0,0,0,.3);
+            text-align: center;
+        }
+        
+        .qr-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .qr-large p {
+            margin: 10px 0 0;
+            color: #007bff;
+            font-size: 16px;
+        }
 
-<style>
-/* ===== 小触发器 ===== */
-.qr-trigger{
-    position:fixed;
-    right:20px;
-    bottom:80px;
-    width:150px;
-    height:150px;
-    background:#fff;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0 6px 20px rgba(0,0,0,.2);
-    cursor:pointer;
-    z-index:999;
-    transition:.3s;
-}
-.qr-trigger img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-.qr-trigger span{
-    position:absolute;
-    bottom:-22px;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:13px;
-    color:#007bff;
-    white-space:nowrap;
-    opacity:0;
-    transition:.3s;
-}
-.qr-trigger:hover span{opacity:1;bottom:-20px;}
+        /* 关闭按钮 */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+            z-index: 2001;
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+    </style>
 
-/* ===== 大浮层 ===== */
-.qr-overlay{
-    position:fixed;
-    inset:0;                 /* top/right/bottom/left:0 */
-    background:rgba(0,0,0,.6);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    opacity:0;
-    visibility:hidden;
-    transition:.3s;
-    z-index:2000;
-}
-.qr-overlay.show{
-    opacity:1;
-    visibility:visible;
-}
-.qr-large{
-    width:600px;
-    height:600px;
-    background:#fff;
-    border-radius:12px;
-    padding:20px;
-    box-shadow:0 12px 40px rgba(0,0,0,.3);
-    text-align:center;
-}
-.qr-large img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
-.qr-large p{
-    margin:10px 0 0;
-    color:#007bff;
-    font-size:16px;
-}
-</style>
+<body>
+    <!-- 上方邀请函 -->
+    <div class="qr-trigger" id="qrTrigger" style="bottom: 260px;">
+        <img src="yaoqinghan.jpg" alt="Conference Invitation">
+        <span>Conference Invitation</span>
+    </div>
 
-<script>
-const trigger1 = document.getElementById('qrTrigger');
-const trigger2 = document.getElementById('qrTrigger2');
-const overlay1 = document.getElementById('qrOverlay1');
-const overlay2 = document.getElementById('qrOverlay2');
+    <!-- 下方二维码 -->
+    <div class="qr-trigger" id="qrTrigger2" style="bottom: 80px;">
+        <img src="cwqun1.jpg" alt="WeChat">
+        <span>Join the group to chat</span>
+    </div>
 
-trigger1.addEventListener('mouseenter', () => overlay1.classList.add('show'));
-trigger1.addEventListener('mouseleave', () => overlay1.classList.remove('show'));
+    <!-- 上方大图浮层 -->
+    <div class="qr-overlay" id="qrOverlay1">
+        <div class="qr-large">
+            <button class="close-btn" onclick="closeOverlay('qrOverlay1')">&times;</button>
+            <img src="yaoqinghan.jpg" alt="Conference Invitation">
+            <p>Conference Invitation</p>
+        </div>
+    </div>
 
-trigger2.addEventListener('mouseenter', () => overlay2.classList.add('show'));
-trigger2.addEventListener('mouseleave', () => overlay2.classList.remove('show'));
-</script>
+    <!-- 下方大图浮层 -->
+    <div class="qr-overlay" id="qrOverlay2">
+        <div class="qr-large">
+            <button class="close-btn" onclick="closeOverlay('qrOverlay2')">&times;</button>
+            <img src="cwqun1.jpg" alt="WeChat QR 2">
+            <p>Scan the code to join the group chat</p>
+        </div>
+    </div>
+
+    <script>
+        // 等待DOM加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            const trigger1 = document.getElementById('qrTrigger');
+            const trigger2 = document.getElementById('qrTrigger2');
+            const overlay1 = document.getElementById('qrOverlay1');
+            const overlay2 = document.getElementById('qrOverlay2');
+
+            // 鼠标进入显示大图
+            trigger1.addEventListener('mouseenter', function() {
+                overlay1.classList.add('show');
+            });
+            
+            trigger1.addEventListener('mouseleave', function() {
+                overlay1.classList.remove('show');
+            });
+
+            trigger2.addEventListener('mouseenter', function() {
+                overlay2.classList.add('show');
+            });
+            
+            trigger2.addEventListener('mouseleave', function() {
+                overlay2.classList.remove('show');
+            });
+
+            // 点击浮层外部关闭
+            overlay1.addEventListener('click', function(e) {
+                if (e.target === overlay1) {
+                    overlay1.classList.remove('show');
+                }
+            });
+
+            overlay2.addEventListener('click', function(e) {
+                if (e.target === overlay2) {
+                    overlay2.classList.remove('show');
+                }
+            });
+        });
+
+        // 关闭浮层函数
+        function closeOverlay(overlayId) {
+            document.getElementById(overlayId).classList.remove('show');
+        }
+
+        // ESC键关闭浮层
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.qr-overlay').forEach(overlay => {
+                    overlay.classList.remove('show');
+                });
+            }
+        });
+    </script>
 
 
 
