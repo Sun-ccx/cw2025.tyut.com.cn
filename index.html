@@ -1305,29 +1305,34 @@ h1, h2, h3, h4, h5, h6 {
 
 
    
-   <!-- 微信二维码悬停放大 -->
-<div class="qr-trigger" id="qrTrigger">
-  <img src="cwqun.jpg" alt="WeChat">
-  <span>Join the group to chat</span>
-</div>
-
-<div class="qr-overlay" id="qrOverlay">
-  <div class="qr-large">
-    <img src="cwqun.jpg" alt="WeChat QR">
-    <p>Scan the code to join the group chat</p>
-  </div>
-</div>
-   <div class="qr-trigger" id="qrTrigger">
-  <img src="yaoqinghan.jpg" alt="yaoqinghan">
+  <!-- 上方邀请函 -->
+<div class="qr-trigger" id="qrTrigger" style="bottom:260px;">
+  <img src="yaoqinghan.jpg" alt="Conference Invitation">
   <span>Conference Invitation</span>
 </div>
 
-<div class="qr-overlay" id="qrOverlay">
+<!-- 下方二维码 -->
+<div class="qr-trigger" id="qrTrigger2" style="bottom:80px;">
+  <img src="cwqun1.jpg" alt="WeChat">
+  <span>Join the group to chat</span>
+</div>
+
+<!-- 上方大图浮层 -->
+<div class="qr-overlay" id="qrOverlay1">
   <div class="qr-large">
-    <img src="yaoqinghan.jpg" alt="yaoqinghan">
+    <img src="yaoqinghan.jpg" alt="Conference Invitation">
     <p>Conference Invitation</p>
   </div>
 </div>
+
+<!-- 下方大图浮层 -->
+<div class="qr-overlay" id="qrOverlay2">
+  <div class="qr-large">
+    <img src="cwqun1.jpg" alt="WeChat QR 2">
+    <p>Scan the code to join the group chat</p>
+  </div>
+</div>
+   
 
 <style>
 /* ===== 小触发器 ===== */
@@ -1403,11 +1408,16 @@ h1, h2, h3, h4, h5, h6 {
 </style>
 
 <script>
-const trigger = document.getElementById('qrTrigger');
-const overlay = document.getElementById('qrOverlay');
+const trigger1 = document.getElementById('qrTrigger');
+const trigger2 = document.getElementById('qrTrigger2');
+const overlay1 = document.getElementById('qrOverlay1');
+const overlay2 = document.getElementById('qrOverlay2');
 
-trigger.addEventListener('mouseenter', () => overlay.classList.add('show'));
-overlay.addEventListener('mouseleave', () => overlay.classList.remove('show'));
+trigger1.addEventListener('mouseenter', () => overlay1.classList.add('show'));
+trigger1.addEventListener('mouseleave', () => overlay1.classList.remove('show'));
+
+trigger2.addEventListener('mouseenter', () => overlay2.classList.add('show'));
+trigger2.addEventListener('mouseleave', () => overlay2.classList.remove('show'));
 </script>
 
 
