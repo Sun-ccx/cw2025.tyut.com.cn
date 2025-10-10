@@ -1460,7 +1460,68 @@ overlay.addEventListener('mouseleave', () => overlay.classList.remove('show'));
         </div>
     </div>
 </section>
+<!-- 邀请函部分 -->
+<section class="invitation-section">
+    <div class="container">
+        <div class="invitation-card">
+            <h2 class="holographic-title">Official Invitation</h2>
+            <div class="invitation-image">
+                <img src="yaoqinghan.jpg" alt="Official Conference Invitation Letter" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            </div>
+            <p class="invitation-note">Download the official invitation letter for conference participation and visa applications</p>
+            <a href="invitation-letter.jpg" download class="download-btn">
+                <i class="fas fa-download"></i> Download Invitation Letter
+            </a>
+        </div>
+    </div>
+</section>
+   <style>
+.invitation-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
 
+.invitation-card {
+    text-align: center;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.invitation-image {
+    margin: 2rem 0;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.invitation-note {
+    color: #666;
+    margin: 1.5rem 0;
+    font-size: 1.1em;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+</style>
 <!-- 替换原有的Important Dates部分 -->
 <section class="timeline-section">
     <div class="container">
